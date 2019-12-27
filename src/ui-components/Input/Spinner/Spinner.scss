@@ -1,0 +1,31 @@
+
+/* CSS SPINNERS */
+  
+  @keyframes rotating {
+    to {transform: rotate(360deg)}
+  }
+  
+  .spinner {
+    position: relative;
+    width: 68px;
+    height: 68px;
+    margin-bottom: 20px;
+    border-radius: 50%;
+    border: 2px solid rgb(168, 193, 230);
+    text-align: center;
+  }
+  .spinner:before {
+    content: '';
+    position: absolute;
+    top: -3%;
+    left: -3%;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    border-right: 4px solid transparent;
+    animation: rotating 2s linear infinite;
+    filter: blur(1px);
+  }
+  .spinner--loading:before {
+    border-top: 3px solid #F76C6C;
+  }

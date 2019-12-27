@@ -1,0 +1,14 @@
+.inputbutton__wrapper {
+    display: block;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color:rgba(55,71,133,.8);
+    color: #A8D0E6;
+    outline: none;
+    border: none;
+    &:active {
+        transform: translateY(2px);
+        background-color:rgba(55,71,133,1)
+    }
+ 
+}
