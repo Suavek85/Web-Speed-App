@@ -1,14 +1,14 @@
 
 
-.inp {
+.urlinput {
   display: flex;
   position: relative;
   width: 100%;
   max-width: 280px;
   margin-top: 30px;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
-.inp .label {
+.urlinput .label {
   position: absolute;
   top: 16px;
   left: 0;
@@ -18,7 +18,7 @@
   transform-origin: 0 0;
   transition: all 0.2s ease;
 }
-.inp .border {
+.urlinput .border {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -29,7 +29,7 @@
   transform-origin: 0 0;
   transition: all 0.15s ease;
 }
-.inp input {
+.urlinput input {
   -webkit-appearance: none;
   width: 100%;
   border: 0;
@@ -45,17 +45,17 @@
   transition: all 0.15s ease;
 }
 
-.inp input:not(:placeholder-shown) + span {
+.urlinput input:not(:placeholder-shown) + span {
   color: #F76C6C;
   transform: translateY(-26px) scale(0.75);
 }
-.inp input:focus {
+.urlinput input:focus {
   background: none;
   outline: none;
 }
-.inp input:focus + span {
+.urlinput input:focus + span {
   transform: translateY(-26px) scale(0.75);
 }
-.inp input:focus + span + .border {
+.urlinput input:focus + span + .border {
   transform: scaleX(1);
 }

@@ -1,5 +1,7 @@
+@import '../../../scss/styles.scss';
+
 .resultsbottom__wrapper {
     width: 100%;
     height: 50%;
-    background-color: #f76c6c;
+    background-color: $color-bottom-background;
 }

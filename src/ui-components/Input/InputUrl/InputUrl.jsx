@@ -3,8 +3,8 @@ import './InputUrl.scss';
 
 function InputCard() {
   return (
-      <label for="inp" className="inp">
-        <input autocomplete='off' type="text" id="inp" placeholder="&nbsp;" />
+      <label for="urlinput" className="urlinput">
+        <input autocomplete='off' type="url" id="urlinput" placeholder="&nbsp;" />
         <span className="label">Enter your website url</span>
         <span className="border"></span>
       </label>
