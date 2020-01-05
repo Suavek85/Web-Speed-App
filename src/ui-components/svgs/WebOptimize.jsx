@@ -1,17 +1,23 @@
 import React from "react";
 import { useSpring, animated } from 'react-spring';
+import { appStates } from '../States'
 import './WebOptimize.scss';
 
-function WebOptimize() {
+function WebOptimize(props) {
 
+  const customInactive = { mass: 25, tension: 25, friction: 25 }
+  const customLoading = { mass: 1, tension: 170, friction: 26 }
+  const loadingStatus = props.getReportStatus === appStates.LOADING; 
+  const getConfig = () => loadingStatus? customLoading : customInactive;
+  
   const indicatorProps = useSpring({
     from:{ transform: 'rotate(-65deg)', transformOrigin: 'center' },
     to: async next => {
       while (true) {
-        await next({ transform: 'rotate(-155deg)', config: { mass: 25, tension: 25, friction: 25 }} )
-        await next({ transform: 'rotate(0deg)', config: { mass: 25, tension: 25, friction: 25 }})
-        await next({ transform: 'rotate(-100deg)', config: { mass: 25, tension: 25, friction: 25 } })
-        await next({ transform: 'rotate(-65deg)', config: { mass: 25, tension: 25, friction: 25 }} )
+        await next({ transform: 'rotate(-155deg)', config: getConfig() } )
+        await next({ transform: 'rotate(0deg)', config: getConfig() })
+        await next({ transform: 'rotate(-100deg)', config: getConfig() })
+        await next({ transform: 'rotate(-65deg)', config: getConfig() } )
         await next({ delay: 1000 } )
       }
     },
