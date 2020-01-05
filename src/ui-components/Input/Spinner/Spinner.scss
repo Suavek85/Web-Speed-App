@@ -21,11 +21,9 @@
     left: -3%;
     width: 46px;
     height: 46px;
+    border-top: 3px solid #F76C6C;
     border-radius: 50%;
     border-right: 4px solid transparent;
     animation: rotating 2s linear infinite;
     filter: blur(1px);
-  }
-  .spinner--loading:before {
-    border-top: 3px solid #F76C6C;
   }

@@ -1,24 +1,57 @@
 import React from "react";
-import { useSpring, config, animated } from 'react-spring';
+import { useSpring, animated } from 'react-spring';
 import './WebOptimize.scss';
-
 
 function WebOptimize() {
 
-  const props = useSpring({
-    from:{transform: 'rotate(-65deg)'},
+  const indicatorProps = useSpring({
+    from:{ transform: 'rotate(-65deg)', transformOrigin: 'center' },
     to: async next => {
       while (true) {
-        await next({ transform: 'rotate(-165deg)', config: config.slow} )
-        await next({ transform: 'rotate(0deg)', config: config.slow})
-        await next({ transform: 'rotate(-100deg)', config: config.slow })
-        await next({ transform: 'rotate(-65deg)', config: config.wobbly })
+        await next({ transform: 'rotate(-155deg)', config: { mass: 25, tension: 25, friction: 25 }} )
+        await next({ transform: 'rotate(0deg)', config: { mass: 25, tension: 25, friction: 25 }})
+        await next({ transform: 'rotate(-100deg)', config: { mass: 25, tension: 25, friction: 25 } })
+        await next({ transform: 'rotate(-65deg)', config: { mass: 25, tension: 25, friction: 25 }} )
+        await next({ delay: 1000 } )
+      }
+    },
+  })
+
+  const colorProps = useSpring({
+    from:{ fill: "#FFFFFF" },
+    to: async next => {
+      while (true) {
+        await next({ fill: "#91E0E8" })
+        await next({ fill: "#5DC1D8" })
+        await next({ fill: "#FFFFFF" })
+      }
+    },
+  })
+
+  const colorPropsBlue = useSpring({
+    from:{ fill: "#91E0E8" },
+    to: async next => {
+      while (true) {
+        await next({ fill: "#5DC1D8" })
+        await next({ fill: "#FFFFFF" })
+        await next({ fill: "#91E0E8" })
+      }
+    },
+  })
+
+  const colorPropsDarkBlue = useSpring({
+    from:{ fill: "#5DC1D8" },
+    to: async next => {
+      while (true) {
+        await next({ fill: "#FFFFFF" })
+        await next({ fill: "#91E0E8" })
+        await next({ fill: "#5DC1D8" })
       }
     },
   })
 
   return (
-    <div className='svgWrapper'>
+    <div className='weboptimize__wrapper'>
       <svg
         version="1.1"
         id="Capa_1"
@@ -110,30 +143,29 @@ function WebOptimize() {
           d="M310.62,358.851c0,1.65-1.35,3-3,3h-30.217c-1.65,0-3-1.35-3-3v-30.218
 	c0-1.65,1.35-3,3-3h30.217c1.65,0,3,1.35,3,3V358.851z"
         />
-        <path
-          style={{ fill: "#5DC1D8" }}
+
+        <animated.path
+          style={colorPropsDarkBlue}
           d="M226.419,358.851c0,1.65-1.35,3-3,3h-30.221c-1.65,0-3-1.35-3-3v-30.218c0-1.65,1.35-3,3-3h30.221
 	c1.65,0,3,1.35,3,3V358.851z"
         />
         <g>
-          <path
+          <animated.path
             id="SVGCleanerId_0_1_"
-            style={{ fill: "#91E0E8" }}
+            style={colorPropsBlue}
             d="M268.518,358.851c0,1.65-1.35,3-3,3h-30.217c-1.65,0-3-1.35-3-3v-30.218
 		c0-1.65,1.35-3,3-3h30.217c1.65,0,3,1.35,3,3V358.851z"
           />
         </g>
         <g>
-          <path
+          <animated.path
             id="SVGCleanerId_1_1_"
-            style={{ fill: "#FFFFFF" }}
+            style={colorProps}
             d="M310.62,358.851c0,1.65-1.35,3-3,3h-30.217c-1.65,0-3-1.35-3-3v-30.218
 		c0-1.65,1.35-3,3-3h30.217c1.65,0,3,1.35,3,3V358.851z"
           />
         </g>
-        <animated.g 
-        style={props}
-        className='transform'>
+        <animated.g style={indicatorProps} >
         <path
           style={{ fill: "#FE3745" }}
           d="M226.123,274.934c-6.308-13.391-0.546-29.419,12.847-35.728c0.736-0.346,1.494-0.661,2.318-0.96
@@ -141,7 +173,6 @@ function WebOptimize() {
 	l-111.022,79.738c-0.047,0.035-0.094,0.066-0.145,0.095c-0.758,0.446-1.484,0.83-2.219,1.178
 	C248.459,294.09,232.433,288.328,226.123,274.934z"
         />
-        
           <path
             style={{ fill: "#B7092B" }}
             d="M238.97,247.049c0.736-0.346,1.494-0.661,2.318-0.96c0.057-0.02,0.11-0.037,0.166-0.05

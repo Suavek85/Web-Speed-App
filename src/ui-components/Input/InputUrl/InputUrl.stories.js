@@ -1,8 +1,9 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import InputUrl from './InputUrl';
 
-export default {
-    title: 'Input Url',
-  };
+const stories = storiesOf('UI Components', module)
 
-export const InputUrlGeneric = () => <InputUrl />;
+stories.add('Input Url', () => {
+    return <InputUrl />
+})

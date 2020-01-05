@@ -1,8 +1,10 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react';
 import InputCard from './InputCard';
 
-export default {
-    title: 'Input Card',
-  };
+const stories = storiesOf('UI Components', module)
 
-export const InputUrl = () => <InputCard />;
+stories.add('Input Card', () => {
+    return <InputCard />
+})
+

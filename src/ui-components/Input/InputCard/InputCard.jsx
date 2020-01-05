@@ -2,22 +2,20 @@ import React from 'react';
 import InputUrl from '../InputUrl/InputUrl';
 import InputButton from '../InputButton/InputButton';
 import Spinner from '../Spinner/Spinner';
-import WebOptimize from '../../AnimatedSvg/WebOptimize';
+import WebOptimize from '../../svgs/WebOptimize';
 import './InputCard.scss';
 
-function InputCard() {
+function InputCard(props) {
   return (
     <div className='inputcard__wrapper' >
       <div className='inputcard__sub-wrapper'>
-        <h1 style={{color:'white'}}>Web Speed App</h1>
-        <InputUrl />
-        <div style={{display:'flex'}}>
-        <InputButton />
-        <Spinner />
+        <h1>Web Speed App</h1>
+          <InputUrl />
+        <div className='inputcard__btn-wrapper'>
+          <InputButton {...props} />
+          <Spinner getReportStatus={props.getReportStatus} />
         </div>
       </div>
-      
-      
       <WebOptimize />
     </div>
   );

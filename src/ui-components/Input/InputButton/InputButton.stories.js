@@ -1,8 +1,16 @@
 import React from 'react';
+import { storiesOf } from '@storybook/react'
+import { withKnobs, select } from "@storybook/addon-knobs";
 import InputButton from './InputButton';
+import { appStates } from '../../States';
 
-export default {
-    title: 'Input Button',
-  };
 
-export const InputBtn = () => <InputButton />;
+const stories = storiesOf('UI Components', module)
+
+stories.addDecorator(withKnobs)
+
+stories.add('Input Button', () => {
+    const groupId = 'Props';
+    const statusesKnob = select('Button states', appStates, Object.values(appStates)[0], groupId)
+    return <InputButton getReportStatus={statusesKnob} />
+})

@@ -1,5 +1,13 @@
 @import '../../../scss/styles.scss';
 
+h1 {
+    color: white;
+}
+
+.inputcard__btn-wrapper {
+    display: flex;
+}
+
 .inputcard__wrapper {
     width: 50%;
     height: max-content;
