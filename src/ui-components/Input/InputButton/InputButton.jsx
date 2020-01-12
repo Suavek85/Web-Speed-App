@@ -1,27 +1,30 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { appStates } from '../../../constants/states'
-import { GETREPORT, LOADING } from '../../../constants/content'
+import { appContent } from '../../../constants/content'
 import './InputButton.scss'
 import cls from 'classnames'
 
 function InputButton(props) {
   const {getReportStatus, handleGetReportClick } = props
-  const loadingStatus = getReportStatus === appStates.LOADING
-  const inactiveStatus = getReportStatus === appStates.INACTIVE
+  const getClassFromState = state => getReportStatus === state
+  const getContentFromState = state => { 
+    const contentObj = appContent.find(el => Object.keys(el)[0] === state)
+    return Object.values(contentObj)[0]
+  }
   const getButtonClasses = cls({
     'inputbutton__wrapper': true,
-    'inputbutton__wrapper--inactive': inactiveStatus,
-    'inputbutton__wrapper--loading': loadingStatus,
+    'inputbutton__wrapper--inactive': getClassFromState(appStates.INACTIVE),
+    'inputbutton__wrapper--loading': getClassFromState(appStates.LOADING),
+    'inputbutton__wrapper--error': getClassFromState(appStates.ERROR),
   })
   return (
     <button 
       onClick={handleGetReportClick} 
-      disabled={loadingStatus}
+      disabled={getClassFromState(appStates.LOADING)}
       className={getButtonClasses}
     >   
-      {inactiveStatus && GETREPORT}
-      {loadingStatus && LOADING}
+      {getContentFromState(getReportStatus)}
     </button>
   )
 }

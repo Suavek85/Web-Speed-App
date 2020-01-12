@@ -15,6 +15,9 @@
       }
     }
     &--loading {
-        background-color: $color-bottom-background;
+        background-color: $color-warning-loading;
+    }
+    &--error {
+      background-color: $color-bottom-background;
     }
 }
