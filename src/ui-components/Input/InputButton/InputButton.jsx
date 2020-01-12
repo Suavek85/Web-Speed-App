@@ -1,27 +1,39 @@
-import React from 'react';
-import { appStates } from '../../States';
-import './InputButton.scss';
-import cls from 'classnames';
-
+import React from 'react'
+import PropTypes from 'prop-types'
+import { appStates } from '../../../constants/states'
+import { GETREPORT, LOADING } from '../../../constants/content'
+import './InputButton.scss'
+import cls from 'classnames'
 
 function InputButton(props) {
-  const loadingStatus = props.getReportStatus === appStates.LOADING; 
-  const inactiveStatus = props.getReportStatus === appStates.INACTIVE; 
+  const {getReportStatus, handleGetReportClick } = props
+  const loadingStatus = getReportStatus === appStates.LOADING
+  const inactiveStatus = getReportStatus === appStates.INACTIVE
   const getButtonClasses = cls({
     'inputbutton__wrapper': true,
     'inputbutton__wrapper--inactive': inactiveStatus,
     'inputbutton__wrapper--loading': loadingStatus,
   })
-  
   return (
     <button 
-      onClick={props.handleGetReportClick} 
+      onClick={handleGetReportClick} 
       disabled={loadingStatus}
-      className={getButtonClasses}>
-        {inactiveStatus && 'Get report'}
-        {loadingStatus && 'Loading'}
+      className={getButtonClasses}
+    >   
+      {inactiveStatus && GETREPORT}
+      {loadingStatus && LOADING}
     </button>
-  );
+  )
 }
 
-export default InputButton;
+InputButton.propTypes = {
+  getReportStatus: PropTypes.string.isRequired,
+  handleGetReportClick: PropTypes.func.isRequired
+}
+
+InputButton.defaultProps = {
+  getReportStatus: appStates.INACTIVE,
+  handleGetReportClick: () => {}
+}
+
+export default InputButton

@@ -3,10 +3,8 @@ import './ResultsTop.scss';
 
 function ResultsTop() {
   return (
-    <div className='resultstop__wrapper'>
-    
-    </div>
-  );
+    <div className='resultstop__wrapper'></div>
+  )
 }
 
-export default ResultsTop;
+export default ResultsTop

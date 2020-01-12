@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match the snapshot 1`] = `
+"<label htmlFor=\\"urlinput\\" className=\\"urlinput\\">
+  <input autoComplete=\\"off\\" type=\\"url\\" id=\\"urlinput\\" placeholder=\\" \\" />
+  <span className=\\"label\\">
+    Enter your website url
+  </span>
+  <span className=\\"border\\" />
+</label>"
+`;

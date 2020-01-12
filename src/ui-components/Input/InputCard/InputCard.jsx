@@ -1,25 +1,36 @@
-import React from 'react';
-import InputUrl from '../InputUrl/InputUrl';
-import InputButton from '../InputButton/InputButton';
-import Spinner from '../Spinner/Spinner';
-import WebOptimize from '../../svgs/WebOptimize';
-import { appTitle } from '../../Constants';
-import './InputCard.scss';
+import React from 'react'
+import PropTypes from 'prop-types'
+import InputUrl from '../InputUrl/InputUrl'
+import InputButton from '../InputButton/InputButton'
+import Spinner from '../Spinner/Spinner'
+import WebOptimize from '../../svgs/WebOptimize'
+import { APPTITLE } from '../../../constants/content'
+import { appStates } from '../../../constants/states'
+import './InputCard.scss'
 
 function InputCard(props) {
+  const { getReportStatus } = props
   return (
     <div className='inputcard__wrapper' >
       <div className='inputcard__sub-wrapper'>
-        <h1>{appTitle}</h1>
-          <InputUrl />
+        <h1>{APPTITLE}</h1>
+        <InputUrl />
         <div className='inputcard__btn-wrapper'>
           <InputButton {...props} />
-          <Spinner getReportStatus={props.getReportStatus} />
+          <Spinner getReportStatus={getReportStatus} />
         </div>
       </div>
-      <WebOptimize getReportStatus={props.getReportStatus} />
+      <WebOptimize getReportStatus={getReportStatus} />
     </div>
-  );
+  )
 }
 
-export default InputCard;
+InputCard.propTypes = {
+  getReportStatus: PropTypes.string.isRequired
+}
+
+InputCard.defaultProps = {
+  getReportStatus: appStates.INACTIVE
+}
+
+export default InputCard

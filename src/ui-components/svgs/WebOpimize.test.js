@@ -1,9 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import App from './App'
-import './App.scss'
+import WebOptimize from './WebOptimize'
 
 it('Should match the snapshot', () => {
-  const wrapper = shallow(<App />).debug()
+  const wrapper = shallow(<WebOptimize />).debug()
   expect(wrapper).toMatchSnapshot()
 })

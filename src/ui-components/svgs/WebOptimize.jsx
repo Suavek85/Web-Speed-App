@@ -1,18 +1,20 @@
-import React from "react";
-import { useSpring, animated } from 'react-spring';
-import { appStates } from '../States'
-import './WebOptimize.scss';
+import React from "react"
+import PropTypes from 'prop-types'
+import { useSpring, animated } from 'react-spring'
+import { appStates } from '../../constants/states'
+import './WebOptimize.scss'
 
 function WebOptimize(props) {
-
+  const { getReportStatus } = props
   const customInactive = { mass: 25, tension: 25, friction: 25 }
   const customLoading = { mass: 1, tension: 170, friction: 26 }
-  const loadingStatus = props.getReportStatus === appStates.LOADING; 
-  const getConfig = () => loadingStatus? customLoading : customInactive;
+  const loadingStatus = getReportStatus === appStates.LOADING
+  const getConfig = () => loadingStatus? customLoading : customInactive
   
   const indicatorProps = useSpring({
     from:{ transform: 'rotate(-65deg)', transformOrigin: 'center' },
     to: async next => {
+      // eslint-disable-next-line no-constant-condition
       while (true) {
         await next({ transform: 'rotate(-155deg)', config: getConfig() } )
         await next({ transform: 'rotate(0deg)', config: getConfig() })
@@ -26,6 +28,7 @@ function WebOptimize(props) {
   const colorProps = useSpring({
     from:{ fill: "#FFFFFF" },
     to: async next => {
+      // eslint-disable-next-line no-constant-condition
       while (true) {
         await next({ fill: "#91E0E8" })
         await next({ fill: "#5DC1D8" })
@@ -37,6 +40,7 @@ function WebOptimize(props) {
   const colorPropsBlue = useSpring({
     from:{ fill: "#91E0E8" },
     to: async next => {
+      // eslint-disable-next-line no-constant-condition
       while (true) {
         await next({ fill: "#5DC1D8" })
         await next({ fill: "#FFFFFF" })
@@ -48,6 +52,7 @@ function WebOptimize(props) {
   const colorPropsDarkBlue = useSpring({
     from:{ fill: "#5DC1D8" },
     to: async next => {
+      // eslint-disable-next-line no-constant-condition
       while (true) {
         await next({ fill: "#FFFFFF" })
         await next({ fill: "#91E0E8" })
@@ -172,13 +177,13 @@ function WebOptimize(props) {
           />
         </g>
         <animated.g style={indicatorProps} >
-        <path
-          style={{ fill: "#FE3745" }}
-          d="M226.123,274.934c-6.308-13.391-0.546-29.419,12.847-35.728c0.736-0.346,1.494-0.661,2.318-0.96
+          <path
+            style={{ fill: "#FE3745" }}
+            d="M226.123,274.934c-6.308-13.391-0.546-29.419,12.847-35.728c0.736-0.346,1.494-0.661,2.318-0.96
 	c0.057-0.02,0.11-0.037,0.166-0.05l132.179-34.823c0.893-0.235,1.818,0.2,2.213,1.034c0.391,0.832,0.135,1.829-0.613,2.363
 	l-111.022,79.738c-0.047,0.035-0.094,0.066-0.145,0.095c-0.758,0.446-1.484,0.83-2.219,1.178
 	C248.459,294.09,232.433,288.328,226.123,274.934z"
-        />
+          />
           <path
             style={{ fill: "#B7092B" }}
             d="M238.97,247.049c0.736-0.346,1.494-0.661,2.318-0.96c0.057-0.02,0.11-0.037,0.166-0.05
@@ -221,8 +226,16 @@ function WebOptimize(props) {
         
       </svg>
     </div>
-  );
+  )
 }
 
-export default WebOptimize;
+WebOptimize.propTypes = {
+  getReportStatus: PropTypes.string.isRequired,
+}
+
+WebOptimize.defaultProps = {
+  getReportStatus: appStates.INACTIVE,
+}
+
+export default WebOptimize
 
