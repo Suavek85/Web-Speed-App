@@ -8,10 +8,10 @@ exports[`Should match the snapshot 1`] = `
     </h1>
     <InputCard />
     <div className=\\"inputcard__btn-wrapper\\">
-      <InputButton getReportStatus=\\"INACTIVE\\" handleGetReportClick={[Function: handleGetReportClick]} />
-      <Spinner getReportStatus=\\"INACTIVE\\" />
+      <InputButton />
+      <Spinner />
     </div>
   </div>
-  <WebOptimize getReportStatus=\\"INACTIVE\\" />
+  <WebOptimize />
 </div>"
 `;

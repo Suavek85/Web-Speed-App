@@ -11,5 +11,5 @@ stories.addDecorator(withKnobs)
 stories.add('Spinner', () => {
   const groupId = 'Props'
   const statusesKnob = select('Spinner states', appStates, Object.values(appStates)[0], groupId)
-  return <Spinner getReportStatus={statusesKnob} />
+  return <Spinner getAppState={statusesKnob} />
 })

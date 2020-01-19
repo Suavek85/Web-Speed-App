@@ -12,5 +12,5 @@ stories.addDecorator(withKnobs)
 stories.add('Input Button', () => {
   const groupId = 'Props'
   const statusesKnob = select('Button states', appStates, Object.values(appStates)[0], groupId)
-  return <InputButton getReportStatus={statusesKnob} />
+  return <InputButton getAppState={statusesKnob} />
 })

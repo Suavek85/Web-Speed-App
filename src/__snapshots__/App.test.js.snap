@@ -2,7 +2,7 @@
 
 exports[`Should match the snapshot 1`] = `
 "<div className=\\"app__wrapper\\">
-  <InputCard getReportStatus=\\"INACTIVE\\" handleGetReportClick={[Function: handleGetReportClick]} />
+  <InputCard />
   <Results />
 </div>"
 `;

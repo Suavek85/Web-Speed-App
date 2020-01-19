@@ -1,18 +1,12 @@
-import React, { useState } from 'react'
+import React from 'react'
 import InputCard from '../src/ui-components/Input/InputCard/InputCard'
 import Results from '../src/ui-components/Results/Results'
-import { appStates } from './constants/states'
 import './App.scss'
 
 function App() {
-  const [getReportStatus, setGetReportStatus] = useState(appStates.INACTIVE)
-  const handleGetReportClick = () => { setGetReportStatus(appStates.LOADING) }
   return (
     <div className='app__wrapper'>
-      <InputCard 
-        getReportStatus={getReportStatus} 
-        handleGetReportClick={handleGetReportClick} 
-      />
+      <InputCard />
       <Results />
     </div>
   )

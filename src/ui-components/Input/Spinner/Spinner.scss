@@ -1,4 +1,6 @@
 
+@import "../../../scss/styles.scss";
+
 /* CSS SPINNERS */
   
   @keyframes rotating {
@@ -21,7 +23,7 @@
     left: -3%;
     width: 46px;
     height: 46px;
-    border-top: 3px solid #F76C6C;
+    border-top: 3px solid $color-warning-loading;
     border-radius: 50%;
     border-right: 4px solid transparent;
     animation: rotating 2s linear infinite;

@@ -1,14 +1,16 @@
 import React from "react"
-import PropTypes from 'prop-types'
+import { useSelector } from "react-redux"
 import { useSpring, animated } from 'react-spring'
+
+//INTERNAL
 import { appStates } from '../../constants/states'
 import './WebOptimize.scss'
 
-function WebOptimize(props) {
-  const { getReportStatus } = props
+function WebOptimize() {
+  const getAppState = useSelector(state => state.getAppState)
   const customInactive = { mass: 25, tension: 25, friction: 25 }
   const customLoading = { mass: 1, tension: 170, friction: 26 }
-  const loadingStatus = getReportStatus === appStates.LOADING
+  const loadingStatus = getAppState === appStates.LOADING
   const getConfig = () => loadingStatus? customLoading : customInactive
   
   const indicatorProps = useSpring({
@@ -227,14 +229,6 @@ function WebOptimize(props) {
       </svg>
     </div>
   )
-}
-
-WebOptimize.propTypes = {
-  getReportStatus: PropTypes.string.isRequired,
-}
-
-WebOptimize.defaultProps = {
-  getReportStatus: appStates.INACTIVE,
 }
 
 export default WebOptimize
