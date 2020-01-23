@@ -6,13 +6,21 @@ import cls from 'classnames'
 //INTERNAL
 import { appStates } from '../../../constants/states'
 import { btnsContent } from '../../../constants/content'
-import './InputButton.scss'
+import firebase from './../../../firestore'
+import './InputButton.scss'  
 
 function InputButton() {
+  //FETCHING API KEY FROM FIRESTORE DB
+  let key = ''
+  const db = firebase.firestore()
+  const docRef = db.collection("key").doc("maAkzowoP49Eu5OKNQV7")
+  docRef.get().then(function(doc) {
+    if (doc.exists) key = doc.data().keyid
+  })
+
   //FETCHING API
   const [data, setData] = useState('placeholder')
   const inputUrl =  `https://www.weszlo.com`
-  const key = `AIzaSyD8Ez5Z6p41SfoKnK_nUHAV5PZPtqKkDag`
   const url = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${inputUrl}&key=${key}`
   async function makeGetRequest() {
     let res = await axios.get(url)
