@@ -1,10 +1,9 @@
 import React from 'react'
 import InputUrl from '../InputUrl/InputUrl'
-import InputButton from '../InputButton/InputButton'
-import Spinner from '../Spinner/Spinner'
-import WebOptimize from '../../svgs/WebOptimize'
+import InputButtonWrapper from '../InputButton/InputButtonWrapper'
+import SpinnerWrapper from '../Spinner/SpinnerWrapper'
+import WebOptimizeWrapper from '../../svgs/WebOptimizeWrapper'
 import { APPTITLE } from '../../../constants/content'
-import { appStates } from '../../../constants/states'
 import './InputCard.scss'
 
 function InputCard() {
@@ -14,11 +13,11 @@ function InputCard() {
         <h1>{APPTITLE}</h1>
         <InputUrl />
         <div className='inputcard__btn-wrapper'>
-          <InputButton />
-          <Spinner />
+          <InputButtonWrapper />
+          <SpinnerWrapper />
         </div>
       </div>
-      <WebOptimize />
+      <WebOptimizeWrapper />
     </div>
   )
 }

@@ -1,3 +1,9 @@
+# Web Speed App
+
+Work In Progress.
+
+React.js app using Hooks, Redux.
+
 
 ## Available Scripts
 

@@ -1,17 +1,15 @@
 import React from "react"
-import { useSelector } from "react-redux"
+import PropTypes from 'prop-types'
 import { useSpring, animated } from 'react-spring'
 
 //INTERNAL
-import { appStates } from '../../constants/states'
-import './WebOptimize.scss'
+import './WebOptimizeUI.scss'
 
-function WebOptimize() {
-  const getAppState = useSelector(state => state.getAppState)
+function WebOptimizeUI(props) {
+
   const customInactive = { mass: 25, tension: 25, friction: 25 }
   const customLoading = { mass: 1, tension: 170, friction: 26 }
-  const loadingStatus = getAppState === appStates.LOADING
-  const getConfig = () => loadingStatus? customLoading : customInactive
+  const getConfig = () => props.loadingStatus? customLoading : customInactive
   
   const indicatorProps = useSpring({
     from:{ transform: 'rotate(-65deg)', transformOrigin: 'center' },
@@ -231,5 +229,9 @@ function WebOptimize() {
   )
 }
 
-export default WebOptimize
+WebOptimizeUI.propTypes = {
+  loadingStatus: PropTypes.bool
+}
+
+export default WebOptimizeUI
 
