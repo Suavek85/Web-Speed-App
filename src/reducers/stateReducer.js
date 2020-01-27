@@ -1,6 +1,6 @@
-import { appStates } from './constants/states'
+import { appStates } from '../constants/states'
 
-export const reducer = (state = { getAppState: 'INACTIVE' }, action) => {
+export const stateReducer = (state = { getAppState: 'INACTIVE' }, action) => {
   switch (action.type) {
   case "INACTIVE":
     return {
@@ -20,4 +20,6 @@ export const reducer = (state = { getAppState: 'INACTIVE' }, action) => {
     }
   }
 }
+
+
      

@@ -13,9 +13,7 @@ function InputButtonWrapper() {
   let key = ''
   const db = firebase.firestore()
   const docRef = db.collection("key").doc("maAkzowoP49Eu5OKNQV7")
-  docRef.get().then(function(doc) {
-    if (doc.exists) key = doc.data().keyid
-  })
+  docRef.get().then(doc => { if(doc.exists) key = doc.data().keyid })
  
   //FETCHING API
   const [data, setData] = useState('placeholder')
@@ -27,13 +25,12 @@ function InputButtonWrapper() {
     setData(allData.captchaResult)
   }
 
-  //ONCLICK
   const dispatch = useDispatch()
   const handleGetReportClick = () => { 
     dispatch({ type: appStates.LOADING })
     makeGetRequest() 
   }
-  const getAppState = useSelector(state => state.getAppState)
+  const getAppState = useSelector(state => state.stateReducer.getAppState)
 
   return (
     <InputButtonUI 

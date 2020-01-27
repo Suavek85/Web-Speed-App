@@ -6,7 +6,7 @@ import WebOptimizeUI from './WebOptimizeUI'
 import { appStates } from '../../constants/states'
 
 function WebOptimizeWrapper() {
-  const getAppState = useSelector(state => state.getAppState)
+  const getAppState = useSelector(state => state.stateReducer.getAppState)
   const loadingStatus = getAppState === appStates.LOADING
   
   return <WebOptimizeUI 

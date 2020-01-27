@@ -1,13 +1,21 @@
 import React from 'react'
 import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
-import { createStore } from 'redux'
+import { createStore, combineReducers } from 'redux'
 import './index.css'
 import App from './App'
 import * as serviceWorker from './serviceWorker'
-import { reducer } from "./reducers"
+import { stateReducer} from "./reducers/stateReducer"
+import { toggleReducer } from "./reducers/toggleReducer"
 
-const store = createStore(reducer, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__() )
+const rootReducer = combineReducers({
+  stateReducer,
+  toggleReducer
+})
+
+const store = createStore(rootReducer)
+
+console.log(store.getState())
 
 ReactDOM.render(
   <Provider store={store}>

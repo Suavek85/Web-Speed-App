@@ -1,9 +1,9 @@
 
 .navigation__wrapper {
     position: absolute;
-    display: none;
+    display: block;
     top:0;
-    left:0;
+    left:-300px;
     width: 300px;
     height: 100vh;
     background-color: white;

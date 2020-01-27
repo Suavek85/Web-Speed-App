@@ -3,6 +3,7 @@ import InputUrl from '../InputUrl/InputUrl'
 import InputButtonWrapper from '../InputButton/InputButtonWrapper'
 import SpinnerWrapper from '../Spinner/SpinnerWrapper'
 import WebOptimizeWrapper from '../../svgs/WebOptimizeWrapper'
+import OpenButton from '../../Navigation/Buttons/OpenButton'
 import { APPTITLE } from '../../../constants/content'
 import './InputCard.scss'
 
@@ -10,7 +11,9 @@ function InputCard() {
   return (
     <div className='inputcard__wrapper' >
       <div className='inputcard__sub-wrapper'>
+        
         <h1>{APPTITLE}</h1>
+        <OpenButton style={{marginLeft: '300px'}}/>
         <InputUrl />
         <div className='inputcard__btn-wrapper'>
           <InputButtonWrapper />

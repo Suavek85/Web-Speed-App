@@ -4,7 +4,7 @@ import { useSelector } from "react-redux"
 import SpinnerUI from './SpinnerUI'
 
 function SpinnerWrapper() {
-  const getAppState = useSelector(state => state.getAppState)
+  const getAppState = useSelector(state => state.stateReducer.getAppState)
   return <SpinnerUI getAppState={getAppState} />
 }
 
