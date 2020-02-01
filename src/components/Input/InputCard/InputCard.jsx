@@ -11,9 +11,10 @@ function InputCard() {
   return (
     <div className='inputcard__wrapper' >
       <div className='inputcard__sub-wrapper'>
-        
-        <h1>{APPTITLE}</h1>
-        <OpenButton style={{marginLeft: '300px'}}/>
+        <div className='inputcard__header'>
+          <OpenButton />
+          <h1>{APPTITLE}</h1>
+        </div>
         <InputUrl />
         <div className='inputcard__btn-wrapper'>
           <InputButtonWrapper />
