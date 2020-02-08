@@ -3,6 +3,6 @@ import { shallow } from 'enzyme'
 import InputUrl from './InputUrl'
 
 it('Should match the snapshot', () => {
-  const wrapper = shallow(<InputUrl />).debug()
+  const wrapper = shallow(<InputUrl />)
   expect(wrapper).toMatchSnapshot()
 })

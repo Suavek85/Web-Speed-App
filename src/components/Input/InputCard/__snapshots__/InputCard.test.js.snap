@@ -1,17 +1,28 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should match the snapshot 1`] = `
-"<div className=\\"inputcard__wrapper\\">
-  <div className=\\"inputcard__sub-wrapper\\">
-    <h1>
-      Web Speed App
-    </h1>
+<div
+  className="inputcard__wrapper"
+>
+  <div
+    className="inputcard__sub-wrapper"
+  >
+    <div
+      className="inputcard__header"
+    >
+      <OpenButton />
+      <h1>
+        Web Speed App
+      </h1>
+    </div>
     <InputCard />
-    <div className=\\"inputcard__btn-wrapper\\">
+    <div
+      className="inputcard__btn-wrapper"
+    >
       <InputButtonWrapper />
       <SpinnerWrapper />
     </div>
   </div>
   <WebOptimizeWrapper />
-</div>"
+</div>
 `;
