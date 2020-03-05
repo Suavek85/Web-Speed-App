@@ -6,6 +6,5 @@ exports[`Should match the snapshot 1`] = `
     className="inputbutton__wrapper"
     disabled={false}
   />
-  <span />
 </Fragment>
 `;

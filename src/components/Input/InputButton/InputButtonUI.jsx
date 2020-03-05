@@ -9,7 +9,7 @@ import './InputButtonUI.scss'
 
 function InputButtonUI(props) {
  
-  const { data, getAppState, handleGetReportClick } = props
+  const { getAppState, handleGetReportClick } = props
 
   //BUTTON FORMATTING - CLASSES AND CONTENT
   const isStatus = state => getAppState === state
@@ -36,7 +36,6 @@ function InputButtonUI(props) {
       >   
         {getContentFromStatus(getAppState)}
       </button>
-      <span>{data}</span>
     </>
   )
 }

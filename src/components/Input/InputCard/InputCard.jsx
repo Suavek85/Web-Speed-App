@@ -1,4 +1,5 @@
 import React from 'react'
+
 import InputUrl from '../InputUrl/InputUrl'
 import InputButtonWrapper from '../InputButton/InputButtonWrapper'
 import SpinnerWrapper from '../Spinner/SpinnerWrapper'
@@ -8,6 +9,7 @@ import { APPTITLE } from '../../../constants/content'
 import './InputCard.scss'
 
 function InputCard() {
+
   return (
     <div className='inputcard__wrapper' >
       <div className='inputcard__sub-wrapper'>
