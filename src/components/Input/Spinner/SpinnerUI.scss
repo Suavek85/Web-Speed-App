@@ -29,3 +29,7 @@
     animation: rotating 2s linear infinite;
     filter: blur(1px);
   }
+
+  :export {
+    block: spinner;
+  }

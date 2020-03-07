@@ -28,3 +28,9 @@
     color:grey;
     cursor: pointer;
 }
+
+:export {
+    blockBackground: navigation__background;
+    blockWrapper: navigation__wrapper;
+    blockClose: navigation__close;
+}

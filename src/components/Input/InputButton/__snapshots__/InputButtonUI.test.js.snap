@@ -3,7 +3,7 @@
 exports[`Should match the snapshot 1`] = `
 <Fragment>
   <button
-    className="inputbutton__wrapper"
+    className="block"
     disabled={false}
   />
 </Fragment>

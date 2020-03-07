@@ -1,4 +1,4 @@
-.urlinput {
+.url-input {
   display: flex;
   position: relative;
   width: 100%;
@@ -6,7 +6,8 @@
   margin-top: 30px;
   margin-bottom: 30px;
 }
-.urlinput .label {
+
+ .url-label {
   position: absolute;
   top: -5px;
   left: 0;
@@ -16,7 +17,8 @@
   transform-origin: 0 0;
   transition: all 0.2s ease;
 }
-.urlinput .border {
+
+ .url-border {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -27,7 +29,7 @@
   transform-origin: 0 0;
   transition: all 0.15s ease;
 }
-.urlinput input {
+ input {
   -webkit-appearance: none;
   width: 100%;
   border: 0;
@@ -43,17 +45,25 @@
   transition: all 0.15s ease;
 }
 
-.urlinput input:not(:placeholder-shown) + span {
+input:not(:placeholder-shown) + span {
   color: #F76C6C;
   transform: translateY(-26px) scale(0.75);
 }
-.urlinput input:focus {
+
+input:focus {
   background: none;
   outline: none;
 }
-.urlinput input:focus + span {
+
+input:focus + span {
   transform: translateY(-26px) scale(0.75);
 }
-.urlinput input:focus + span + .border {
+input:focus + span + .border {
   transform: scaleX(1);
+}
+
+:export {
+  block: url-input;
+  blockLabel: url-label;
+  blockBorder: url-border;
 }

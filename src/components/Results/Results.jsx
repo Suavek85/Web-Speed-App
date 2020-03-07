@@ -1,15 +1,13 @@
 import React from 'react'
-import './Results.scss'
+import styles from './Results.scss'
 import ResultsTop from './ResultsTop/ResultsTop'
 import ResultsBottom from './ResultsBottom/ResultsBottom'
 
-function Results() {
+export default function Results() {
   return (
-    <div className='results__wrapper'>
+    <div className={ styles.block } >
       <ResultsTop />
       <ResultsBottom />
     </div>
   )
 }
-
-export default Results

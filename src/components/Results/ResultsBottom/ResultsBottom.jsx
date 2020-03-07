@@ -1,16 +1,14 @@
 import React from 'react'
 
 import LightBulbUI from '../../svgs/LightBulb/LightBulbUI'
-import './ResultsBottom.scss'
+import styles from './ResultsBottom.scss'
 
-function ResultsBottom() {
+export default function ResultsBottom() {
   return (
-    <div className='resultsbottom__wrapper'>
-      <div className='resultsbottom__row'>
+    <div className={ styles.blockWrapper } >
+      <div className={ styles.blockRow }>
         <LightBulbUI />
       </div>
     </div>
   )
 }
-
-export default ResultsBottom

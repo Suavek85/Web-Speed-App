@@ -25,3 +25,11 @@
       background-color: $color-green-success;
     }
 }
+
+:export {
+  block: inputbutton__wrapper;
+  blockInactive: inputbutton__wrapper--inactive;
+  blockLoading: inputbutton__wrapper--loading;
+  blockError: inputbutton__wrapper--error;
+  blockSuccess: inputbutton__wrapper--success;
+}

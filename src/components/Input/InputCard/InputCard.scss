@@ -25,3 +25,10 @@ h1 { color: white; }
     display: flex;
     align-items: center;
 }
+
+:export {
+    block: inputcard__wrapper;
+    btnWrapper: inputcard__btn-wrapper;
+    subWrapper: inputcard__sub-wrapper;
+    headerWrapper: inputcard__header;
+  }

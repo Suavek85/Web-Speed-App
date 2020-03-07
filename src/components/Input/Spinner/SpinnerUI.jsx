@@ -1,17 +1,14 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 
-//INTERNAL
 import { appStates } from '../../../constants/states'
-import './SpinnerUI.scss'
+import styles from './SpinnerUI.scss'
 
-function SpinnerUI(props) {
+export default function SpinnerUI(props) {
   const loadingStatus = props.getAppState === appStates.LOADING
-  return loadingStatus && <div className="spinner" />
+  return loadingStatus && <div className={styles.block} />
 }
 
 SpinnerUI.propTypes = {
   loadingStatus: PropTypes.boolean
 }
-
-export default SpinnerUI

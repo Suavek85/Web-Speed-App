@@ -4,3 +4,7 @@
     height: 100vh;
     flex-direction: column;
 }
+
+:export {
+    block: results__wrapper;
+}

@@ -1,13 +1,12 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import cls from 'classnames'
+import classNames from 'classnames/bind'
 
-//INTERNAL
 import { appStates } from '../../../constants/states'
 import { btnsContent } from '../../../constants/content'
-import './InputButtonUI.scss'  
+import styles from './InputButtonUI.scss'  
 
-function InputButtonUI(props) {
+export default function InputButtonUI(props) {
  
   const { getAppState, handleGetReportClick } = props
 
@@ -19,12 +18,14 @@ function InputButtonUI(props) {
     return Object.values(btnsContent)[contentIndex]
   }
 
-  const getButtonClasses = cls({
-    'inputbutton__wrapper': true,
-    'inputbutton__wrapper--inactive': isStatus(appStates.INACTIVE),
-    'inputbutton__wrapper--loading': isStatus(appStates.LOADING),
-    'inputbutton__wrapper--error': isStatus(appStates.ERROR),
-    'inputbutton__wrapper--success': isStatus(appStates.SUCCESS),
+  let cx = classNames.bind(styles)
+
+  let getButtonClasses = cx({
+    block: true,
+    blockInactive: isStatus(appStates.INACTIVE),
+    blockLoading: isStatus(appStates.LOADING),
+    blockError: isStatus(appStates.ERROR),
+    blockSuccess: isStatus(appStates.SUCCESS),
   })
 
   return (
@@ -45,5 +46,3 @@ InputButtonUI.propTypes = {
   getAppState: PropTypes.string,
   handleGetReportClick: PropTypes.func
 }
-
-export default InputButtonUI

@@ -2,10 +2,10 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useSelector, useDispatch } from "react-redux"
 
-import './Navigation.scss'
+import styles from './Navigation.scss'
 import { navigationStates } from '../../constants/navigationStates'
 
-function Navigation() {
+export default function Navigation() {
 
   //using useSpring instead of useTransition becouse of react-spring beta version bug
   const collapseAnimation = useSpring({ 
@@ -54,18 +54,17 @@ function Navigation() {
     <>
       <animated.div 
         style={getBackgroundAnimation(getToggleState)} 
-        className='navigation__background'>
+        className={ styles.blockBackground } >
       </animated.div>
       <animated.div 
         style={getAnimation(getToggleState)} 
-        className='navigation__wrapper' 
+        className={ styles.blockWrapper } 
       >
         <div 
-          onClick={handleCollapseMenu} 
-          className='navigation__close'>x</div>
+          onClick={ handleCollapseMenu } 
+          className={ styles.blockClose } >
+            x
+        </div>
       </animated.div>
     </>
   )}
-
-
-export default Navigation

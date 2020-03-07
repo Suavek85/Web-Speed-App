@@ -3,7 +3,7 @@ import ReactDOM from 'react-dom'
 import { Provider } from 'react-redux'
 import { createStore, combineReducers } from 'redux'
 import './index.css'
-import App from './App'
+import App from './App.jsx'
 import * as serviceWorker from './serviceWorker'
 import { stateReducer} from "./reducers/stateReducer"
 import { toggleReducer } from "./reducers/toggleReducer"

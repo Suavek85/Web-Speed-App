@@ -2,18 +2,18 @@ import React from 'react'
 import { useDispatch } from "react-redux"
 
 import { navigationStates } from '../../../constants/navigationStates'
-import './OpenButton.scss'
+import styles from './OpenButton.scss'
 
-function OpenButton() {
+export default function OpenButton() {
+
   const dispatch = useDispatch()
   const handleExpandMenu = () => dispatch({ type: navigationStates.EXPAND })
+
   return (
-    <div className='button__wrapper' onClick={handleExpandMenu}>
-      <div className='button__bar'></div>
-      <div className='button__bar'></div>
-      <div className='button__bar'></div>
+    <div className={ styles.blockWrapper } onClick={ handleExpandMenu }>
+      <div className={ styles.blockBar }></div>
+      <div className={ styles.blockBar }></div>
+      <div className={ styles.blockBar }></div>
     </div>
   )
 }
-
-export default OpenButton

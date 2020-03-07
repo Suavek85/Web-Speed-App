@@ -2,11 +2,11 @@ import React from 'react'
 import InputCard from '../src/components/Input/InputCard/InputCard'
 import Results from '../src/components/Results/Results'
 import Navigation from '../src/components/Navigation/Navigation'
-import './App.scss'
+import styles from './App.scss'
 
-function App() {
+export default function App() {
   return (
-    <div className='app__wrapper'>
+    <div className={styles.block}>
       <Navigation />
       <InputCard />
       <Results />
@@ -14,4 +14,3 @@ function App() {
   )
 }
 
-export default App
