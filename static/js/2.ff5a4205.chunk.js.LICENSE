@@ -47,12 +47,6 @@ and limitations under the License.
  * limitations under the License.
  */
 
-/*!
-  Copyright (c) 2017 Jed Watson.
-  Licensed under the MIT License (MIT), see
-  http://jedwatson.github.io/classnames
-*/
-
 /**
  * @license
  * Copyright 2018 Google Inc.
@@ -69,6 +63,12 @@ and limitations under the License.
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
+
+/*!
+  Copyright (c) 2017 Jed Watson.
+  Licensed under the MIT License (MIT), see
+  http://jedwatson.github.io/classnames
+*/
 
 /*
 object-assign
