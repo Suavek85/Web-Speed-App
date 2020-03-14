@@ -6,7 +6,7 @@ import axios from 'axios'
 import InputButtonUI from './InputButtonUI'
 import { appStates } from '../../../constants/states'
 import firebase from './../../../firestore'
-import getData from '../../../actions/dataActions.js'
+import getState from '../../../actions/stateActions.js'
 
 function InputButtonWrapper() {
 
@@ -21,17 +21,23 @@ function InputButtonWrapper() {
   //useSelector to take url from store
 
   const getUrlState = useSelector(state => state.urlReducer.getUrl)
-  const inputUrl =  getUrlState
+  const inputUrl = getUrlState
 
   const url = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${inputUrl}&key=${key}`
 
   const dispatch = useDispatch()
-
+ 
   async function makeGetRequest() {
-    let res = await axios.get(url)
-    let allData = res.data
-    console.log(allData)
-    dispatch(getData(allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category))
+    try {
+      let res = await axios.get(url)
+      let allData = res.data      
+      dispatch(getState(allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category))
+    } catch(err) {
+      dispatch({ type: appStates.ERROR })
+      setTimeout(function () {
+        dispatch({ type: appStates.INACTIVE })
+      }, 4000)
+    }
   }
 
   const handleGetReportClick = () => { 

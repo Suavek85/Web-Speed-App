@@ -1,6 +1,6 @@
 import React from 'react'
 
-import InputUrl from '../InputUrl/InputUrl'
+import InputUrl from '../InputUrl'
 import InputButtonWrapper from '../InputButton/InputButtonWrapper'
 import SpinnerWrapper from '../Spinner/SpinnerWrapper'
 import WebOptimizeWrapper from '../../svgs/WebOptimizeWrapper'

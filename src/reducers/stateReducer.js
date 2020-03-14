@@ -1,22 +1,31 @@
 import { appStates } from '../constants/states'
 
-export const stateReducer = (state = { getAppState: 'INACTIVE' }, action) => {
+export const stateReducer = (state = { getAppState: '?' }, action) => {
   switch (action.type) {
   case "INACTIVE":
     return {
-      getAppState: appStates.INACTIVE
+      getAppState: appStates.INACTIVE,
+      getData: '?'
     }
   case appStates.LOADING:
     return {
-      getAppState: appStates.LOADING
+      getAppState: appStates.LOADING,
+      getData: '?'
     }
   case "ERROR":
     return {
-      getAppState: appStates.ERROR
+      getAppState: appStates.ERROR,
+      getData: '?'
+    }
+  case "SUCCESS":
+    return {
+      getAppState: appStates.SUCCESS,
+      getData: action.payload
     }
   default:
     return {
-      getAppState: appStates.INACTIVE
+      getAppState: appStates.INACTIVE,
+      getData: '?'
     }
   }
 }

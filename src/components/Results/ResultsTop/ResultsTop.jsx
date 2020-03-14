@@ -7,7 +7,7 @@ import styles from './ResultsTop.scss'
 
 export default function ResultsTop() {
 
-  const getDataState = useSelector(state => state.dataReducer.getData)
+  const getDataState = useSelector(state => state.stateReducer.getData)
 
   return (
     <div className={ styles.blockWrapper } >

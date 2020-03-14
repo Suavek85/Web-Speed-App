@@ -7,13 +7,11 @@ import App from './App.jsx'
 import * as serviceWorker from './serviceWorker'
 import { stateReducer} from "./reducers/stateReducer"
 import { toggleReducer } from "./reducers/toggleReducer"
-import { dataReducer } from "./reducers/dataReducer"
 import { urlReducer } from "./reducers/urlReducer"
 
 const rootReducer = combineReducers({
   stateReducer,
   toggleReducer,
-  dataReducer,
   urlReducer
 })
 
