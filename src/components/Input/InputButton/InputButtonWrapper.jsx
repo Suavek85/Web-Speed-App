@@ -31,7 +31,12 @@ function InputButtonWrapper() {
     try {
       let res = await axios.get(url)
       let allData = res.data      
-      dispatch(getState(allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category))
+      console.log(allData)
+      dispatch(getState([
+        allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category, 
+        allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category
+        //allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category, 
+      ]))
     } catch(err) {
       dispatch({ type: appStates.ERROR })
       setTimeout(function () {

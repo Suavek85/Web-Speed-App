@@ -2,7 +2,7 @@ import React from 'react'
 import { useSelector } from "react-redux"
 
 import LightBulbUI from '../../svgs/LightBulb/LightBulbUI'
-import { FIRST_PAINT_HEADER, FIRST_PAINT_CONTENT, FIRST_PAINT_RESULT } from '../../../constants/content.js'
+import { FIRST_PAINT_HEADER, FIRST_PAINT_CONTENT, RESULT } from '../../../constants/content.js'
 import styles from './ResultsTop.scss'
 
 export default function ResultsTop() {
@@ -16,8 +16,8 @@ export default function ResultsTop() {
           <LightBulbUI />
         </h1>
         <p style={{color: 'lightgrey'}}>{ FIRST_PAINT_CONTENT }</p>
-        <p style={{color: 'ivory'}}>{ FIRST_PAINT_RESULT }
-          <span style={{color: 'ivory'}}>{ getDataState }</span>
+        <p style={{color: 'ivory'}}>{ RESULT }
+          <span style={{color: 'ivory'}}>{ getDataState[0]  }</span>
         </p>
       </div>
     </div>
