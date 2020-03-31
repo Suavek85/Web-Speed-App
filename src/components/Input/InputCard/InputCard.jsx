@@ -20,10 +20,12 @@ export default function InputCard() {
             <OpenButton />
             <h1>{APPTITLE}</h1>
           </div>
-          <InputUrl />
-          <div className={styles.btnWrapper}>
-            <InputButtonWrapper />
-            <SpinnerWrapper />
+          <div style={{display: 'flex', margin: '30px 0px'}}>
+            <InputUrl />
+            <div className={styles.btnWrapper}>
+              <InputButtonWrapper />
+              <SpinnerWrapper />
+            </div>
           </div>
         </div>     
       </div>

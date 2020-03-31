@@ -1,0 +1,60 @@
+@import '../../../scss/styles.scss';
+
+h1 {
+  padding: 0px 20px;
+}
+
+.lighthouse__wrapper {
+  margin-right: 40px;
+  margin-left: 20px;
+  margin-top: 10px;
+  border: $ws-lighthouse-border-light;
+  background-color: $color-lighthouse-background;
+}
+
+.lighthouse__header {
+  display: flex; 
+  height: 120px;
+  padding: 20px 40px;
+  border-bottom: $ws-lighthouse-border-light;
+}
+
+.lighthouse__content {
+  display: flex; 
+  flex-direction: column;
+  height: auto;
+}
+
+.lighthouse__tabs {
+  display: flex; 
+  width: 100%;
+  height: 44px;
+  background-color: $color-lighthouse-background-dark;
+}
+.lighthouse__tabsitem {
+  height: inherit;
+  background-color: $color-lighthouse-background-dark;
+  width: 100%;
+  text-align: center;
+  line-height: 44px;
+  cursor: pointer;
+  padding: 0px 5px;
+  font-size: 12px;
+}
+
+.lighthouse__tabsitem:not(:last-child) {
+  border-right: $ws-lighthouse-border-light;
+}
+
+.lighthouse__tabsitem:hover {
+  background-color: $color-top-background;
+  color: white;
+}
+
+:export {
+    blockWrapper: lighthouse__wrapper;
+    blockHeader: lighthouse__header;
+    blockContent: lighthouse__content;
+    blockTabs: lighthouse__tabs;
+    blockTabsItem: lighthouse__tabsitem;
+}

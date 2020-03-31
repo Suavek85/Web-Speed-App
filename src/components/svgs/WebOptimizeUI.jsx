@@ -74,7 +74,7 @@ function WebOptimizeUI(props) {
         style={{ enableBackground: "new 0 0 512 512" }}
         xmlSpace="preserve"
       >
-        <circle style={{ fill: "#02AF8E" }} cx="251.381" cy={267} r={245} />
+        <circle style={{ fill: "#445EA0" }} cx="251.381" cy={267} r={245} />
         <circle
           style={{ fill: "#FFFFFF" }}
           cx="250.411"
