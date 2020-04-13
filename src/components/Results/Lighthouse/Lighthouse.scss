@@ -25,6 +25,10 @@ h1 {
   height: auto;
 }
 
+.lighthouse__results {
+  padding-left: 20px;
+}
+
 .lighthouse__tabs {
   display: flex; 
   width: 100%;
@@ -48,6 +52,12 @@ h1 {
 
 .lighthouse__tabsitem:hover {
   background-color: $color-top-background;
+  opacity: .8;
+  color: white;
+}
+
+.lighthouse__active {
+  background-color: $color-top-background;
   color: white;
 }
 
@@ -55,6 +65,8 @@ h1 {
     blockWrapper: lighthouse__wrapper;
     blockHeader: lighthouse__header;
     blockContent: lighthouse__content;
+    blockResults: lighthouse__results;
     blockTabs: lighthouse__tabs;
     blockTabsItem: lighthouse__tabsitem;
+    blockActive: lighthouse__active;
 }

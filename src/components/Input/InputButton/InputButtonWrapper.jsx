@@ -34,8 +34,8 @@ function InputButtonWrapper() {
       console.log(allData)
       dispatch(getState([
         allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category, 
-        allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category
-        //allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category, 
+        allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category,
+        allData.lighthouseResult.audits['speed-index'] 
       ]))
     } catch(err) {
       dispatch({ type: appStates.ERROR })

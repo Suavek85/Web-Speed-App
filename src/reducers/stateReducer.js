@@ -1,21 +1,21 @@
 import { appStates } from '../constants/states'
 
-export const stateReducer = (state = { getAppState: ['?', '?'] }, action) => {
+export const stateReducer = (state = { getAppState: ['?', '?', {}] }, action) => {
   switch (action.type) {
   case "INACTIVE":
     return {
       getAppState: appStates.INACTIVE,
-      getData: ['?', '?']
+      getData: ['?', '?', {}]
     }
   case appStates.LOADING:
     return {
       getAppState: appStates.LOADING,
-      getData: ['?', '?']
+      getData: ['?', '?', {}]
     }
   case "ERROR":
     return {
       getAppState: appStates.ERROR,
-      getData: ['?', '?']
+      getData: ['?', '?', {}]
     }
   case "SUCCESS":
     return {
@@ -25,7 +25,7 @@ export const stateReducer = (state = { getAppState: ['?', '?'] }, action) => {
   default:
     return {
       getAppState: appStates.INACTIVE,
-      getData: ['?', '?']
+      getData: ['?', '?', {}]
     }
   }
 }
