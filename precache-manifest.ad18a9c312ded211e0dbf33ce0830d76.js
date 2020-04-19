@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "1ed26f420b50e2455c6acf6042766d14",
+    "revision": "0ce7b9a613f84f5138e7c96749aa7fe6",
     "url": "/Web-Speed-App/index.html"
   },
   {
-    "revision": "6600cb55a9bb1278ae79",
-    "url": "/Web-Speed-App/static/css/main.850ca68e.chunk.css"
+    "revision": "09a2abbc1bba16a89df6",
+    "url": "/Web-Speed-App/static/css/main.43562335.chunk.css"
   },
   {
     "revision": "dceef3a8e544e52c2ecc",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/Web-Speed-App/static/js/2.e316fc5a.chunk.js.LICENSE"
   },
   {
-    "revision": "6600cb55a9bb1278ae79",
-    "url": "/Web-Speed-App/static/js/main.955d88a5.chunk.js"
+    "revision": "09a2abbc1bba16a89df6",
+    "url": "/Web-Speed-App/static/js/main.63a5dd10.chunk.js"
   },
   {
     "revision": "a1cb17cb6d56e8c7780b",
