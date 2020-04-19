@@ -1,15 +1,15 @@
 import React from 'react'
-import InputCard from '../src/components/Input/InputCard'
-import Results from '../src/components/Results/Results'
+import PrimaryCard from '../src/components/Primary'
+import Side from '../src/components/Side/Side'
 import Navigation from '../src/components/Navigation/Navigation'
 import styles from './App.scss'
 
 export default function App() {
   return (
-    <div className={styles.block}>
+    <div className={ styles.block }>
       <Navigation />
-      <InputCard />
-      <Results />
+      <PrimaryCard />
+      <Side />
     </div>
   )
 }

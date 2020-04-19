@@ -3,9 +3,9 @@ import { useSelector } from "react-redux"
 
 import LightBulbUI from '../../svgs/LightBulb/LightBulbUI'
 import { FIRST_INPUT_DELAY_HEADER, FIRST_INPUT_DELAY_CONTENT, RESULT } from '../../../constants/content.js'
-import styles from './ResultsBottom.scss'
+import styles from './Bottom.scss'
 
-export default function ResultsBottom() {
+export default function Bottom() {
 
   const getDataState = useSelector(state => state.stateReducer.getData)
 

@@ -1,9 +1,9 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import InputUrl from './InputUrl'
+import InputUrlUI from './InputUrlUI'
 
 const stories = storiesOf('UI Components', module)
 
 stories.add('Input Url', () => {
-  return <InputUrl />
+  return <InputUrlUI />
 })

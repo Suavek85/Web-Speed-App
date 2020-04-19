@@ -2,7 +2,6 @@ import React from 'react'
 import { useSelector, useDispatch } from "react-redux"
 import axios from 'axios'
 
-//INTERNAL
 import InputButtonUI from './InputButtonUI'
 import { appStates } from '../../../constants/states'
 import firebase from './../../../firestore'
@@ -17,8 +16,6 @@ function InputButtonWrapper() {
   docRef.get().then(doc => { if(doc.exists) key = doc.data().keyid })
  
   //FETCHING API
-
-  //useSelector to take url from store
 
   const getUrlState = useSelector(state => state.urlReducer.getUrl)
   const inputUrl = getUrlState
@@ -35,7 +32,12 @@ function InputButtonWrapper() {
       dispatch(getState([
         allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category, 
         allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category,
-        allData.lighthouseResult.audits['speed-index'] 
+        allData.lighthouseResult.audits['speed-index'],
+        allData.lighthouseResult.audits['time-to-first-byte'],
+        allData.lighthouseResult.audits['total-byte-weight'],
+        allData.lighthouseResult.audits['interactive'],
+        allData.lighthouseResult.audits['uses-responsive-images'],
+        allData.lighthouseResult.audits['uses-text-compression'],
       ]))
     } catch(err) {
       dispatch({ type: appStates.ERROR })

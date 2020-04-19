@@ -27,6 +27,17 @@ h1 {
 
 .lighthouse__results {
   padding-left: 20px;
+  font-size: 13px;
+  > p:first-child {
+    padding-top: 15px;
+  }
+  > p {
+    padding-bottom: 15px;
+  }
+  > p > span {
+    font-weight: 600;
+    padding-right: 5px;
+  }
 }
 
 .lighthouse__tabs {

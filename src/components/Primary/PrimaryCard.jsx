@@ -1,16 +1,15 @@
 import React from 'react'
 
-import InputUrl from '../InputUrl'
-import InputButtonWrapper from '../InputButton/InputButtonWrapper'
-import SpinnerWrapper from '../Spinner/SpinnerWrapper'
-import WebOptimizeWrapper from '../../svgs/WebOptimizeWrapper'
-import OpenButton from '../../Navigation/Buttons/OpenButton'
-import Lighthouse from '../../Results/Lighthouse/Lighthouse'
-import { APPTITLE } from '../../../constants/content'
-import './InputCard.scss'
-import styles from './InputCard.scss'
+import InputUrlWrapper from './InputUrl/InputUrlWrapper'
+import InputButtonWrapper from './InputButton/InputButtonWrapper'
+import SpinnerWrapper from './Spinner/SpinnerWrapper'
+import OpenButton from '../Navigation/Buttons/OpenButton'
+import Lighthouse from './Lighthouse/Lighthouse'
+import { APPTITLE } from '../../constants/content'
+import './PrimaryCard.scss'
+import styles from './PrimaryCard.scss'
 
-export default function InputCard() {
+export default function PrimaryCard() {
 
   return (
     <div className={styles.block} >
@@ -21,7 +20,7 @@ export default function InputCard() {
             <h1>{APPTITLE}</h1>
           </div>
           <div style={{display: 'flex', margin: '30px 0px'}}>
-            <InputUrl />
+            <InputUrlWrapper />
             <div className={styles.btnWrapper}>
               <InputButtonWrapper />
               <SpinnerWrapper />
