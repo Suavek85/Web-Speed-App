@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/Web-Speed-App/static/css/main.43562335.chunk.css",
-    "main.js": "/Web-Speed-App/static/js/main.63a5dd10.chunk.js",
-    "main.js.map": "/Web-Speed-App/static/js/main.63a5dd10.chunk.js.map",
+    "main.js": "/Web-Speed-App/static/js/main.f3fec82a.chunk.js",
+    "main.js.map": "/Web-Speed-App/static/js/main.f3fec82a.chunk.js.map",
     "runtime-main.js": "/Web-Speed-App/static/js/runtime-main.a8832365.js",
     "runtime-main.js.map": "/Web-Speed-App/static/js/runtime-main.a8832365.js.map",
     "static/js/2.e316fc5a.chunk.js": "/Web-Speed-App/static/js/2.e316fc5a.chunk.js",
     "static/js/2.e316fc5a.chunk.js.map": "/Web-Speed-App/static/js/2.e316fc5a.chunk.js.map",
     "index.html": "/Web-Speed-App/index.html",
-    "precache-manifest.ad18a9c312ded211e0dbf33ce0830d76.js": "/Web-Speed-App/precache-manifest.ad18a9c312ded211e0dbf33ce0830d76.js",
+    "precache-manifest.24d20098a043cef84d5a8107293ccae4.js": "/Web-Speed-App/precache-manifest.24d20098a043cef84d5a8107293ccae4.js",
     "service-worker.js": "/Web-Speed-App/service-worker.js",
     "static/css/main.43562335.chunk.css.map": "/Web-Speed-App/static/css/main.43562335.chunk.css.map",
     "static/js/2.e316fc5a.chunk.js.LICENSE": "/Web-Speed-App/static/js/2.e316fc5a.chunk.js.LICENSE"
@@ -17,6 +17,6 @@
     "static/js/runtime-main.a8832365.js",
     "static/js/2.e316fc5a.chunk.js",
     "static/css/main.43562335.chunk.css",
-    "static/js/main.63a5dd10.chunk.js"
+    "static/js/main.f3fec82a.chunk.js"
   ]
 }
