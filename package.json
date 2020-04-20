@@ -29,7 +29,9 @@
     "flow": "flow",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "cypress:open": "cypress open",
+    "cypress:common": "cypress run --spec 'cypress/integration/common.js' --browser chrome"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -52,6 +54,7 @@
     "@storybook/addon-links": "^5.2.8",
     "@storybook/addons": "^5.2.8",
     "@storybook/react": "^5.2.8",
+    "cypress": "^3.4.1",
     "enzyme": "^3.11.0",
     "enzyme-adapter-react-16": "^1.15.2",
     "enzyme-to-json": "^3.4.3",

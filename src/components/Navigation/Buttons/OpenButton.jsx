@@ -10,7 +10,7 @@ export default function OpenButton() {
   const handleExpandMenu = () => dispatch({ type: navigationStates.EXPAND })
 
   return (
-    <div className={ styles.blockWrapper } onClick={ handleExpandMenu }>
+    <div id='buttonwrapper' className={ styles.blockWrapper } onClick={ handleExpandMenu }>
       <div className={ styles.blockBar }></div>
       <div className={ styles.blockBar }></div>
       <div className={ styles.blockBar }></div>
