@@ -11,13 +11,13 @@ export default function Bottom() {
 
   return (
     <div className={ styles.blockWrapper } >
-      <div style={{padding: "0px 30px"}}>
-        <h1 style={{color: 'lightgrey'}}>{ FIRST_INPUT_DELAY_HEADER }
+      <div className={ styles.contentWrapper }>
+        <h1>{ FIRST_INPUT_DELAY_HEADER }
           <LightBulbUI />
         </h1>
-        <p style={{color: 'lightgrey'}}>{ FIRST_INPUT_DELAY_CONTENT }</p>
-        <p style={{color: 'ivory'}}>{ RESULT }
-          <span style={{color: 'ivory'}}>{ getDataState[1] }</span>
+        <p>{ FIRST_INPUT_DELAY_CONTENT }</p>
+        <p>{ RESULT }
+          <span>{ getDataState[1] }</span>
         </p>
       </div>
     </div>

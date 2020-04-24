@@ -29,7 +29,7 @@ function LightBulbUI() {
       viewBox="0 0 480.8 480.8"
       style={{ enableBackground: "new 0 0 480.8 480.8" }}
       xmlSpace="preserve"
-      height="40px"
+      height="32px"
       fill="#A9A9A9" //grey
     >
       <path

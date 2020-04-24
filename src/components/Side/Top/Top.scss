@@ -8,6 +8,23 @@
     background-color: $color-top-background;
 }
 
+.resultstop__content-wrapper {
+    padding: 0px 30px;
+    > h1 {
+      color: lightgrey;
+    }
+    > p:nth-child(2) {
+      color: lightgrey;
+    }
+    > p:nth-child(3) {
+      color: ivory;
+      span {
+        color: ivory;
+      }
+    }
+}
+
 :export {
     blockWrapper: resultstop__wrapper;
+    contentWrapper: resultstop__content-wrapper;
 }

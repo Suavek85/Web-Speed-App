@@ -11,19 +11,18 @@ export default function Top() {
 
   return (
     <div className={ styles.blockWrapper } >
-      <div style={{padding: "0px 30px"}}>
-        <h1 style={{color: 'lightgrey'}}>
+      <div className={ styles.contentWrapper }>
+        <h1>
           { FIRST_PAINT_HEADER }
           <LightBulbUI />
         </h1>
-        <p style={{color: 'lightgrey'}}>
+        <p>
           { FIRST_PAINT_CONTENT }
         </p>
-        <p style={{color: 'ivory'}}>
+        <p>
           { RESULT }
-          <span 
-            style={{color: 'ivory'}}>
-            { getDataState[0]  }
+          <span>
+            { getDataState[0] }
           </span>
         </p>
       </div>

@@ -8,13 +8,24 @@
     background-color: $color-bottom-background;
 }
 
-.resultsbottom__row {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+.resultsbottom__content-wrapper {
+    padding: 0px 30px;
+    > h1 {
+      color: lightgrey;
+    }
+    > p:nth-child(2) {
+      color: lightgrey;
+    }
+    > p:nth-child(3) {
+      color: ivory;
+      span {
+        color: ivory;
+      }
+    }
 }
 
 :export {
     blockWrapper: resultsbottom__wrapper;
     blockRow: resultsbottom__row;
+    contentWrapper: resultsbottom__content-wrapper;
 }
