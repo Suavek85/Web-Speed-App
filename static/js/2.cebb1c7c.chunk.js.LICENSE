@@ -53,6 +53,12 @@ and limitations under the License.
   http://jedwatson.github.io/classnames
 */
 
+/*
+    object-assign
+    (c) Sindre Sorhus
+    @license MIT
+    */
+
 /**
  * @license
  * Copyright 2018 Google Inc.
