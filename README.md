@@ -30,4 +30,8 @@ Builds the app for production to the `build` folder.
 
 Runs storybook to browse a component library, view the different states of each UI component.
 
+### `npm run cypress:open`
+
+Runs Cypress integration tests.
+
 

@@ -4,6 +4,11 @@
     background-color: #A8D0E6;
 }
 
+.app__wrapper-tablet {
+    flex-direction: column;
+}
+
 :export {
     block: app__wrapper;
+    blockTablet: app__wrapper-tablet;
 }

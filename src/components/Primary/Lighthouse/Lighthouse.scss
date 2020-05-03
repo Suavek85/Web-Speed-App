@@ -1,6 +1,8 @@
 @import '../../../scss/styles.scss';
 
 
+//TODO: at 380px - flex-direction column for Tabs, height for indivdiaul tabs 34px
+
 .lighthouse__wrapper {
   margin-right: 40px;
   margin-left: 20px;
@@ -10,6 +12,10 @@
   h1 {
     padding: 0px 20px;
   }
+}
+
+.lighthouse__wrapper-tablet {
+  margin-right: 20px;
 }
 
 .lighthouse__header {
@@ -40,21 +46,32 @@
   }
 }
 
+
+//TODO: at 700 tabs 54px height and container no margin nor padding
 .lighthouse__tabs {
   display: flex; 
   width: 100%;
   height: 44px;
   background-color: $color-lighthouse-background-dark;
 }
+
+.lighthouse__tabs-mobile {
+  height: 54px;
+}
+
+
 .lighthouse__tabsitem {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   height: inherit;
   background-color: $color-lighthouse-background-dark;
   width: 100%;
   text-align: center;
-  line-height: 44px;
   cursor: pointer;
   padding: 0px 5px;
   font-size: 12px;
+  
 }
 
 .lighthouse__tabsitem:not(:last-child) {
@@ -74,10 +91,12 @@
 
 :export {
     blockWrapper: lighthouse__wrapper;
+    blockWrapperTablet: lighthouse__wrapper-tablet;
     blockHeader: lighthouse__header;
     blockContent: lighthouse__content;
     blockResults: lighthouse__results;
     blockTabs: lighthouse__tabs;
+    blockTabsMobile: lighthouse__tabs-mobile;
     blockTabsItem: lighthouse__tabsitem;
     blockActive: lighthouse__active;
 }
