@@ -1,13 +1,21 @@
 //TODO: rename class
 //TODO: at 1000px width 100% and flex-direction row, remove width and height, margin everywhere 20px
 
-.results__wrapper { 
+.side__wrapper { 
     display: flex;
     width: 30%;
     height: 100vh;
     flex-direction: column;
 }
 
+.side__wrapper-tablet { 
+    width: auto;
+    height: 100%;
+    flex-direction: row;
+    margin: 20px 0;
+}
+
 :export {
-    block: results__wrapper;
+    block: side__wrapper;
+    blockTablet: side__wrapper-tablet;
 }

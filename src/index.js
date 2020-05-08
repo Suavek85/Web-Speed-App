@@ -7,12 +7,10 @@ import App from './App.jsx'
 import * as serviceWorker from './serviceWorker'
 import { stateReducer} from "./reducers/stateReducer"
 import { toggleReducer } from "./reducers/toggleReducer"
-import { urlReducer } from "./reducers/urlReducer"
 
 const rootReducer = combineReducers({
   stateReducer,
   toggleReducer,
-  urlReducer
 })
 
 const store = createStore(rootReducer)

@@ -2,21 +2,20 @@
 
 h1 { color: white; }
 
-.inputcard__btn-wrapper { display: flex; }
-
-//rename classes
-//od 1000px ponizej = width 100%, remove padding left
-
-.inputcard__wrapper {
+.primarycard__wrapper {
     width: 70%;
     height: max-content;
     display: flex;
     flex-direction: column;
     background-color: $color-main-background;
     padding-left: 20px;
+    &--tablet {
+        width: 100%;
+        padding-left: 0;
+    }
 }
 
-.inputcard__wrapperinner {
+.primarycard__wrapperinner {
     display: flex;
     justify-content: space-around;
     align-items: flex-end;
@@ -24,22 +23,25 @@ h1 { color: white; }
     padding-right: 20px;
 }
 
-.inputcard__sub-wrapper {
+.primarycard__sub-wrapper {
     display: flex;
     flex-direction: column;
     padding-left: 20px;
     height: max-content;
 }
 
-.inputcard__header {
+.primarycard__header {
     display: flex;
     align-items: center;
 }
 
+.primarycard__btn-wrapper { display: flex; }
+
 :export {
-    block: inputcard__wrapper;
-    blockInner: inputcard__wrapperInner;
-    btnWrapper: inputcard__btn-wrapper;
-    subWrapper: inputcard__sub-wrapper;
-    headerWrapper: inputcard__header;
+    block: primarycard__wrapper;
+    blockTablet: primarycard__wrapper--tablet;
+    blockInner: primarycard__wrapperInner;
+    btnWrapper: primarycard__btn-wrapper;
+    subWrapper: primarycard__sub-wrapper;
+    headerWrapper: primarycard__header;
   }

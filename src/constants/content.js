@@ -6,7 +6,7 @@ export const btnsContent = {...appStates}
 btnsContent.LOADING = 'Loading...' 
 btnsContent.INACTIVE = 'Get report' 
 btnsContent.ERROR = 'Oops, an error' 
-btnsContent.SUCCESS = 'Report created'
+btnsContent.SUCCESS = 'Get new report'
 
 //FIRST CONTENTFUL PAIN
 export const FIRST_PAINT_HEADER = 'First Contentful Paint'

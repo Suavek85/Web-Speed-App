@@ -2,7 +2,7 @@
   display: flex;
   position: relative;
   width: 100%;
-  max-width: 280px;
+  max-width: 210px;
 }
 
  .url-label {
@@ -27,6 +27,7 @@
   transform-origin: 0 0;
   transition: all 0.15s ease;
 }
+
  input {
   -webkit-appearance: none;
   width: 100%;

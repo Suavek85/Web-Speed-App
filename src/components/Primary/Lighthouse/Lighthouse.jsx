@@ -5,10 +5,10 @@ import { useMediaQuery } from 'react-responsive'
 
 import LighthouseTabContent from './LighthouseTabContent'
 import LighthouseTabs from './LighthouseTabs'
-import { tabletWidth, mobileWidth } from'../../../scss/mediaqueries'
+import LighthouseHeader from './LighthouseHeader'
 import { tabsDescriptions, tabsTitles } from '../../../constants/content'
-import WebOptimizeWrapper from '../../svgs/WebOptimizeWrapper'
 import styles from './Lighthouse.scss'
+import { tabletWidth } from'../../../scss/mediaqueries'
 
 export default function LightHouse() {
 
@@ -30,17 +30,9 @@ export default function LightHouse() {
     blockWrapper: true,
     blockWrapperTablet: useMediaQuery(tabletWidth),
   })
-  let getTabClass = cx({
-    blockTabs: true,
-    blockTabsMobile: useMediaQuery(mobileWidth),
-  })
-  let getActiveTabClass = arg => cx({
-    blockTabsItem: true,
-    blockActive: activeTab === arg,
-  })
 
   //PROPS
-  const tabsProps = { handleActiveTab, getTabClass, getActiveTabClass }
+  const tabsProps = { handleActiveTab, activeTab }
 
   const tabContentProps = { 
     activeTabDesc,
@@ -51,10 +43,7 @@ export default function LightHouse() {
 
   return (
     <div className={ getWrapperClass } >
-      <div className={ styles.blockHeader }>
-        <WebOptimizeWrapper />
-        <h1>Lighthouse<br/>Score</h1>
-      </div>
+      <LighthouseHeader />
       <div className={ styles.blockContent }>
         <LighthouseTabs {...tabsProps} />
         <LighthouseTabContent  {...tabContentProps} />
