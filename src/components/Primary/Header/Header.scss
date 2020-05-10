@@ -1,0 +1,8 @@
+.primarycard__header {
+    display: flex;
+    align-items: center;
+}
+
+:export {
+    headerWrapper: primarycard__header;
+}

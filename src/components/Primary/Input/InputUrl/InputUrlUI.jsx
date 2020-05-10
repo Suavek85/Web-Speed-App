@@ -1,6 +1,6 @@
 import React, { useRef } from 'react'
 
-import { INPUT_HINT } from '../../../constants/content'
+import { INPUT_HINT } from '../../../../constants/content'
 import './InputUrlUI.scss'
 import styles from './InputUrlUI.scss'
 

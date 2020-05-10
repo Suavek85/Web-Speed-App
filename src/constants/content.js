@@ -42,6 +42,18 @@ const RESP_IMAGES_DESC = 'Serve images that are appropriately-sized to save cell
 const TEXT_COMRPESSION_TITLE = 'Enable text compression.'
 const TEXT_COMRPESSION_DESC = 'Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes.'
 
+//TABS HEADERS
+
+export const tabsHeader = [
+  { content: 'Speed Index' },
+  { content: 'Time to First Byte' },
+  { content: 'Total Byte Weight' },
+  { content: 'Interactive' },
+  { content: 'Used Responsive Images' },
+  { content: 'Uses Text Compression' },
+]
+
+
 //TABS TITLES
 export const tabsTitles = [
   SPEED_INDEX_TITLE, 

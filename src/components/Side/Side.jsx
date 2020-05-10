@@ -4,7 +4,7 @@ import { useMediaQuery } from 'react-responsive'
 
 import Top from './Top/Top'
 import Bottom from './Bottom/Bottom'
-import { tabletWidth } from'../../scss/mediaqueries'
+import { tabletWidth, mobileWidth } from'../../scss/mediaqueries'
 import styles from './Side.scss'
 
 export default function Side() {
@@ -14,6 +14,7 @@ export default function Side() {
   let getClass = cx({
     block: true,
     blockTablet: useMediaQuery(tabletWidth),
+    blockMobile: useMediaQuery(mobileWidth),
   })
 
   return (

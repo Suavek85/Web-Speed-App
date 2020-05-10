@@ -3,6 +3,8 @@ import React from 'react'
 import WebOptimizeWrapper from '../../svgs/WebOptimizeWrapper'
 import styles from './Lighthouse.scss'
 
+
+
 export default function LighthouseHeader() {
   return (
     <div className={ styles.blockHeader }>

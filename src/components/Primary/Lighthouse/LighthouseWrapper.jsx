@@ -8,7 +8,7 @@ import LighthouseTabs from './LighthouseTabs'
 import LighthouseHeader from './LighthouseHeader'
 import { tabsDescriptions, tabsTitles } from '../../../constants/content'
 import styles from './Lighthouse.scss'
-import { tabletWidth } from'../../../scss/mediaqueries'
+import { tabletWidth, smallMobileWidth } from'../../../scss/mediaqueries'
 
 export default function LightHouse() {
 
@@ -29,6 +29,7 @@ export default function LightHouse() {
   let getWrapperClass = cx({
     blockWrapper: true,
     blockWrapperTablet: useMediaQuery(tabletWidth),
+    blockWrapperSmallMobile: useMediaQuery(smallMobileWidth),
   })
 
   //PROPS

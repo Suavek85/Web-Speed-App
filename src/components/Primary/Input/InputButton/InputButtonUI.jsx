@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
 
-import { appStates } from '../../../constants/states'
-import { btnsContent } from '../../../constants/content'
+import { appStates } from '../../../../constants/states'
+import { btnsContent } from '../../../../constants/content'
 import styles from './InputButtonUI.scss'  
 
 export default function InputButtonUI(props) {

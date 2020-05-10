@@ -1,30 +1,23 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
+
+import { tabsHeader } from '../../../constants/content'
 import styles from './Lighthouse.scss'
 
 export default function LighthouseTabItem(props) {
   const { activeTab } = props
 
-  const tabsData = [
-    { content: 'Speed Index' },
-    { content: 'Time to First Byte' },
-    { content: 'Total Byte Weight' },
-    { content: 'Interactive' },
-    { content: 'Used Responsive Images' },
-    { content: 'Uses Text Compression' },
-  ]
-
   //STYLE
   let cx = classNames.bind(styles)
   
-  let geTabItemClass = (arg, activeTab) => cx({
+  let geTabItemClass = (tabIndex, activeTabIndex) => cx({
     blockTabsItem: true,
-    blockTabsItemActive: activeTab === arg,
+    blockTabsItemActive: activeTabIndex === tabIndex,
   })
 
   return (
-    tabsData.map((el,i) => ( <div 
+    tabsHeader.map((el,i) => ( <div 
       id={i} 
       key={i} 
       className={ geTabItemClass(i.toString(), activeTab) }>

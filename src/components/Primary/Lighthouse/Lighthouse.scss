@@ -13,6 +13,14 @@
     margin-right: 0;
     margin-left: 0;
   }
+  &--small-mobile {
+    border: 0;
+  }
+  &--small-mobile > div.lighthouse__header {
+    height: auto;
+    flex-direction: column;
+    align-items: center;
+  }
 }
 
 .lighthouse__header {
@@ -20,6 +28,7 @@
   height: 120px;
   padding: 20px 40px;
   border-bottom: $ws-lighthouse-border-light;
+
 }
 
 .lighthouse__content {
@@ -56,6 +65,13 @@
     flex-direction: column;
     height: 250px;
   }
+  &--small-mobile > div {
+    width: auto;
+    &:not(:last-child) {
+      border-bottom: $ws-lighthouse-border-dark;
+      border-right: 0;
+    }
+  }
 }
 
 //TAB ITEM
@@ -82,11 +98,13 @@
     background-color: $color-top-background;
     color: white;
   }
+
 }
 
 :export {
     blockWrapper: lighthouse__wrapper;
     blockWrapperTablet: lighthouse__wrapper--tablet;
+    blockWrapperSmallMobile: lighthouse__wrapper--small-mobile;
     blockHeader: lighthouse__header;
     blockContent: lighthouse__content;
     blockResults: lighthouse__results;

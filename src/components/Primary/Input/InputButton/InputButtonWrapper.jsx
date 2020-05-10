@@ -3,8 +3,8 @@ import { useSelector, useDispatch } from "react-redux"
 import axios from 'axios'
 
 import InputButtonUI from './InputButtonUI'
-import { appStates } from '../../../constants/states'
-import apikey from '../../../helpers/apikey'
+import { appStates } from '../../../../constants/states'
+import apikey from '../../../../helpers/apikey'
 
 function InputButtonWrapper() {
 

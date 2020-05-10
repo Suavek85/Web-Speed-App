@@ -6,16 +6,19 @@
     width: 30%;
     height: 100vh;
     flex-direction: column;
-}
-
-.side__wrapper-tablet { 
-    width: auto;
-    height: 100%;
-    flex-direction: row;
-    margin: 20px 0;
+    &--tablet { 
+        width: auto;
+        height: 100%;
+        flex-direction: row;
+        margin: 20px 0;
+    }
+    &--mobile { 
+        flex-direction: column;
+    }
 }
 
 :export {
     block: side__wrapper;
-    blockTablet: side__wrapper-tablet;
+    blockTablet: side__wrapper--tablet;
+    blockMobile: side__wrapper--mobile;
 }
