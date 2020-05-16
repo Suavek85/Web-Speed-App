@@ -1,28 +1,19 @@
 import React from 'react'
-import classNames from 'classnames/bind'
-import { useMediaQuery } from 'react-responsive'
-
-import { tabletWidth } from'./scss/mediaqueries'
-import PrimaryCard from '../src/components/Primary'
-import Side from '../src/components/Side/Side'
-import Navigation from '../src/components/Navigation/Navigation'
-import styles from './App.scss'
+import { Switch, Route } from "react-router-dom"
+  
+import Homepage from './components/Homepage/Homepage'
+import SignInSignUp from './components/SignIn/SignInSignUp'
 
 export default function App() {
 
-  //STYLES
-  let cx = classNames.bind(styles)
-  let getButtonClasses = cx({
-    block: true,
-    blockTablet: useMediaQuery(tabletWidth),
-  })
-
   return (
-    <section className={ getButtonClasses }>
-      <Navigation />
-      <PrimaryCard />
-      <Side />
-    </section>
+    <>
+      <Switch >
+        <Route exact path="/" component={ Homepage } />
+        <Route exact path="/signin" component={ SignInSignUp } />
+      </Switch>
+    </>
   )
+
 }
 

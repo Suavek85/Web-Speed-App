@@ -11,9 +11,7 @@ export default function OpenButton() {
 
   return (
     <div id='buttonwrapper' className={ styles.blockWrapper } onClick={ handleExpandMenu }>
-      <div className={ styles.blockBar }></div>
-      <div className={ styles.blockBar }></div>
-      <div className={ styles.blockBar }></div>
+      <h1>Settings</h1>
     </div>
   )
 }

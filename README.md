@@ -4,7 +4,7 @@ Work In Progress.
 
 GH Pages live preview: https://suavek85.github.io/Web-Speed-App/
 
-React.js app using Hooks, Redux.
+React.js app using Hooks + Redux.
 
 
 ## Available Scripts
