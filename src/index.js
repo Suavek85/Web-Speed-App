@@ -17,7 +17,7 @@ const rootReducer = combineReducers({
 const store = createStore(rootReducer)
 
 ReactDOM.render(
-  <BrowserRouter>
+  <BrowserRouter basename={ process.env.PUBLIC_URL } >
     <Provider store={store}>
       <App />
     </Provider>
