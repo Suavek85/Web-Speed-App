@@ -1,3 +1,5 @@
+@import "../../../scss/styles.scss";
+
 .primarycard__header {
     display: flex;
     align-items: center;
@@ -5,6 +7,21 @@
     padding-right: 40px;
 }
 
+.primarycard__title-wrapper {
+    text-decoration: none;
+}
+
+.primarycard__links-wrapper {
+    display: flex;
+    align-items: center;
+    h2 {
+        font-size: 18px;
+        color: $color-bottom-background;
+    }
+}
+
 :export {
     headerWrapper: primarycard__header;
+    titleWrapper: primarycard__title-wrapper;
+    linksWrapper: primarycard__links-wrapper;
 }

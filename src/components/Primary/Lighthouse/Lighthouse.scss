@@ -23,94 +23,15 @@
   }
 }
 
-.lighthouse__header {
-  display: flex; 
-  height: 120px;
-  padding: 20px 40px;
-  border-bottom: $ws-lighthouse-border-light;
-
-}
-
 .lighthouse__content {
   display: flex; 
   flex-direction: column;
   height: auto;
 }
 
-.lighthouse__results {
-  padding-left: 20px;
-  font-size: 13px;
-  > p:first-child {
-    padding-top: 15px;
-  }
-  > p {
-    padding-bottom: 15px;
-  }
-  > p > span {
-    font-weight: 600;
-    padding-right: 5px;
-  }
-}
-
-//TABS
-.lighthouse__tabs {
-  display: flex; 
-  width: 100%;
-  height: 44px;
-  background-color: $color-lighthouse-background-dark;
-  &--mobile {
-    height: 54px;
-  }
-  &--small-mobile {
-    flex-direction: column;
-    height: 250px;
-  }
-  &--small-mobile > div {
-    width: auto;
-    &:not(:last-child) {
-      border-bottom: $ws-lighthouse-border-dark;
-      border-right: 0;
-    }
-  }
-}
-
-//TAB ITEM
-.lighthouse__tabsitem {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: inherit;
-  background-color: $color-lighthouse-background-dark;
-  width: 100%;
-  text-align: center;
-  cursor: pointer;
-  padding: 0px 5px;
-  font-size: 12px;
-  &:not(:last-child) {
-    border-right: $ws-lighthouse-border-light;
-  }
-  &:hover {
-    background-color: $color-top-background;
-    opacity: .8;
-    color: white;
-  }
-  &--active {
-    background-color: $color-top-background;
-    color: white;
-  }
-
-}
-
 :export {
     blockWrapper: lighthouse__wrapper;
     blockWrapperTablet: lighthouse__wrapper--tablet;
     blockWrapperSmallMobile: lighthouse__wrapper--small-mobile;
-    blockHeader: lighthouse__header;
     blockContent: lighthouse__content;
-    blockResults: lighthouse__results;
-    blockTabs: lighthouse__tabs;
-    blockTabsMobile: lighthouse__tabs--mobile;
-    blockTabsSmallMobile: lighthouse__tabs--small-mobile;
-    blockTabsItem: lighthouse__tabsitem;
-    blockTabsItemActive: lighthouse__tabsitem--active;
 }

@@ -1,0 +1,32 @@
+@import '../../../../scss/styles.scss';
+
+.lighthouse__tabsitem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: inherit;
+    background-color: $color-lighthouse-background-dark;
+    width: 100%;
+    text-align: center;
+    cursor: pointer;
+    padding: 0px 5px;
+    font-size: 12px;
+    &:not(:last-child) {
+      border-right: $ws-lighthouse-border-light;
+    }
+    &:hover {
+      background-color: $color-top-background;
+      opacity: .8;
+      color: white;
+    }
+    &--active {
+      background-color: $color-top-background;
+      color: white;
+    }
+  
+  }
+
+  :export {
+    blockTabsItem: lighthouse__tabsitem;
+    blockTabsItemActive: lighthouse__tabsitem--active;
+}

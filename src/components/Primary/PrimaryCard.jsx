@@ -18,8 +18,8 @@ export default function PrimaryCard() {
   })
 
   return (
-    <div className={getClass} >
-      <div className={styles.headerInputWrapper} >
+    <div className={ getClass } >
+      <div className={ styles.headerInputWrapper } >
         <Header />
         <InputWrapper />
       </div>     

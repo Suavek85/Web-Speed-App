@@ -10,13 +10,18 @@ export default function InputButtonUI(props) {
  
   const { getAppState, handleGetReportClick } = props
 
-  //BUTTON FORMATTING - CLASSES AND CONTENT
-  const isStatus = state => getAppState === state
-  
+  //BUTTON FORMATTING - CONTENT
   const getContentFromStatus = state => { 
     const contentIndex = Object.keys(btnsContent).findIndex(el => el === state)
     return Object.values(btnsContent)[contentIndex]
   }
+
+  const btnContentFromStatus = getContentFromStatus(getAppState)
+
+  //BUTTON FORMATTING - CLASSES
+
+  const isStatus = state => getAppState === state
+  const isLoadingStatus = isStatus(appStates.LOADING)
 
   let cx = classNames.bind(styles)
 
@@ -29,15 +34,13 @@ export default function InputButtonUI(props) {
   })
 
   return (
-    <>
-      <button 
-        onClick={handleGetReportClick} 
-        disabled={isStatus(appStates.LOADING)}
-        className={getButtonClasses}
-      >   
-        {getContentFromStatus(getAppState)}
-      </button>
-    </>
+    <button 
+      onClick={ handleGetReportClick } 
+      disabled={ isLoadingStatus }
+      className={ getButtonClasses }
+    >   
+      { btnContentFromStatus }
+    </button>
   )
 }
 

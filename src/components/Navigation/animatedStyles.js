@@ -1,6 +1,6 @@
-const displayNav = { left:'0px', width: '300px'}
-const hideNav = { left:'-300px', width: '0px'}
-const animDuration = { duration:330 }
+const displayNav = { left: '0px', width: '300px'}
+const hideNav = { left: '-300px', width: '0px'}
+const animDuration = { duration: 330 }
 const displayBackground = { opacity: .5, display: 'block'}
 const hideBackground = { opacity: 0, display: 'none' }
 

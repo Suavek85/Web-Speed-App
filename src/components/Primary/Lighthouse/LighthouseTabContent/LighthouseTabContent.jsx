@@ -1,15 +1,16 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styles from './Lighthouse.scss'
+import styles from './LighthouseTabContent.scss'
+import * as content from '../../../../constants/lighthouseTabAllContent'
 
 export default function LighthouseTabContent(props) {
   const { activeTabTitle, activeTabDesc, scorePercentage, displayValuePercentage } = props
   return (
     <div className={ styles.blockResults }>
-      <p><span>Title:</span> { activeTabTitle }</p>
-      <p><span>Description:</span> { activeTabDesc }</p>
-      <p><span>Score:</span> { scorePercentage } </p>
-      <p><span>Display Value:</span> { displayValuePercentage } </p>
+      <p><span>{ content.TITLE }</span> { activeTabTitle }</p>
+      <p><span>{ content.DESCRIPTION }</span> { activeTabDesc }</p>
+      <p><span>{ content.SCORE }</span> { scorePercentage } </p>
+      <p><span>{ content.DISPLAY_VALUE }</span> { displayValuePercentage } </p>
     </div>
   )
 }

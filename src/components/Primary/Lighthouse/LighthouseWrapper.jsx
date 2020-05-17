@@ -3,9 +3,9 @@ import { useSelector } from "react-redux"
 import classNames from 'classnames/bind'
 import { useMediaQuery } from 'react-responsive'
 
-import LighthouseTabContent from './LighthouseTabContent'
-import LighthouseTabs from './LighthouseTabs'
-import LighthouseHeader from './LighthouseHeader'
+import LighthouseTabContent from './LighthouseTabContent/LighthouseTabContent'
+import LighthouseTabs from './LighthouseTabs/LighthouseTabs'
+import LighthouseHeader from './LighhouseHeader/LighthouseHeader'
 import { tabsDescriptions, tabsTitles } from '../../../constants/content'
 import styles from './Lighthouse.scss'
 import { tabletWidth, smallMobileWidth } from'../../../scss/mediaqueries'

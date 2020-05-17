@@ -1,12 +1,8 @@
 import React from 'react'
-
-import { signInWithGoogle } from '../../firestore'
-
+import { signInWithGoogle } from '../../firebase/firebase'
 
 export default function SignWithGoogle() {
   return (
-    <div  >
-      <button onClick={ signInWithGoogle }>Sign in with Google</button>
-    </div>
+    <button onClick={ signInWithGoogle }>Sign in with Google</button>
   )
 }

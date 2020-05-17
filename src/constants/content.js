@@ -1,12 +1,21 @@
 import { appStates } from './states'
 
+//APP HEADER
 export const APPTITLE = 'Web Speed App'
+export const SETTINGS = 'Settings'
+export const SIGN_IN = 'Sign in'
 
+
+//BUTTONS
 export const btnsContent = {...appStates}
 btnsContent.LOADING = 'Loading...' 
 btnsContent.INACTIVE = 'Get report' 
 btnsContent.ERROR = 'Oops, an error' 
 btnsContent.SUCCESS = 'Get new report'
+
+//LIGHTHOUSE
+
+export const LIGHTHOUSE_TITLE = 'Lighthouse Score'
 
 //FIRST CONTENTFUL PAIN
 export const FIRST_PAINT_HEADER = 'First Contentful Paint'
@@ -43,7 +52,6 @@ const TEXT_COMRPESSION_TITLE = 'Enable text compression.'
 const TEXT_COMRPESSION_DESC = 'Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes.'
 
 //TABS HEADERS
-
 export const tabsHeader = [
   { content: 'Speed Index' },
   { content: 'Time to First Byte' },
@@ -52,7 +60,6 @@ export const tabsHeader = [
   { content: 'Used Responsive Images' },
   { content: 'Uses Text Compression' },
 ]
-
 
 //TABS TITLES
 export const tabsTitles = [

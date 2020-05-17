@@ -2,16 +2,17 @@ import React from 'react'
 import { useDispatch } from "react-redux"
 
 import { navigationStates } from '../../../constants/navigationStates'
-import styles from './OpenButton.scss'
+import { SETTINGS } from '../../../constants/content'
+import styles from './NavOpenLink.scss'
 
-export default function OpenButton() {
+export default function NavOpenLink() {
 
   const dispatch = useDispatch()
   const handleExpandMenu = () => dispatch({ type: navigationStates.EXPAND })
 
   return (
     <div id='buttonwrapper' className={ styles.blockWrapper } onClick={ handleExpandMenu }>
-      <h1>Settings</h1>
+      <h2> { SETTINGS } </h2>
     </div>
   )
 }

@@ -1,4 +1,4 @@
-import firebase from '../firestore'
+import firebase from '../firebase/firebase'
 
 export default function () {
   let key = ''

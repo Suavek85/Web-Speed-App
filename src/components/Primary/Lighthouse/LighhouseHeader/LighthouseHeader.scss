@@ -1,0 +1,13 @@
+@import '../../../../scss/styles.scss';
+
+.lighthouse__header {
+  display: flex; 
+  align-items: center;
+  height: 120px;
+  padding: 20px 40px;
+  border-bottom: $ws-lighthouse-border-light;
+}
+
+:export {
+    blockHeader: lighthouse__header;
+}

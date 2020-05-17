@@ -2,8 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
 
-import { tabsHeader } from '../../../constants/content'
-import styles from './Lighthouse.scss'
+import { tabsHeader } from '../../../../constants/content'
+import styles from './LighthouseTabItem.scss'
 
 export default function LighthouseTabItem(props) {
   const { activeTab } = props

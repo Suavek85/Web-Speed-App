@@ -15,9 +15,10 @@ const rootReducer = combineReducers({
 })
 
 const store = createStore(rootReducer)
+const url = process.env.PUBLIC_URL
 
 ReactDOM.render(
-  <BrowserRouter basename={ process.env.PUBLIC_URL } >
+  <BrowserRouter basename={ url } >
     <Provider store={store}>
       <App />
     </Provider>

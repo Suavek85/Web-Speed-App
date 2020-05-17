@@ -21,8 +21,8 @@ describe('website tests', () => {
       .should('contain', 'Get report')
       .click()
       .should('contain', 'Loading...')
-      cy.reqUrl()
-      cy.get('.inputbutton__wrapper').should('contain', 'Report created')
+    cy.reqUrl()
+    cy.get('.inputbutton__wrapper').should('contain', 'Get new report')
   })
 
   it('it returns error when wrong input is given', () => {

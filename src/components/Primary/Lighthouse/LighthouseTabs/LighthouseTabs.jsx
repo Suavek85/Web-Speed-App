@@ -2,13 +2,13 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
 import { useMediaQuery } from 'react-responsive'
-import LightHouseTabItem from './LightHouseTabItem'
+import LighthouseTabItem from '../LighthouseTabItem/LighthouseTabItem'
 
-import styles from './Lighthouse.scss'
+import styles from './LighthouseTabs.scss'
 import { 
   mobileWidth, 
   smallMobileWidth 
-} from'../../../scss/mediaqueries'
+} from'../../../../scss/mediaqueries'
 
 export default function LighthouseTabs(props) {
   const { handleActiveTab, activeTab } = props
@@ -22,7 +22,7 @@ export default function LighthouseTabs(props) {
 
   return (
     <div onClickCapture={ handleActiveTab } className={ getTabClass }>
-      <LightHouseTabItem activeTab={activeTab} />
+      <LighthouseTabItem activeTab={activeTab} />
     </div>
   )
 }

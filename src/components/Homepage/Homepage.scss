@@ -1,7 +1,9 @@
+@import "../../scss/styles.scss";
+
 .app__wrapper {
     display: flex;
     position: relative;
-    background-color: #A8D0E6;
+    background-color: $color-main-background;
 }
 
 .app__wrapper-tablet {
