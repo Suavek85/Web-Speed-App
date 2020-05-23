@@ -2,6 +2,7 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useSelector, useDispatch } from "react-redux"
 
+import NavClose from './NavClose/NavClose'
 import styles from './Navigation.scss'
 import { 
   collapseNavConfig, 
@@ -38,12 +39,10 @@ function Navigation() {
       </animated.div>
       <animated.div 
         style={ getAnimation(getToggleState, expandNav, collapseNav) } 
-        className={ styles.blockWrapper } 
+        className={ styles.block } 
       >
-        <div 
-          onClick={ handleCollapseMenu } 
-          className={ styles.blockClose } >
-            x
+        <div className={ styles.blockCloseWrapper } >
+          <NavClose handleOnClick={ handleCollapseMenu } />
         </div>
       </animated.div>
     </>

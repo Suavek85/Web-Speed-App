@@ -1,27 +1,32 @@
 @import "../../../scss/styles.scss";
 
-.primarycard__header {
+.mainheader {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding-right: 40px;
+    padding-left: 20px;
+    margin-bottom: 20px;
 }
 
-.primarycard__title-wrapper {
+.mainheader__title {
     text-decoration: none;
+    h1 {
+        color: papayawhip;
+    }
 }
 
-.primarycard__links-wrapper {
+.mainheader__links {
     display: flex;
     align-items: center;
     h2 {
         font-size: 18px;
-        color: $color-bottom-background;
+        color: papayawhip;
     }
 }
 
 :export {
-    headerWrapper: primarycard__header;
-    titleWrapper: primarycard__title-wrapper;
-    linksWrapper: primarycard__links-wrapper;
+    block: mainheader;
+    blockTitle: mainheader__title;
+    blockLinks: mainheader__links;
 }

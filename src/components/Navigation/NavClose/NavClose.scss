@@ -1,0 +1,13 @@
+@import "../../../scss/styles.scss";
+
+.navigationclose {
+    font-size: 20px;
+    font-weight: 700;
+    color: $color-grey;
+    cursor: pointer;
+    transform: translateY(-3px);
+}
+
+:export {
+    block: navigationclose;
+}

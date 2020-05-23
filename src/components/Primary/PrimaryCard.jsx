@@ -19,11 +19,12 @@ export default function PrimaryCard() {
 
   return (
     <div className={ getClass } >
+      <Header />
       <div className={ styles.headerInputWrapper } >
-        <Header />
         <InputWrapper />
       </div>     
       <LighthouseWrapper />
     </div>
+    
   )
 }
