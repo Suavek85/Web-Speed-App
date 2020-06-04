@@ -4,36 +4,36 @@ import axios from 'axios'
 
 import InputButtonUI from './InputButtonUI'
 import { appStates } from '../../../../constants/states'
+import { lighthouseData } from '../../../../constants/lighthouseData'
 import apikey from '../../../../helpers/apikey'
 
 function InputButtonWrapper() {
 
   const dispatch = useDispatch()
+  const key = apikey()
  
   async function makeGetRequest() {
 
-    let test = document.getElementById('urlinput').value
-    const url = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${test}&key=${apikey()}`
+    const urlInput = document.getElementById('urlinput').value
+    const url = `https://www.googleapis.com/pagespeedonline/v5/runPagespeed?url=${ urlInput }&key=${ key }`
 
     try {
       let res = await axios.get(url)
-      let allData = res.data      
+      let allData = res.data 
+      const lighthouseDataArr = lighthouseData.map(el => allData.lighthouseResult.audits[el] )
+      const payloadObj = [
+        allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category, 
+        allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category,
+        ...lighthouseDataArr
+      ]
       dispatch({ 
         type: appStates.SUCCESS,
-        payload: [
-          allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category, 
-          allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category,
-          allData.lighthouseResult.audits['speed-index'],
-          allData.lighthouseResult.audits['time-to-first-byte'],
-          allData.lighthouseResult.audits['total-byte-weight'],
-          allData.lighthouseResult.audits['interactive'],
-          allData.lighthouseResult.audits['uses-responsive-images'],
-          allData.lighthouseResult.audits['uses-text-compression'],
-        ]
+        payload: payloadObj
       })
-    } catch(err) {
+    } 
+    
+    catch(err) {
       dispatch({ type: appStates.ERROR })
-      
     } 
   }
 
@@ -46,8 +46,8 @@ function InputButtonWrapper() {
 
   return (
     <InputButtonUI 
-      handleGetReportClick={handleGetReportClick} 
-      getAppState={getAppState} 
+      handleGetReportClick={ handleGetReportClick } 
+      getAppState={ getAppState } 
     />
   )
 }

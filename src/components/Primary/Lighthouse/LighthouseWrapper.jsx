@@ -11,6 +11,7 @@ import styles from './Lighthouse.scss'
 import { tabletWidth, smallMobileWidth } from'../../../scss/mediaqueries'
 
 export default function LightHouse() {
+  
 
   const [ activeTab, setActiveTab ] = useState('0')
   const activeTabInt = parseInt(activeTab)
