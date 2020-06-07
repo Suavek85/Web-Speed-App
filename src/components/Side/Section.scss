@@ -1,0 +1,49 @@
+@import '../../scss/styles.scss';
+
+.section__wrapper {
+    width: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    &--generic {
+      background-color: #24305e;
+      border-bottom: solid 1px #A8D0E6;
+    }
+    &--top {
+      background-color: #f76c6c;
+      border-bottom: solid 1px #A8D0E6;
+    }
+    &--bottom {
+      background-color: #f76c6c;
+    }
+}
+
+.section__content-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0px 30px;
+    > h2 {
+      color: lightgrey;
+      font-size: 19px;
+    }
+    p {
+      font-size: 13px;
+    }
+    > p:nth-child(2) {
+      color: lightgrey;
+    }
+    > p:nth-child(3) {
+      color: ivory;
+      span {
+        color: ivory;
+      }
+    }
+}
+
+:export {
+    blockWrapper: section__wrapper;
+    blockGeneric: section__wrapper--generic;
+    blockTop: section__wrapper--top;
+    blockBottom: section__wrapper--bottom;
+    contentWrapper: section__content-wrapper;
+}

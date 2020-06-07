@@ -12,16 +12,16 @@ import { tabletWidth, smallMobileWidth } from'../../../scss/mediaqueries'
 
 export default function LightHouse() {
   
-
   const [ activeTab, setActiveTab ] = useState('0')
   const activeTabInt = parseInt(activeTab)
 
   const handleActiveTab = e => setActiveTab(e.target.id)
-  const activeTabIndex = 2 + activeTabInt
+
   const activeTabDesc = tabsDescriptions[activeTabInt]
   const activeTabTitle = tabsTitles[activeTabInt]
-  const getDataState = useSelector(state => state.stateReducer.getData)
-  const { score, displayValue } = getDataState[activeTabIndex]
+
+  const getDataState = useSelector(state => state.stateReducer.getLighthouseData)
+  const { score, displayValue } = getDataState[activeTabInt]
   const scorePercentage = score ? Math.round(score * 100) + '%' : '?'
   const displayValuePercentage = displayValue ? displayValue : '?'
 

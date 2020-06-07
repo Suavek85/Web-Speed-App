@@ -4,14 +4,23 @@
     width: 30%;
     height: 100vh;
     flex-direction: column;
+    > div {
+        height: calc(100%/3);
+    }
     &--tablet { 
         width: auto;
         height: 100%;
         flex-direction: row;
         margin: 20px 0;
+        > div {
+            height: 350px;
+        }
     }
     &--mobile { 
         flex-direction: column;
+        > div {
+            height: 350px;
+        }
     }
 }
 

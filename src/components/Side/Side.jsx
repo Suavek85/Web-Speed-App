@@ -2,6 +2,7 @@ import React from 'react'
 import classNames from 'classnames/bind'
 import { useMediaQuery } from 'react-responsive'
 
+import Main from './Main/Main'
 import Top from './Top/Top'
 import Bottom from './Bottom/Bottom'
 import { tabletWidth, mobileWidth } from'../../scss/mediaqueries'
@@ -19,6 +20,7 @@ export default function Side() {
 
   return (
     <div className={ getClass } >
+      <Main />
       <Top />
       <Bottom />
     </div>
