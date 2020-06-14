@@ -27,56 +27,59 @@ export const INPUT_HINT = 'Enter your website url in this format https://www.bbc
 export const FIRST_INPUT_DELAY_HEADER = 'First Input Delay'
 export const FIRST_INPUT_DELAY_CONTENT = 'First Input Delay (FID) measures the time from when a user first interacts with your site (i.e. when they click a link, tap on a button, or use a custom, JavaScript-powered control) to the time when the browser is actually able to respond to that interaction.'
 
-//SPEED INDEX
+
+//LIGHTHOUSE TABLE
+
+//FIRST PAINT - LIGHTHOUSE
+const FIRST_PAINT_TITLE = 'First Contentful Paint'
+const FIRST_PAINT_DESC = 'First Contentful Paint marks the time at which the first text or image is painted.'
+
+//LARGEST PAINT - LIGHTHOUSE
+const LARGEST_PAINT_TITLE = 'Largest Contentful Paint'
+const LARGEST_PAINT_DESC = 'Largest Contentful Paint marks the time at which the largest text or image is painted.'
+
+//SPEED INDEX - LIGHTHOUSE
 const SPEED_INDEX_TITLE = 'Speed Index.'
 const SPEED_INDEX_DESC = 'Speed Index shows how quickly the contents of a page are visibly populated.'
 
-//TIME TO FIRST BYTE
-const FIRST_BYTE_TITLE = 'Server response times are low (TTFB).'
-const FIRST_BYTE_DESC = 'Time To First Byte identifies the time at which your server sends a response.'
-
-//TOTAL BYTE WIEGHT
-const TOTAL_BYTE_WEIGHT_TITLE = 'Avoid enormous network payloads.'
-const TOTAL_BYTE_WEIGHT_DESC = 'Large network payloads cost users real money and are highly correlated with long load times.'
-
-//TOTAL BYTE WIEGHT
+//TIME TO INTERACTIVE - LIGHTHOUSE
 const INTERACTIVE_TITLE = 'Time to Interactive.'
 const INTERACTIVE = 'Time to interactive is the amount of time it takes for the page to become fully interactive.'
 
-//USED RESPONSIVE IMAGES
-const RESP_IMAGES_TITLE = 'Properly size images.'
-const RESP_IMAGES_DESC = 'Serve images that are appropriately-sized to save cellular data and improve load time.'
+//TOTAL BLOCKING TIME - LIGHTHOUSE
+const BLOCKING_TIME_TITLE = 'Total Blocking Time'
+const BLOCKING_TIME_DESC = 'Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds'
 
-//TEXT COMPRESSION 
-const TEXT_COMRPESSION_TITLE = 'Enable text compression.'
-const TEXT_COMRPESSION_DESC = 'Text-based resources should be served with compression (gzip, deflate or brotli) to minimize total network bytes.'
+//CUMULATIVE LAYOUT SHIFT
+const LAYOUT_SHIFT_TITLE = 'Cumulative Layout Shift.'
+const LAYOUT_SHIFT_DESC = 'Cumulative Layout Shift measures the movement of visible elements within the viewport.'
 
 //TABS HEADERS
 export const tabsHeader = [
+  { content: 'First Paint' },
+  { content: 'Largest Paint' },
   { content: 'Speed Index' },
-  { content: 'Time to First Byte' },
-  { content: 'Total Byte Weight' },
   { content: 'Interactive' },
-  { content: 'Used Responsive Images' },
-  { content: 'Uses Text Compression' },
+  { content: 'Blocking Time' },
+  { content: 'Layout Shift' },
 ]
 
 //TABS TITLES
 export const tabsTitles = [
+  FIRST_PAINT_TITLE, 
+  LARGEST_PAINT_TITLE, 
   SPEED_INDEX_TITLE, 
-  FIRST_BYTE_TITLE, 
-  TOTAL_BYTE_WEIGHT_TITLE, 
   INTERACTIVE_TITLE,
-  RESP_IMAGES_TITLE,
-  TEXT_COMRPESSION_TITLE
+  BLOCKING_TIME_TITLE,
+  LAYOUT_SHIFT_TITLE
 ]
 
 //TABS DESCRIPTIONS
 export const tabsDescriptions = [
+  FIRST_PAINT_DESC, 
+  LARGEST_PAINT_DESC, 
   SPEED_INDEX_DESC, 
-  FIRST_BYTE_DESC, 
-  TOTAL_BYTE_WEIGHT_DESC, 
   INTERACTIVE,
-  RESP_IMAGES_DESC,
-  TEXT_COMRPESSION_DESC
+  BLOCKING_TIME_DESC,
+  LAYOUT_SHIFT_DESC
 ]

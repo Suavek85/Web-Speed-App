@@ -2,7 +2,7 @@ import React from 'react'
 import { storiesOf } from '@storybook/react'
 import { withKnobs, select } from "@storybook/addon-knobs"
 import InputButtonUI from './InputButtonUI'
-import { appStates } from '../../../constants/states'
+import { appStates } from '../../../../constants/states'
 
 const stories = storiesOf('UI Components', module)
 stories.addDecorator(withKnobs)

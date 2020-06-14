@@ -10,11 +10,11 @@ export default function Main() {
 
   const content = {
     header: 'Generic info',
-    mainContent: 'Lorem ipsum ',
-    result: 'Page overall category:'
+    mainContent: 'Page overall information ',
+    result: ['Page overall category:', 'First Contentful Paint:', 'First Input Delay:']
   }
 
-  const data = getDataState[3]
+  const data = [getDataState[3], getDataState[4], getDataState[5]]
   const position = 'generic'
   const props = { content, data, position }
 

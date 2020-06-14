@@ -28,12 +28,7 @@ export default function Section(props) {
         <p>
           { mainContent }
         </p>
-        <p>
-          { result }
-          <span>
-            { data }
-          </span>
-        </p>
+        { data.map((el,index) => <p key={index}>{ result[index] } <span>{ el }</span></p>) }
       </div>
     </div>
   )

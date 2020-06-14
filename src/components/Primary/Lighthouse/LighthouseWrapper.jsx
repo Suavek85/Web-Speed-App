@@ -39,6 +39,7 @@ export default function LightHouse() {
   const tabContentProps = { 
     activeTabDesc,
     activeTabTitle,
+    score,
     scorePercentage,
     displayValuePercentage
   }
@@ -46,6 +47,7 @@ export default function LightHouse() {
   return (
     <div className={ getWrapperClass } >
       <LighthouseHeader />
+  
       <div className={ styles.blockContent }>
         <LighthouseTabs {...tabsProps} />
         <LighthouseTabContent  {...tabContentProps} />

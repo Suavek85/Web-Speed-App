@@ -20,10 +20,12 @@ function InputButtonWrapper() {
       let res = await axios.get(url)
       let allData = res.data 
       const loadingExperienceArr = [
-        allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category, 
-        allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category,
+        allData.lighthouseResult.audits['dom-size'].score,
+        allData.lighthouseResult.audits['unused-javascript'].score,
         allData.loadingExperience.id,
         allData.loadingExperience.overall_category,
+        allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category, 
+        allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category
       ]
       const lighthouseDataArr = lighthouseData.map(el => allData.lighthouseResult.audits[el] )
       dispatch({ 
