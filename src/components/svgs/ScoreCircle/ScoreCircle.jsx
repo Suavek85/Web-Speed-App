@@ -1,35 +1,64 @@
 import React from "react"
-//import { useSpring, animated } from 'react-spring'
+import PropTypes from 'prop-types'
+import classNames from 'classnames/bind'
 
-//INTERNAL
-import './ScoreCircle.scss'
+import styles from './ScoreCircle.scss'
 
 export default function ScoreCircle(props) {
 
   const { score } = props
-  const scoreCircle = score? Math.floor(score * 100) : 0
+  const scoreCircle = score ? Math.floor(score * 100) : 0
   const strokeValue = `${ scoreCircle }, 100`
 
-  return (
+  const isAlert = !!(scoreCircle < 50)
+  const isWarning = !!(scoreCircle < 90 && scoreCircle > 49)
+  const isInfo = !!(scoreCircle > 89)
 
-    <div className="chart-wrapper">
-      <svg viewBox="0 0 36 36" className="circular-chart orange">
-        <path className="circle-bg"
+  //STYLES
+  const cx = classNames.bind(styles)
+
+  const getClass = cx({
+    blockStats: true,
+    blockStatsAlert: isAlert,
+    blockStatsWarning: isWarning,
+    blockStatsInfo: isInfo
+  })
+
+  const getTextClass = cx({
+    blockText: true,
+    blockTextAlert: isAlert,
+    blockTextWarning: isWarning,
+    blockTextInfo: isInfo
+  })
+
+  const getBgClass = cx({
+    blockBg: true,
+    blockBgAlert: isAlert,
+    blockBgWarning: isWarning,
+    blockBgInfo: isInfo
+  })
+
+  return (
+    <div className={ styles.block }>
+      <svg viewBox="0 0 36 36" className={ styles.blockSvg }>
+        <path className={ getBgClass }
           d="M18 2.0845
             a 15.9155 15.9155 0 0 1 0 31.831
             a 15.9155 15.9155 0 0 1 0 -31.831"
         />
-        <path className="circle"
+        <path className={ getClass }
           strokeDasharray={ strokeValue }
           d="M18 2.0845
             a 15.9155 15.9155 0 0 1 0 31.831
             a 15.9155 15.9155 0 0 1 0 -31.831"
         />
-        <text x="18" y="21.5" className="percentage-text">{ scoreCircle }</text>
+        <text x="18" y="21.5" className={ getTextClass }>{ scoreCircle }</text>
       </svg>
     </div>
   
   )
 }
 
-
+ScoreCircle.propTypes = {
+  score: PropTypes.string,
+}

@@ -1,37 +1,32 @@
 # Web Speed App
 
-Work In Progress.
+React.js app using React Hooks with Redux for state manegement. WIP.
 
 GH Pages live preview: https://suavek85.github.io/Web-Speed-App/
 
-React.js app using Hooks + Redux.
 
-
-## Available Scripts
+## Scripts
 
 In the project directory, you can run:
 
-### `npm start`
+#### `npm start`
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+runs the app in the development mode on [http://localhost:3000](http://localhost:3000)
 
+#### `npm test`
 
-### `npm test`
+launches the test runner in the interactive watch mode.
 
-Launches the test runner in the interactive watch mode.
+#### `npm run build`
 
-### `npm run build`
+builds the app for production to the `build` folder.
 
-Builds the app for production to the `build` folder.
+#### `npm run storybook`
 
+runs storybook to browse a component library, view the different states of each UI component.
 
-### `npm run storybook`
+#### `npm run cypress:open`
 
-Runs storybook to browse a component library, view the different states of each UI component.
-
-### `npm run cypress:open`
-
-Runs Cypress integration tests.
+runs Cypress integration tests.
 
 

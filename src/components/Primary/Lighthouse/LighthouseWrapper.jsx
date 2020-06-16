@@ -22,12 +22,12 @@ export default function LightHouse() {
 
   const getDataState = useSelector(state => state.stateReducer.getLighthouseData)
   const { score, displayValue } = getDataState[activeTabInt]
-  const scorePercentage = score ? Math.round(score * 100) + '%' : '?'
-  const displayValuePercentage = displayValue ? displayValue : '?'
+  //const scorePercentage = score ? Math.round(score * 100) + '%' : '?'
+  //const displayValuePercentage = displayValue ? displayValue : '?'
 
   //STYLES
-  let cx = classNames.bind(styles)
-  let getWrapperClass = cx({
+  const cx = classNames.bind(styles)
+  const getWrapperClass = cx({
     blockWrapper: true,
     blockWrapperTablet: useMediaQuery(tabletWidth),
     blockWrapperSmallMobile: useMediaQuery(smallMobileWidth),
@@ -40,8 +40,6 @@ export default function LightHouse() {
     activeTabDesc,
     activeTabTitle,
     score,
-    scorePercentage,
-    displayValuePercentage
   }
 
   return (

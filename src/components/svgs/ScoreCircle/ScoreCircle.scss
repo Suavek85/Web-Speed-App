@@ -1,42 +1,84 @@
-  .chart-wrapper {
+  .chart__wrapper {
    width: 70px;
    height: 70px;
   }
   
-  .circular-chart {
+  .chart__svg {
     display: block;
     margin: 10px auto;
     max-width: 80%;
     max-height: 250px;
   }
   
-  .circle-bg {
+  .chart__background {
     fill: #fff0d8;
     stroke: #ffda9d;
     stroke-width: 3.8;
+    &--alert {
+      fill: #ffd8d8;
+      stroke: #ff8989;
+    }
+    &--warning {
+      fill: #fff0d8;
+      stroke: #ffda9d;
+    }
+    &--info {
+      fill: #ceffce;
+      stroke: #80ff80;
+    }
   }
   
-  .circle {
+  .chart__stats {
     fill: none;
     stroke-width: 3.6;
     stroke-linecap: round;
     animation: progress 1.5s ease-out forwards;
+    &--alert {
+      stroke: red;
+    }
+    &--warning {
+      stroke: #ff9f00;
+    }
+    &--info {
+      stroke: green;
+    }
   }
   
-  .circular-chart.orange .circle {
-    stroke: #ff9f00;
-  }
-  
-  .percentage-text {
-    fill:#ff9f00;
+  .chart__text {
     font-family: sans-serif;
     font-size: 10px;
     font-weight: 500;
     text-anchor: middle;
+    &--alert {
+      fill: red;
+    }
+    &--warning {
+      fill: #ff9f00;
+    }
+    &--info {
+      fill: green;
+    }
   }
 
   @keyframes progress {
     0% {
       stroke-dasharray: 0 100;
     }
+  }
+
+  :export {
+    block: chart__wrapper;
+    blockSvg: chart__svg;
+    blockBg: chart__background;
+    blockStats: chart__stats;
+    blockStatsAlert: chart__stats--alert;
+    blockStatsWarning: chart__stats--warning;
+    blockStatsInfo: chart__stats--info;
+    blockText: chart__text;
+    blockTextAlert: chart__text--alert;
+    blockTextWarning: chart__text--warning;
+    blockTextInfo: chart__text--info;
+    blockBgAlert: chart__background--alert;
+    blockBgWarning: chart__background--warning;
+    blockBgInfo: chart__background--info;
   }

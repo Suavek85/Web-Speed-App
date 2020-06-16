@@ -41,10 +41,16 @@
     }
 }
 
+.score__para {
+  display: flex; 
+  align-items: center;
+}
+
 :export {
     blockWrapper: section__wrapper;
     blockGeneric: section__wrapper--generic;
     blockTop: section__wrapper--top;
     blockBottom: section__wrapper--bottom;
     contentWrapper: section__content-wrapper;
+    scorePara: score__para;
 }

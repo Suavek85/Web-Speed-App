@@ -5,7 +5,7 @@ import * as content from '../../../../constants/lighthouseTabAllContent'
 import ScoreCircle from '../../../svgs/ScoreCircle/ScoreCircle'
 
 export default function LighthouseTabContent(props) {
-  const { activeTabTitle, activeTabDesc, score, scorePercentage, displayValuePercentage } = props
+  const { activeTabTitle, activeTabDesc, score } = props
   return (
     <div className={ styles.blockResults }>
       <p><span>{ content.TITLE }</span> { activeTabTitle }</p>
@@ -22,5 +22,4 @@ LighthouseTabContent.propTypes = {
   activeTabTitle: PropTypes.string,
   activeTabDesc: PropTypes.string,
   score: PropTypes.string,
-  scorePercentage: PropTypes.string,
 }

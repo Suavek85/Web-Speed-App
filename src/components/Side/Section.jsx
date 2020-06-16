@@ -2,12 +2,18 @@ import React from 'react'
 import classNames from 'classnames/bind'
 
 import LightBulbUI from '../svgs/LightBulb/LightBulbUI'
+import ScoreCircle from '../svgs/ScoreCircle/ScoreCircle'
 import styles from './Section.scss'
 
 export default function Section(props) {
 
   const { content, data, position } = props
-  const { header, mainContent, result } = content
+  const { header, mainContent, result } = content 
+
+  const genericPara = (el, index) => <p key={index}>{ result[index] } <span>{ el }</span></p>
+  const scorePara = (el, index) => { 
+    return el !== '?' && (<p className={scorePara} key={index}>Score: <span><ScoreCircle score={el} /></span></p>)
+  }
 
   //STYLES
   let cx = classNames.bind(styles)
@@ -28,7 +34,8 @@ export default function Section(props) {
         <p>
           { mainContent }
         </p>
-        { data.map((el,index) => <p key={index}>{ result[index] } <span>{ el }</span></p>) }
+        { position === 'generic' && data.map(genericPara) }
+        { position !== 'generic' && data.map(scorePara) }
       </div>
     </div>
   )
