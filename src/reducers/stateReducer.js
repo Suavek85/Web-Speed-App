@@ -1,6 +1,6 @@
 import { appStates } from '../constants/states'
 
-const initialState = ['?', '?', '?', '?'] 
+const initialState = ['?', '?', '?', '?','?', '?', '?'] 
 const initialStateLighthouse = [{}, {}, {}, {}, {}, {}] 
 
 export const stateReducer = (state = { getAppState: initialState }, action) => {

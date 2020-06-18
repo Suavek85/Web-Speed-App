@@ -10,8 +10,8 @@ import { smallMobileWidth } from'../../../scss/mediaqueries'
 export default function InputWrapper() {
 
    //STYLES
-   let cx = classNames.bind(styles)
-   let getClass = cx({
+   const cx = classNames.bind(styles)
+   const getClass = cx({
     block: true,
     blockSmallMobile: useMediaQuery(smallMobileWidth),
    })

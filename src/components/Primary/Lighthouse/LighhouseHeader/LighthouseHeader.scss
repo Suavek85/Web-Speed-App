@@ -4,10 +4,31 @@
   display: flex; 
   align-items: center;
   height: 120px;
-  padding: 20px 40px;
+  padding: 30px 40px;
   border-bottom: $ws-lighthouse-border-light;
 }
 
+.lighthouse__title-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 20px;
+}
+
+.lighthouse__title {
+  color: papayawhip;
+  margin-bottom: 0;
+}
+
+.lighthouse__subtitle {
+  color: papayawhip;
+  font-size: 20px;
+}
+
+
 :export {
     blockHeader: lighthouse__header;
+    blockTitleWrapper: lighthouse__title-wrapper;
+    blockTitle: lighthouse__title;
+    blockSubTitle: lighthouse__subtitle;
 }

@@ -11,10 +11,11 @@ import {
 } from'../../../../scss/mediaqueries'
 
 export default function LighthouseTabs(props) {
+
   const { handleActiveTab, activeTab } = props
 
-  let cx = classNames.bind(styles)
-  let getTabClass = cx({
+  const cx = classNames.bind(styles)
+  const getTabClass = cx({
     blockTabs: true,
     blockTabsMobile: useMediaQuery(mobileWidth),
     blockTabsSmallMobile: useMediaQuery(smallMobileWidth),

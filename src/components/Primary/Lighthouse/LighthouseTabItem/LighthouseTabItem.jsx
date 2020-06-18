@@ -9,9 +9,9 @@ export default function LighthouseTabItem(props) {
   const { activeTab } = props
 
   //STYLE
-  let cx = classNames.bind(styles)
+  const cx = classNames.bind(styles)
   
-  let geTabItemClass = (tabIndex, activeTabIndex) => cx({
+  const geTabItemClass = (tabIndex, activeTabIndex) => cx({
     blockTabsItem: true,
     blockTabsItemActive: activeTabIndex === tabIndex,
   })

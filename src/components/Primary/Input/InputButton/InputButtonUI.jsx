@@ -23,9 +23,9 @@ export default function InputButtonUI(props) {
   const isStatus = state => getAppState === state
   const isLoadingStatus = isStatus(appStates.LOADING)
 
-  let cx = classNames.bind(styles)
+  const cx = classNames.bind(styles)
 
-  let getButtonClasses = cx({
+  const getButtonClasses = cx({
     block: true,
     blockInactive: isStatus(appStates.INACTIVE),
     blockLoading: isStatus(appStates.LOADING),

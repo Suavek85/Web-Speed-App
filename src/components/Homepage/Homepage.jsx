@@ -11,8 +11,8 @@ import styles from './Homepage.scss'
 export default function Homepage() {
 
   //STYLES
-  let cx = classNames.bind(styles)
-  let getButtonClasses = cx({
+  const cx = classNames.bind(styles)
+  const getButtonClasses = cx({
     block: true,
     blockTablet: useMediaQuery(tabletWidth),
   })

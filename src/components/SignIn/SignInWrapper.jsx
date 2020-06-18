@@ -19,8 +19,8 @@ export default function SignInWrapper(props) {
   const handleTabClick = e => setActiveTab(e.target.id)
   const isSignUp = activeTab === 'signup'
 
-  let cx = classNames.bind(styles)
-  let getClass = arg => cx({
+  const cx = classNames.bind(styles)
+  const getClass = arg => cx({
     headeritemWrapper: true,
     headeritemWrapperInactive: arg !== activeTab,
   })

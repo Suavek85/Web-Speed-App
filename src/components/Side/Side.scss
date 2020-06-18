@@ -4,8 +4,17 @@
     width: 30%;
     height: 100vh;
     flex-direction: column;
-    > div {
-        height: calc(100%/3);
+    > div:first-child {
+        height: 35%;
+    }
+    > div:not(:first-child) {
+        height: calc((100% - 35%)/3);
+    }
+    > div:not(:first-child) > div > p:nth-child(n+3) {
+        margin-top: 0;
+    }
+    > div:not(:first-child) > div > p:nth-child(n+2) {
+        margin-bottom: 0;
     }
     &--tablet { 
         width: auto;
@@ -13,13 +22,16 @@
         flex-direction: row;
         margin: 20px 0;
         > div {
-            height: 350px;
+            height: 350px !important;
+        }
+        > div:not(:last-child) {
+            border-right: solid 1px #A8D0E6;
         }
     }
     &--mobile { 
         flex-direction: column;
         > div {
-            height: 350px;
+            height: 200px;
         }
     }
 }

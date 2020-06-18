@@ -4,19 +4,20 @@ import { useSelector } from "react-redux"
 import Section from '../Section'
 import { RESULT } from '../../../constants/content.js'
 
-export default function Main() {
+export default function Middle() {
 
   const getDataState = useSelector(state => state.stateReducer.getData)
 
   const content = {
-    header: 'Generic info',
-    mainContent: 'Page overall information ',
-    result: ['Page overall category: ', 'First Contentful Paint: ', 'First Input Delay: ']
+    header: 'Unused Javascript',
+    mainContent: 'Remove unused JavaScript to reduce bytes consumed by network activity.',
+    result: [RESULT],
   }
 
-  const data = [getDataState[3], getDataState[4], getDataState[5]]
-  const position = 'generic'
+  const data = [getDataState[1]]
+  const position = 'bottom'
   const props = { content, data, position }
+
 
   return (
     <Section {...props} />

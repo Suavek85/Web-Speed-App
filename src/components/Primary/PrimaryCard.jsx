@@ -11,8 +11,8 @@ import styles from './PrimaryCard.scss'
 export default function PrimaryCard() {
 
   //STYLES
-  let cx = classNames.bind(styles)
-  let getClass = cx({
+  const cx = classNames.bind(styles)
+  const getClass = cx({
     block: true,
     blockTablet: useMediaQuery(tabletWidth),
   })

@@ -9,17 +9,17 @@ export default function Bottom() {
   const getDataState = useSelector(state => state.stateReducer.getData)
 
   const content = {
-    header: 'Unused Javascript',
+    header: 'Unused CSS',
     mainContent: 'Remove unused JavaScript to reduce bytes consumed by network activity.',
     result: [RESULT],
   }
 
-  const data = [getDataState[1]]
-  const position = 'bottom'
+  const data = [getDataState[6]]
+  const position = 'middle'
   const props = { content, data, position }
-
 
   return (
     <Section {...props} />
   )
 }
+
