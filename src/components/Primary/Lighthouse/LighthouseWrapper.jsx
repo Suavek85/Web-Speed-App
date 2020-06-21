@@ -21,7 +21,7 @@ export default function LightHouse() {
   const activeTabTitle = tabsTitles[activeTabInt]
 
   const getDataState = useSelector(state => state.stateReducer.getLighthouseData)
-  const { score, displayValue } = getDataState[activeTabInt]
+  const { score } = getDataState[activeTabInt]
   //const scorePercentage = score ? Math.round(score * 100) + '%' : '?'
   //const displayValuePercentage = displayValue ? displayValue : '?'
 

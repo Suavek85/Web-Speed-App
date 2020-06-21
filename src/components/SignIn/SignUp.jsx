@@ -1,6 +1,4 @@
 import React, { useState } from 'react'
-
-import SignWithGoogle from './SignWithGoogle'
 import FormInput from './FormInput'
 import styles from './SignIn.scss'
 import * as content from '../../constants/signinContent'

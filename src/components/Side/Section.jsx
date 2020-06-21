@@ -1,14 +1,22 @@
 import React from 'react'
 import classNames from 'classnames/bind'
+import { useSelector } from "react-redux"
+import { appStates } from '../../constants/states'
 
+import SkeletonCircle from '../Skeleton/SkeletonCircle'
+import SkeletonText from '../Skeleton/SkeletonText'
 import LightBulbUI from '../svgs/LightBulb/LightBulbUI'
 import ScoreCircle from '../svgs/ScoreCircle/ScoreCircle'
 import styles from './Section.scss'
+
 
 export default function Section(props) {
 
   const { content, data, position } = props
   const { header, mainContent, result } = content 
+
+  const getAppState = useSelector(state => state.stateReducer.getAppState)
+  const loadingStatus = getAppState === appStates.LOADING
 
   //STYLES
   const cx = classNames.bind(styles)
@@ -25,11 +33,44 @@ export default function Section(props) {
     blockWarning: arg === 'AVERAGE',
   })
 
-  const genericPara = (el, index) => (<p key={index}>{ result[index]  } <span className={ getColorClass(el)}>{ el !== '?' && el }</span></p>)
+
+  //ELEMENTS
+  const genericPara = (el, index) => (
+    <p key={index}>{ result[index]  } 
+      <span className={ getColorClass(el)}>
+        { el !== '?' && el }
+        { el === '?' && loadingStatus && <SkeletonText />}
+      </span>
+    </p>
+  )
+
   const scorePara = (el, index) => { 
-    return el !== '?' && (<p className={scorePara} key={index}>Score: <span><ScoreCircle score={el} /></span></p>)
+    return el !== '?' && !loadingStatus && (
+      <p className={scorePara} key={index}>
+        Score: 
+        <span>
+          <ScoreCircle score={el} />
+        </span>
+      </p>
+    )
   }
-  const lightBulbWrapper = (<span className={ styles.blockLightbulb } ><LightBulbUI /></span>)
+
+  const scoreParaLoading = (el, index) => { 
+    return el === '?' && loadingStatus && (
+      <p className={scorePara} key={index}>
+        Score: 
+        <span>
+          <SkeletonCircle />
+        </span>
+      </p>
+    )
+  }
+
+  const lightBulbWrapper = (
+    <span className={ styles.blockLightbulb } >
+      <LightBulbUI />
+    </span>
+  )
 
   return (
     <div className={ getClass } >
@@ -43,6 +84,7 @@ export default function Section(props) {
         </p>
         { position === 'generic' && data.map(genericPara) }
         { position !== 'generic' && data.map(scorePara) }
+        { position !== 'generic' && data.map(scoreParaLoading) }
       </div>
     </div>
   )

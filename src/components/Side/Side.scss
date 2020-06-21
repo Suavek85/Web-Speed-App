@@ -5,16 +5,16 @@
     height: 100vh;
     flex-direction: column;
     > div:first-child {
-        height: 35%;
+        height: 30%;
     }
     > div:not(:first-child) {
-        height: calc((100% - 35%)/3);
+        height: calc((100% - 30%)/3);
     }
     > div:not(:first-child) > div > p:nth-child(n+3) {
         margin-top: 0;
     }
     > div:not(:first-child) > div > p:nth-child(n+2) {
-        margin-bottom: 0;
+        margin-bottom: 5px;
     }
     &--tablet { 
         width: auto;

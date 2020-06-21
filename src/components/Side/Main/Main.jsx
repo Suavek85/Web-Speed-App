@@ -1,8 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux"
-
 import Section from '../Section'
-import { RESULT } from '../../../constants/content.js'
 
 export default function Main() {
 
