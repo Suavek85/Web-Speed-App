@@ -16,7 +16,7 @@ btnsContent.SUCCESS = 'Get new report'
 //LIGHTHOUSE
 
 export const LIGHTHOUSE_TITLE = 'Lighthouse Score'
-export const PERFORMANCE = 'Performance'
+export const PERFORMANCE = 'Overall Performance'
 
 //FIRST CONTENTFUL PAIN
 export const FIRST_PAINT_HEADER = 'First Contentful Paint'

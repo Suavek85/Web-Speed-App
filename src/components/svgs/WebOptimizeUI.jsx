@@ -1,30 +1,38 @@
 import React from "react"
 import PropTypes from 'prop-types'
 import { useSpring, animated } from 'react-spring'
-
-//INTERNAL
 import './WebOptimizeUI.scss'
 
 function WebOptimizeUI(props) {
 
-  const customInactive = { mass: 25, tension: 25, friction: 25 }
-  const customLoading = { mass: 1, tension: 170, friction: 26 }
-  const getConfig = () => props.loadingStatus? customLoading : customInactive
-  
+  const { averageScore, loadingStatus } = props
+
+  //Indicator
+  const loadingMotion = { mass: 25, tension: 25, friction: 25 }
+  const percentToDegree = percent => percent ? percent * 1.94 : 0
+  const defaultDeegree = -164
+  const addedDegree = percentToDegree(averageScore)
+  const successDegree = defaultDeegree + addedDegree
+
   const indicatorProps = useSpring({
     from:{ transform: 'rotate(-65deg)', transformOrigin: 'center' },
     to: async next => {
       // eslint-disable-next-line no-constant-condition
       while (true) {
-        await next({ transform: 'rotate(-155deg)', config: getConfig() } )
-        await next({ transform: 'rotate(0deg)', config: getConfig() })
-        await next({ transform: 'rotate(-100deg)', config: getConfig() })
-        await next({ transform: 'rotate(-65deg)', config: getConfig() } )
-        await next({ delay: 1000 } )
+        await next({ transform: 'rotate(-155deg)', config: loadingMotion } )
+        await next({ transform: 'rotate(0deg)', config: loadingMotion })
+        await next({ transform: 'rotate(-100deg)', config: loadingMotion })
+        await next({ transform: 'rotate(-65deg)', config: loadingMotion } )
+        await next({ delay: 100 } )
       }
     },
   })
 
+  const indicatorPropsSuccess = useSpring({
+    to: { transform: `rotate(${successDegree}deg)`, transformOrigin: 'center' },
+  })
+
+  //Text squares
   const colorProps = useSpring({
     from:{ fill: "#FFFFFF" },
     to: async next => {
@@ -61,13 +69,17 @@ function WebOptimizeUI(props) {
     },
   })
 
+  //Text
+  const firstDigit = averageScore === 100 ? 1 : null
+  const secondDigit = averageScore >= 10 ? Math.floor(averageScore / 10) : null
+  const thirdDigit = averageScore? averageScore - Math.floor(averageScore /10) * 10 : null
 
   const getText = (xCord, yCord, value) => {
     return (
       <text 
         x={xCord}
         y={yCord}
-        fill="#00143c" 
+        fill="darkslategrey" 
         fontWeight='bold'
         fontFamily='Orbitron, sans-serif' 
         fontSize="65" > 
@@ -89,9 +101,8 @@ function WebOptimizeUI(props) {
         style={{ enableBackground: "new 0 0 512 512" }}
         xmlSpace="preserve"
       >
-        <circle style={{ fill: "#445EA0" }} cx="251.381" cy={262} r={230} />
         <circle
-          style={{ fill: "#FFFFFF" }}
+          style={{ fill: "beige" }}
           cx="250.411"
           cy="263.49"
           r="198.62"
@@ -136,12 +147,6 @@ function WebOptimizeUI(props) {
 	l18.137,49.354c12.326-4.745,25.701-7.353,39.681-7.353c14.034,0,27.465,2.628,39.833,7.409L308.378,110.73z"
         />
         <path
-          style={{ fill: "#D9EAFC" }}
-          d="M71.636,263.493c0-106.363,83.613-193.198,188.696-198.368c-3.287-0.162-6.594-0.247-9.921-0.247
-	c-109.692,0-198.617,88.925-198.617,198.615c0,109.692,88.925,198.615,198.617,198.615c3.327,0,6.634-0.086,9.921-0.247
-	C155.249,456.691,71.636,369.858,71.636,263.493z"
-        />
-        <path
           style={{ fill: "#293D7C" }}
           d="M107.176,273.047H87.332c4.948,85.775,76.064,153.808,163.078,153.808
 	c3.333,0,6.638-0.112,9.921-0.309C177.891,421.607,111.934,355.537,107.176,273.047z"
@@ -155,29 +160,29 @@ function WebOptimizeUI(props) {
 
         <g>
           <animated.path
-            style={colorPropsDarkBlue}
+            style={loadingStatus? colorPropsDarkBlue : { fill: "beige" }}
             d="M219 371.705C219 375.167 216.987 378 214.527 378H169.473C167.013 378 165 375.167 165 371.705V308.295C165 304.833 167.013 302 169.473 302H214.527C216.987 302 219 304.833 219 308.295V371.705Z"
           />
-          { getText(174, 363, 9) }
+          { getText(174, 363, firstDigit) }
         </g>
         <g>
           <animated.path
             id="SVGCleanerId_0_1_"
-            style={colorPropsBlue}
+            style={ loadingStatus? colorPropsBlue : { fill: "beige" }}
             d="M278 371.705C278 375.167 275.987 378 273.527 378H228.473C226.013 378 224 375.167 224 371.705V308.295C224 304.833 226.013 302 228.473 302H273.527C275.987 302 278 304.833 278 308.295V371.705Z"
           />
-          { getText(234, 363, 0) }
+          { getText(234, 363, secondDigit) }
 
         </g>
         <g>
           <animated.path
             id="SVGCleanerId_1_1_"
-            style={colorProps}
+            style={ loadingStatus? colorProps : { fill: "beige" }}
             d="M336 371.705C336 375.167 333.987 378 331.527 378H286.473C284.013 378 282 375.167 282 371.705V308.295C282 304.833 284.013 302 286.473 302H331.527C333.987 302 336 304.833 336 308.295V371.705Z"
           />
-          { getText(292, 363, 3) }
+          { getText(292, 363, thirdDigit) }
         </g>
-        <animated.g style={indicatorProps} >
+        <animated.g style={loadingStatus? indicatorProps : indicatorPropsSuccess} >
           <path
             style={{ fill: "#FE3745" }}
             d="M226.123,274.934c-6.308-13.391-0.546-29.419,12.847-35.728c0.736-0.346,1.494-0.661,2.318-0.96
@@ -207,7 +212,8 @@ function WebOptimizeUI(props) {
 }
 
 WebOptimizeUI.propTypes = {
-  loadingStatus: PropTypes.bool
+  loadingStatus: PropTypes.bool,
+  averageScore: PropTypes.number
 }
 
 export default WebOptimizeUI

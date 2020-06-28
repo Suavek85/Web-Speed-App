@@ -17,8 +17,11 @@ function InputButtonWrapper() {
     const url = getUrl(urlInput)
 
     try {
+      
       let res = await axios.get(url)
+
       let allData = res.data 
+
       const loadingExperienceArr = [
         allData.lighthouseResult.audits['dom-size'].score,
         allData.lighthouseResult.audits['unused-javascript'].score,
@@ -28,8 +31,9 @@ function InputButtonWrapper() {
         allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category,
         allData.lighthouseResult.audits['unused-css-rules'].score,
       ]
-      //console.
+
       const lighthouseDataArr = lighthouseData.map(el => allData.lighthouseResult.audits[el] )
+
       dispatch({ 
         type: appStates.SUCCESS,
         payload: loadingExperienceArr,
