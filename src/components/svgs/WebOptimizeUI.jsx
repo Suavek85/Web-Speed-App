@@ -29,6 +29,7 @@ function WebOptimizeUI(props) {
   })
 
   const indicatorPropsSuccess = useSpring({
+    ///from: { transform: `rotate(${successDegree}deg)`, transformOrigin: 'center' },
     to: { transform: `rotate(${successDegree}deg)`, transformOrigin: 'center' },
   })
 
@@ -108,7 +109,7 @@ function WebOptimizeUI(props) {
           r="198.62"
         />
         <path
-          style={{ fill: "#445EA0" }}
+          style={{ fill: "#376685" }}
           d="M370.784,273.047c-5.275,0-9.553-4.278-9.553-9.554c0-23.982-7.66-46.206-20.657-64.362l-0.001,0.001
             c-12.515-17.481-29.981-31.186-50.329-39.052l-0.001,0.001c-12.367-4.781-25.799-7.409-39.833-7.409
             c-13.98,0-27.355,2.608-39.681,7.353l-0.002-0.005c-20.38,7.844-37.877,21.542-50.418,39.025c0,0,0,0.001,0.001,0.001
@@ -147,7 +148,7 @@ function WebOptimizeUI(props) {
 	l18.137,49.354c12.326-4.745,25.701-7.353,39.681-7.353c14.034,0,27.465,2.628,39.833,7.409L308.378,110.73z"
         />
         <path
-          style={{ fill: "#293D7C" }}
+          style={{ fill: "#375385" }}
           d="M107.176,273.047H87.332c4.948,85.775,76.064,153.808,163.078,153.808
 	c3.333,0,6.638-0.112,9.921-0.309C177.891,421.607,111.934,355.537,107.176,273.047z"
         />
@@ -182,7 +183,7 @@ function WebOptimizeUI(props) {
           />
           { getText(292, 363, thirdDigit) }
         </g>
-        <animated.g style={loadingStatus? indicatorProps : indicatorPropsSuccess} >
+        <animated.g id='red-indicator' style={loadingStatus? indicatorProps : indicatorPropsSuccess} >
           <path
             style={{ fill: "#FE3745" }}
             d="M226.123,274.934c-6.308-13.391-0.546-29.419,12.847-35.728c0.736-0.346,1.494-0.661,2.318-0.96

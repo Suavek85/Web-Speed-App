@@ -49,7 +49,7 @@ const INTERACTIVE = 'Time to interactive is the amount of time it takes for the 
 
 //TOTAL BLOCKING TIME - LIGHTHOUSE
 const BLOCKING_TIME_TITLE = 'Total Blocking Time'
-const BLOCKING_TIME_DESC = 'Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms, expressed in milliseconds'
+const BLOCKING_TIME_DESC = 'Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms.'
 
 //CUMULATIVE LAYOUT SHIFT
 const LAYOUT_SHIFT_TITLE = 'Cumulative Layout Shift.'

@@ -11,14 +11,13 @@
 
 .mainheader__title {
     text-decoration: none;
-    h1 { color: papayawhip !important }
 }
 
 .mainheader__links {
     display: flex;
     h2 {
         font-size: 18px;
-        color: papayawhip;
+        color: $color-main-font;
     }
 }
 

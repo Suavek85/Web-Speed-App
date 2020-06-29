@@ -5,15 +5,15 @@
     height: 100%;
     display: flex;
     flex-direction: column;
-    background-color: ivory;
+    background-color: $color-ivory;
     &--generic {
-      border-bottom: solid 1px #A8D0E6;
+      border-bottom: solid 1px #E4F0F7;
     }
     &--top {
-      border-bottom: solid 1px #A8D0E6;
+      border-bottom: solid 1px #E4F0F7;
     }
     &--bottom {
-      border-bottom: solid 1px #A8D0E6;
+      border-bottom: solid 1px #E4F0F7;
     }
 }
 
@@ -22,9 +22,8 @@
     position: relative;
     flex-direction: column;
     padding: 0px 30px;
-
     > h2 {
-      color: cadetblue;
+      color: $color-main-font;
       font-size: 19px;
       margin-bottom: 0;
     }
@@ -41,15 +40,15 @@
     }
 
     &--alert {
-      color: red;
+      color: $color-alert;
     }
 
     &--warning {
-      color: orange;
+      color: $color-warning-loading;
     }
 
     &--info {
-      color: green;
+      color: $color-green-success;
       
     }
 }

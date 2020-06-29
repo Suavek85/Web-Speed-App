@@ -3,24 +3,26 @@
 .inputbutton__wrapper {
     display: block;
     height: 44px;
-    padding: 16px;
+    line-height: 44px;
+    width: 120px;
+    font-size: 12px;
+    text-align: center;
     margin-left: 40px;
     color: white;
     outline: none;
     border: none;
     cursor: pointer;
     &--inactive {
-      background-color: rgba(55,71,133,.8);
+      background-color: $color-blue;
       &:active {
         transform: translateY(2px);
-        background-color:rgba(55,71,133,1)
       }
     }
     &--loading {
         background-color: $color-warning-loading;
     }
     &--error {
-      background-color: $color-bottom-background;
+      background-color: $color-alert;
     }
     &--success {
       background-color: $color-green-success;

@@ -5,7 +5,7 @@
   align-items: center;
   height: 120px;
   padding: 30px 40px;
-  border-bottom: $ws-lighthouse-border-light;
+  border-bottom: $ws-border-light;
 }
 
 .lighthouse__title-wrapper {
@@ -16,12 +16,11 @@
 }
 
 .lighthouse__title {
-  color: papayawhip;
   margin-bottom: 0;
 }
 
 .lighthouse__subtitle {
-  color: cadetblue;
+  color: $color-main-font;
   font-size: 20px;
 }
 
