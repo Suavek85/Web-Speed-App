@@ -1,0 +1,20 @@
+@import ".././../../scss/styles.scss";
+
+.button__wrapper {
+    display: block;
+    height: 44px;
+    line-height: 44px;
+    width: 120px;
+    font-size: 12px;
+    text-align: center;
+    margin-left: 40px;
+    color: $color-black;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+:export {
+  block: button__wrapper;
+}

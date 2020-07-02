@@ -4,6 +4,7 @@ import { useMediaQuery } from 'react-responsive'
 
 import InputUrlWrapper from './InputUrl/InputUrlWrapper'
 import InputButtonWrapper from './InputButton/InputButtonWrapper'
+import Error from '../Error/Error'
 import styles from './Input.scss'
 import { smallMobileWidth } from'../../../scss/mediaqueries'
 
@@ -22,6 +23,7 @@ export default function InputWrapper() {
       <div className={styles.btnWrapper}>
         <InputButtonWrapper />
       </div>
+      <Error />
     </div>
   )
 }

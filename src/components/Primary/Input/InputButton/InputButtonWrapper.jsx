@@ -42,7 +42,11 @@ function InputButtonWrapper() {
     } 
     
     catch(err) {
-      dispatch({ type: appStates.ERROR })
+      console.log(err.response.status, err.response.data)
+      dispatch({ type: appStates.ERROR, payload: err.response.status })
+      //429 Quota exceeded for quota group 'default' and limit….com' for consumer 'project_number:583797351490'.
+      //400 Request contains an invalid argument
+      //any other generuc message
     } 
   }
 

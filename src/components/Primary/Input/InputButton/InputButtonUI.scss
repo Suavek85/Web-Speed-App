@@ -23,6 +23,7 @@
     }
     &--error {
       background-color: $color-alert;
+      width: 160px;
     }
     &--success {
       background-color: $color-green-success;

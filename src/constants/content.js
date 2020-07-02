@@ -10,7 +10,7 @@ export const SIGN_IN = 'Sign in'
 export const btnsContent = {...appStates}
 btnsContent.LOADING = 'Loading...' 
 btnsContent.INACTIVE = 'Get report' 
-btnsContent.ERROR = 'Oops, an error' 
+btnsContent.ERROR = 'Oops, an error. Try again' 
 btnsContent.SUCCESS = 'Get new report'
 
 //LIGHTHOUSE

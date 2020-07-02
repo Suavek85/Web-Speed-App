@@ -1,6 +1,8 @@
 import React from "react"
 import PropTypes from 'prop-types'
 import { useSpring, animated } from 'react-spring'
+
+import WebOptimizeText from './WebOptimizeText'
 import './WebOptimizeUI.scss'
 
 function WebOptimizeUI(props) {
@@ -74,20 +76,6 @@ function WebOptimizeUI(props) {
   const firstDigit = averageScore === 100 ? 1 : null
   const secondDigit = averageScore >= 10 ? Math.floor(averageScore / 10) : null
   const thirdDigit = averageScore? averageScore - Math.floor(averageScore /10) * 10 : null
-
-  const getText = (xCord, yCord, value) => {
-    return (
-      <text 
-        x={xCord}
-        y={yCord}
-        fill="darkslategrey" 
-        fontWeight='bold'
-        fontFamily='Orbitron, sans-serif' 
-        fontSize="65" > 
-        {value}
-      </text>
-    )
-  }
 
   return (
     <div className='weboptimize__wrapper'>
@@ -164,7 +152,7 @@ function WebOptimizeUI(props) {
             style={loadingStatus? colorPropsDarkBlue : { fill: "beige" }}
             d="M219 371.705C219 375.167 216.987 378 214.527 378H169.473C167.013 378 165 375.167 165 371.705V308.295C165 304.833 167.013 302 169.473 302H214.527C216.987 302 219 304.833 219 308.295V371.705Z"
           />
-          { getText(174, 363, firstDigit) }
+          <WebOptimizeText xCord='174' yCord='363' value={ firstDigit } />
         </g>
         <g>
           <animated.path
@@ -172,8 +160,7 @@ function WebOptimizeUI(props) {
             style={ loadingStatus? colorPropsBlue : { fill: "beige" }}
             d="M278 371.705C278 375.167 275.987 378 273.527 378H228.473C226.013 378 224 375.167 224 371.705V308.295C224 304.833 226.013 302 228.473 302H273.527C275.987 302 278 304.833 278 308.295V371.705Z"
           />
-          { getText(234, 363, secondDigit) }
-
+          <WebOptimizeText xCord='234' yCord='363' value={ secondDigit } />
         </g>
         <g>
           <animated.path
@@ -181,7 +168,7 @@ function WebOptimizeUI(props) {
             style={ loadingStatus? colorProps : { fill: "beige" }}
             d="M336 371.705C336 375.167 333.987 378 331.527 378H286.473C284.013 378 282 375.167 282 371.705V308.295C282 304.833 284.013 302 286.473 302H331.527C333.987 302 336 304.833 336 308.295V371.705Z"
           />
-          { getText(292, 363, thirdDigit) }
+          <WebOptimizeText xCord='292' yCord='363' value={ thirdDigit } />
         </g>
         <animated.g id='red-indicator' style={loadingStatus? indicatorProps : indicatorPropsSuccess} >
           <path
