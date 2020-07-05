@@ -5,6 +5,7 @@ import { useSelector } from "react-redux"
 import { appStates } from '../../constants/states'
 
 import SkeletonCircle from '../Skeleton/SkeletonCircle'
+import InfoCircle from '../svgs/InfoCircle/InfoCircle'
 import SkeletonText from '../Skeleton/SkeletonText'
 import LightBulbUI from '../svgs/LightBulb/LightBulbUI'
 import ScoreCircle from '../svgs/ScoreCircle/ScoreCircle'
@@ -34,8 +35,33 @@ export default function Section(props) {
     blockWarning: arg === 'AVERAGE',
   })
 
+  const getDescrptionWrapperClass = cx({
+    blockDesc: true,
+    blockGenericDesc: position === 'generic',
+    blockResultDesc: position !== 'generic',
+  })
+  
+  const style = position !== 'generic'? { 
+    display: 'flex', alignItems: 'flex-end', flexDirection: 'row' 
+  } : { 
+    display: 'flex', alignItems: 'flex-start', flexDirection: 'column' 
+  }
 
-  //ELEMENTS
+
+  // GENERIC ELEMENTS
+
+  const lightBulbWrapper = (
+    <span className={ styles.blockLightbulb } >
+      <LightBulbUI />
+    </span>
+  )
+
+  const genericDescription = (
+    <p>
+      { mainContent }
+    </p>
+  )
+
   const genericPara = (el, index) => (
     <p key={index}>{ result[index]  } 
       <span className={ getColorClass(el)}>
@@ -43,6 +69,19 @@ export default function Section(props) {
         { el === '?' && loadingStatus && <SkeletonText />}
       </span>
     </p>
+  )
+
+  //RESULTS ELEMENTS
+
+  const description = (
+    <>
+      <span style={{marginLeft: '7px'}}>
+        <InfoCircle mainContent={mainContent} />
+      </span>
+      <ReactTooltip id={ mainContent } type='info'>
+        <span>{ mainContent }</span>
+      </ReactTooltip>
+    </>
   )
 
   const scorePara = (el, index) => { 
@@ -67,36 +106,17 @@ export default function Section(props) {
     )
   }
 
-  const lightBulbWrapper = (
-    <span className={ styles.blockLightbulb } >
-      <LightBulbUI />
-    </span>
-  )
-
   return (
     <div className={ getClass } >
       <div className={ styles.contentWrapper }>
-        <h2>
-          { header }
-          { position === 'generic' && lightBulbWrapper }
-        </h2>
-
-        { position === 'generic' && (
-          <p>
-            { mainContent }
-          </p>
-        )}
-       
-
-        { position !== 'generic' && (
-          <>
-            <p data-tip data-for={ mainContent }> INFO </p>
-            <ReactTooltip id={ mainContent } type='error'>
-              <span>{ mainContent }</span>
-            </ReactTooltip>
-          </>
-        )}
-
+        <div className={ getDescrptionWrapperClass }>
+          <h2>
+            { header }
+            { position === 'generic' && lightBulbWrapper }
+          </h2>
+          { position === 'generic' && genericDescription }
+          { position !== 'generic' && description}
+        </div>
         { position === 'generic' && data.map(genericPara) }
         { position !== 'generic' && data.map(scorePara) }
         { position !== 'generic' && data.map(scoreParaLoading) }

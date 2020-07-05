@@ -9,10 +9,10 @@
     margin-right: 20px;
     border: $ws-border-light;
     > div:first-child {
-        height: 30%;
+        height: 37%;
     }
     > div:not(:first-child) {
-        height: calc((100% - 30%)/3);
+        height: calc((100% - 37%)/3);
     }
     > div:not(:first-child) > div > p:nth-child(n+3) {
         margin-top: 0;

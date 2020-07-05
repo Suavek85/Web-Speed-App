@@ -3,7 +3,6 @@ import { appStates } from '../constants/states'
 import { lighthouseData } from '../constants/lighthouseData'
 import getUrl from './getUrl'
 
-
 async function makeGetRequest(dispatch) {
   const urlInput = document.getElementById('urlinput').value
   const url = getUrl(urlInput)
@@ -11,7 +10,6 @@ async function makeGetRequest(dispatch) {
   try {
       
     let res = await axios.get(url)
-
     let allData = res.data 
 
     const loadingExperienceArr = [
@@ -23,7 +21,6 @@ async function makeGetRequest(dispatch) {
       allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category,
       allData.lighthouseResult.audits['unused-css-rules'].score,
     ]
-
     const lighthouseDataArr = lighthouseData.map(el => allData.lighthouseResult.audits[el] )
 
     dispatch({ 
@@ -34,7 +31,10 @@ async function makeGetRequest(dispatch) {
   } 
     
   catch(err) {
-    dispatch({ type: appStates.ERROR, payload: err.response.status })
+    dispatch({ 
+      type: appStates.ERROR, 
+      payload: err.response.status 
+    })
   } 
 }
 

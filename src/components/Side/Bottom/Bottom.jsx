@@ -10,7 +10,7 @@ export default function Bottom() {
 
   const content = {
     header: 'Unused CSS',
-    mainContent: 'Remove unused JavaScript to reduce bytes consumed by network activity.',
+    mainContent: 'Remove dead rules from stylesheets and defer the loading of not used CSS.',
     result: [RESULT],
   }
 

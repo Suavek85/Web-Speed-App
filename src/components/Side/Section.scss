@@ -22,13 +22,14 @@
     position: relative;
     flex-direction: column;
     padding: 0px 30px;
-    > h2 {
+    > div > h2 {
       color: $color-main-font;
       font-size: 19px;
       margin-bottom: 0;
     }
     p {
       font-size: 13px;
+      margin-top: 10px;
       color: grey;
       display: flex;
       flex-direction: row;
@@ -53,6 +54,19 @@
     }
 }
 
+.section__description {
+  display: flex;
+  &--generic {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  &--result {
+    align-items: flex-end;
+  }
+
+}
+
+
 .section__lightbulb {
   position: absolute;
   right: 5px; 
@@ -63,6 +77,7 @@
   display: flex; 
   align-items: center;
 }
+
 
 :export {
     blockWrapper: section__wrapper;
@@ -75,4 +90,7 @@
     blockAlert: section__content-wrapper--alert;
     blockWarning: section__content-wrapper--warning;
     blockInfo: section__content-wrapper--info;
+    blockDesc: section__description;
+    blockGenericDesc: section__description--generic;
+    blockResultDesc: section__description--result;
 }
