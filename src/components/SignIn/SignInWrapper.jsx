@@ -5,7 +5,7 @@ import { navigationStates } from '../../constants/navigationStates'
 
 import SignIn from './SignIn'
 import SignUp from './SignUp'
-import NavClose from '../Navigation/NavClose/NavClose'
+import NavClose from '../Navigation/Side/NavClose/NavClose'
 import styles from './SignInWrapper.scss'
 import * as content from '../../constants/signinContent'
 

@@ -1,8 +1,8 @@
 import React from 'react'
 import { useDispatch } from "react-redux"
 
-import { navigationStates } from '../../../constants/navigationStates'
-import { SETTINGS } from '../../../constants/content'
+import { navigationStates } from '../../../../constants/navigationStates'
+import { SETTINGS } from '../../../../constants/content'
 import styles from './NavOpenLink.scss'
 
 export default function NavOpenLink() {

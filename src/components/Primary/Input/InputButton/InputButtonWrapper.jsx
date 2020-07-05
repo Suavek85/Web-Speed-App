@@ -1,58 +1,17 @@
 import React from 'react'
 import { useSelector, useDispatch } from "react-redux"
-import axios from 'axios'
 
 import InputButtonUI from './InputButtonUI'
 import { appStates } from '../../../../constants/states'
-import { lighthouseData } from '../../../../constants/lighthouseData'
-import getUrl from '../../../../helpers/getUrl'
+import makeGetRequest from '../../../../helpers/makeGetRequest'
 
 function InputButtonWrapper() {
 
   const dispatch = useDispatch()
- 
-  async function makeGetRequest() {
-
-    const urlInput = document.getElementById('urlinput').value
-    const url = getUrl(urlInput)
-
-    try {
-      
-      let res = await axios.get(url)
-
-      let allData = res.data 
-
-      const loadingExperienceArr = [
-        allData.lighthouseResult.audits['dom-size'].score,
-        allData.lighthouseResult.audits['unused-javascript'].score,
-        allData.loadingExperience.id,
-        allData.loadingExperience.overall_category,
-        allData.loadingExperience.metrics.FIRST_CONTENTFUL_PAINT_MS.category, 
-        allData.loadingExperience.metrics.FIRST_INPUT_DELAY_MS.category,
-        allData.lighthouseResult.audits['unused-css-rules'].score,
-      ]
-
-      const lighthouseDataArr = lighthouseData.map(el => allData.lighthouseResult.audits[el] )
-
-      dispatch({ 
-        type: appStates.SUCCESS,
-        payload: loadingExperienceArr,
-        payloadLighthouse: lighthouseDataArr
-      })
-    } 
-    
-    catch(err) {
-      console.log(err.response.status, err.response.data)
-      dispatch({ type: appStates.ERROR, payload: err.response.status })
-      //429 Quota exceeded for quota group 'default' and limit….com' for consumer 'project_number:583797351490'.
-      //400 Request contains an invalid argument
-      //any other generuc message
-    } 
-  }
 
   const handleGetReportClick = () => { 
     dispatch({ type: appStates.LOADING })
-    makeGetRequest() 
+    makeGetRequest(dispatch) 
   }
   
   const getAppState = useSelector(state => state.stateReducer.getAppState)

@@ -1,4 +1,5 @@
 import React from 'react'
+import ReactTooltip from "react-tooltip"
 import classNames from 'classnames/bind'
 import { useSelector } from "react-redux"
 import { appStates } from '../../constants/states'
@@ -79,9 +80,23 @@ export default function Section(props) {
           { header }
           { position === 'generic' && lightBulbWrapper }
         </h2>
-        <p>
-          { mainContent }
-        </p>
+
+        { position === 'generic' && (
+          <p>
+            { mainContent }
+          </p>
+        )}
+       
+
+        { position !== 'generic' && (
+          <>
+            <p data-tip data-for={ mainContent }> INFO </p>
+            <ReactTooltip id={ mainContent } type='error'>
+              <span>{ mainContent }</span>
+            </ReactTooltip>
+          </>
+        )}
+
         { position === 'generic' && data.map(genericPara) }
         { position !== 'generic' && data.map(scorePara) }
         { position !== 'generic' && data.map(scoreParaLoading) }

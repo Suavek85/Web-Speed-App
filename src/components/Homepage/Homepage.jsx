@@ -3,9 +3,10 @@ import classNames from 'classnames/bind'
 import { useMediaQuery } from 'react-responsive'
 
 import { tabletWidth } from'../../scss/mediaqueries'
+import MainNavigation from '../Navigation/Main/MainNavigation'
 import PrimaryCard from '../Primary/PrimaryCard'
 import Side from '../Side/Side'
-import Navigation from '../Navigation/Navigation'
+import Navigation from '../Navigation/Side/Navigation'
 import styles from './Homepage.scss'
 
 export default function Homepage() {
@@ -18,10 +19,14 @@ export default function Homepage() {
   })
 
   return (
-    <section className={ getButtonClasses }>
+    <section style={{display: 'flex', flexDirection: 'column'}}>
       <Navigation />
-      <PrimaryCard />
-      <Side />
+      <MainNavigation />
+      <div className={ getButtonClasses }>
+        <PrimaryCard />
+        <Side />
+      </div>
+
     </section>
   )
 }

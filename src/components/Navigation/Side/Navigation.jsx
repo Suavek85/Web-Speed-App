@@ -9,7 +9,7 @@ import {
   expandNavConfig, 
   collapseBackgroundConfig, 
   expandBackgroundConfig } from './animatedStyles'
-import { navigationStates } from '../../constants/navigationStates'
+import { navigationStates } from '../../../constants/navigationStates'
 
 
 function Navigation() {

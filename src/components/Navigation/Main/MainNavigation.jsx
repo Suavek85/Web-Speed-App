@@ -1,11 +1,11 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 
-import NavOpenLink from '../../Navigation/NavOpenLink/NavOpenLink'
+import NavOpenLink from '../../Navigation/Side/NavOpenLink/NavOpenLink'
 import { APPTITLE, SIGN_IN } from '../../../constants/content'
-import styles from './Header.scss'
+import styles from './MainNavigation.scss'
 
-export default function Header() {
+export default function MainNavgation() {
   return (
     <div className={ styles.block } >
       <Link to="/" className={ styles.blockTitle }>

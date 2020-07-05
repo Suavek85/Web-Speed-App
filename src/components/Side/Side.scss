@@ -1,9 +1,13 @@
+@import "../../scss/styles.scss";
 
 .side__wrapper { 
     display: flex;
     width: 30%;
-    height: 100vh;
+    height: 80vh;
     flex-direction: column;
+    margin-top: 30px;
+    margin-right: 20px;
+    border: $ws-border-light;
     > div:first-child {
         height: 30%;
     }
