@@ -1,5 +1,8 @@
 
-.signin { 
+$block: signin;
+$blockForm: signin__form;
+
+.#{$block} { 
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
@@ -11,55 +14,14 @@
     span {
         margin-bottom: 20px;
     }
-}
-
-.signin__form { 
-    display: flex;
-    flex-direction: column;    
-}
-
-.signin__input {
-    width: 200px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    height: 35px;
-    padding: 6px 15px;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    background: #F6F7F9;
-    color: #748194;
-    font-size: 14px;
- }
-
- .signin__button {
-    width: 230px;
-    height: 45px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 6px 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    &--warm {
-        background: #EE9BA3;
+    &__form { 
+        display: flex;
+        flex-direction: column;    
     }
-    &--cold {
-        background: #B8d1CB;
-    }  
- }
 
- 
+}
 
 :export {
-    block: signin;
-    blockForm: signin__form;
-    blockInput: signin__input;
-    blockButton: signin__button;
-    blockButtonWarm: signin__button--warm;
-    blockButtonCold: signin__button--cold;
+    block: $block;
+    blockForm: $blockForm;
 }

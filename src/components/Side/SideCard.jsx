@@ -9,7 +9,7 @@ import InfoCircle from '../svgs/InfoCircle/InfoCircle'
 import SkeletonText from '../Skeleton/SkeletonText'
 import LightBulbUI from '../svgs/LightBulb/LightBulbUI'
 import ScoreCircle from '../svgs/ScoreCircle/ScoreCircle'
-import styles from './Section.scss'
+import styles from './SideCard.scss'
 
 
 export default function Section(props) {
@@ -23,16 +23,16 @@ export default function Section(props) {
   //STYLES
   const cx = classNames.bind(styles)
   const getClass = cx({
-    blockWrapper: true,
+    block: true,
     blockGeneric: position === 'generic',
     blockTop: position === 'top',
     blockBottom: position === 'bottom',
   })
 
   const getColorClass = arg => cx({
-    blockAlert: arg === 'SLOW',
-    blockInfo: arg === 'FAST',
-    blockWarning: arg === 'AVERAGE',
+    blockContentAlert: arg === 'SLOW',
+    blockContentInfo: arg === 'FAST',
+    blockContentWarning: arg === 'AVERAGE',
   })
 
   const getDescrptionWrapperClass = cx({
@@ -41,17 +41,11 @@ export default function Section(props) {
     blockResultDesc: position !== 'generic',
   })
   
-  const style = position !== 'generic'? { 
-    display: 'flex', alignItems: 'flex-end', flexDirection: 'row' 
-  } : { 
-    display: 'flex', alignItems: 'flex-start', flexDirection: 'column' 
-  }
-
 
   // GENERIC ELEMENTS
 
   const lightBulbWrapper = (
-    <span className={ styles.blockLightbulb } >
+    <span className={ styles.blockBulb } >
       <LightBulbUI />
     </span>
   )
@@ -86,7 +80,7 @@ export default function Section(props) {
 
   const scorePara = (el, index) => { 
     return el !== '?' && !loadingStatus && (
-      <p className={scorePara} key={index}>
+      <p key={index}>
         Score: 
         <span>
           <ScoreCircle score={el} />
@@ -108,7 +102,7 @@ export default function Section(props) {
 
   return (
     <div className={ getClass } >
-      <div className={ styles.contentWrapper }>
+      <div className={ styles.blockContent }>
         <div className={ getDescrptionWrapperClass }>
           <h2>
             { header }

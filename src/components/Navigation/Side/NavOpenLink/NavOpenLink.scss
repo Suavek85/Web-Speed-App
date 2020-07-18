@@ -1,8 +1,10 @@
-.button__wrapper {
+$block: navopen;
+
+.#{$block} {
     padding-left: 20px;
     cursor: pointer;
 }
 
 :export {
-    blockWrapper: button__wrapper;
+    block: $block;
 }

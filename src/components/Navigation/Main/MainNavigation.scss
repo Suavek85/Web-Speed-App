@@ -1,6 +1,10 @@
-@import "../../../scss/styles.scss";
+@import "../../../scss/styles";
 
-.mainheader {
+$block: mainnav;
+$blockTitle: mainnav__title;
+$blockLinks: mainnav__links;
+
+.#{$block} {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -11,22 +15,20 @@
     h1 {
         color: $color-main-font;
     }
-}
-
-.mainheader__title {
-    text-decoration: none;
-}
-
-.mainheader__links {
-    display: flex;
-    h2 {
-        font-size: 18px;
-        color: $color-main-font;
+    &__title {
+        text-decoration: none;
+    }
+    &__links {
+        display: flex;
+        h2 {
+            font-size: 18px;
+            color: $color-main-font;
+        }
     }
 }
 
 :export {
-    block: mainheader;
-    blockTitle: mainheader__title;
-    blockLinks: mainheader__links;
+    block: $block;
+    blockTitle: $blockTitle;
+    blockLinks: $blockLinks;
 }

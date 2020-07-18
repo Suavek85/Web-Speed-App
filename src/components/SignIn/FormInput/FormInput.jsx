@@ -1,4 +1,5 @@
 import React from 'react'
+import styles from './FormInput.scss'
 
 export default function FormInput( { handleChange, label, ...props }) {
 
@@ -6,7 +7,8 @@ export default function FormInput( { handleChange, label, ...props }) {
     <>
       { label? (<label>{ label }</label>) : null }
       <input 
-        onChange={ handleChange } 
+        onChange={ handleChange }
+        className={ styles.block }  
         {...props} />
     </>
   )

@@ -1,7 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux"
-
-import Section from '../Section'
+import SideCard from '../SideCard'
 import {  RESULT } from '../../../constants/content.js'
 
 export default function Top() {
@@ -19,6 +18,6 @@ export default function Top() {
   const props = { content, data, position }
 
   return (
-    <Section {...props} />
+    <SideCard {...props} />
   )
 }

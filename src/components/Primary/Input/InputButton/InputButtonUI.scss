@@ -1,6 +1,13 @@
-@import "../../../../scss/styles.scss";
+@import "../../../../scss/styles";
 
-.inputbutton__wrapper {
+$block: inputbutton;
+$blockInactive: inputbutton--inactive;
+$blockLoading: inputbutton--loading;
+$blockError: inputbutton--error;
+$blockSuccess: inputbutton--success;
+
+
+.#{$block} {
     display: block;
     height: 44px;
     line-height: 44px;
@@ -31,9 +38,9 @@
 }
 
 :export {
-  block: inputbutton__wrapper;
-  blockInactive: inputbutton__wrapper--inactive;
-  blockLoading: inputbutton__wrapper--loading;
-  blockError: inputbutton__wrapper--error;
-  blockSuccess: inputbutton__wrapper--success;
+  block: $block;
+  blockInactive: $blockInactive;
+  blockLoading: $blockLoading;
+  blockError: $blockError;
+  blockSuccess: $blockSuccess;
 }

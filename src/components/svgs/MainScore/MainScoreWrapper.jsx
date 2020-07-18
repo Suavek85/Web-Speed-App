@@ -1,10 +1,8 @@
 import React from "react"
 import { useSelector } from "react-redux"
-import WebOptimizeUI from './WebOptimizeUI'
-import calcPerformanceAverage from '../../helpers/calcPerformanceAverage'
-
-//INTERNAL
-import { appStates } from '../../constants/states'
+import MainScoreUI from './MainScoreUI'
+import calcPerformanceAverage from '../../../helpers/calcPerformanceAverage'
+import { appStates } from '../../../constants/states'
 
 function WebOptimizeWrapper() {
   const getAppState = useSelector(state => state.stateReducer.getAppState)
@@ -14,7 +12,7 @@ function WebOptimizeWrapper() {
   const getScore = getLighthouseData.map(el => el.score)
   const averageScore = calcPerformanceAverage(getScore)
   
-  return <WebOptimizeUI 
+  return <MainScoreUI 
     getAppState={getAppState} 
     loadingStatus={loadingStatus}
     averageScore={averageScore} 

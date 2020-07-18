@@ -1,0 +1,17 @@
+$block: svg-wrapper;
+$blockSvg: svg-main;
+
+.svg-wrapper {
+    width: 145px;
+    height: 145px;
+}
+
+.svg-main {
+    -webkit-filter: drop-shadow( 3px 3px 2px rgba(71, 53, 53, 0.5));
+    filter: drop-shadow( 3px 3px 2px rgba(0, 0, 0, .5));
+}
+
+:export {
+    block: $block;
+    blockSvg: $blockSvg;
+}

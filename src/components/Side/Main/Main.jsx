@@ -1,6 +1,6 @@
 import React from 'react'
 import { useSelector } from "react-redux"
-import Section from '../Section'
+import SideCard from '../SideCard'
 
 export default function Main() {
 
@@ -17,6 +17,6 @@ export default function Main() {
   const props = { content, data, position }
 
   return (
-    <Section {...props} />
+    <SideCard {...props} />
   )
 }

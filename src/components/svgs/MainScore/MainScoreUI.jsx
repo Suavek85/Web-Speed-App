@@ -1,11 +1,10 @@
 import React from "react"
 import PropTypes from 'prop-types'
 import { useSpring, animated } from 'react-spring'
+import MainScoreText from './MainScoreText'
+import styles from './MainScoreUI.scss'
 
-import WebOptimizeText from './WebOptimizeText'
-import './WebOptimizeUI.scss'
-
-function WebOptimizeUI(props) {
+function MainScoreUI(props) {
 
   const { averageScore, loadingStatus } = props
 
@@ -78,7 +77,7 @@ function WebOptimizeUI(props) {
   const thirdDigit = averageScore? averageScore - Math.floor(averageScore /10) * 10 : null
 
   return (
-    <div className='weboptimize__wrapper'>
+    <div className={ styles.block }>
       <svg
         version="1.1"
         id="Capa_1"
@@ -87,15 +86,11 @@ function WebOptimizeUI(props) {
         x="0px"
         y="0px"
         viewBox="0 0 512 512"
+        className={ styles.blockSvg }
         style={{ enableBackground: "new 0 0 512 512" }}
         xmlSpace="preserve"
       >
-        <circle
-          style={{ fill: "beige" }}
-          cx="250.411"
-          cy="263.49"
-          r="198.62"
-        />
+
         <path
           style={{ fill: "#376685" }}
           d="M370.784,273.047c-5.275,0-9.553-4.278-9.553-9.554c0-23.982-7.66-46.206-20.657-64.362l-0.001,0.001
@@ -152,7 +147,7 @@ function WebOptimizeUI(props) {
             style={loadingStatus? colorPropsDarkBlue : { fill: "beige" }}
             d="M219 371.705C219 375.167 216.987 378 214.527 378H169.473C167.013 378 165 375.167 165 371.705V308.295C165 304.833 167.013 302 169.473 302H214.527C216.987 302 219 304.833 219 308.295V371.705Z"
           />
-          <WebOptimizeText xCord='174' yCord='363' value={ firstDigit } />
+          <MainScoreText xCord='174' yCord='363' value={ firstDigit } />
         </g>
         <g>
           <animated.path
@@ -160,7 +155,7 @@ function WebOptimizeUI(props) {
             style={ loadingStatus? colorPropsBlue : { fill: "beige" }}
             d="M278 371.705C278 375.167 275.987 378 273.527 378H228.473C226.013 378 224 375.167 224 371.705V308.295C224 304.833 226.013 302 228.473 302H273.527C275.987 302 278 304.833 278 308.295V371.705Z"
           />
-          <WebOptimizeText xCord='234' yCord='363' value={ secondDigit } />
+          <MainScoreText xCord='234' yCord='363' value={ secondDigit } />
         </g>
         <g>
           <animated.path
@@ -168,7 +163,7 @@ function WebOptimizeUI(props) {
             style={ loadingStatus? colorProps : { fill: "beige" }}
             d="M336 371.705C336 375.167 333.987 378 331.527 378H286.473C284.013 378 282 375.167 282 371.705V308.295C282 304.833 284.013 302 286.473 302H331.527C333.987 302 336 304.833 336 308.295V371.705Z"
           />
-          <WebOptimizeText xCord='292' yCord='363' value={ thirdDigit } />
+          <MainScoreText xCord='292' yCord='363' value={ thirdDigit } />
         </g>
         <animated.g id='red-indicator' style={loadingStatus? indicatorProps : indicatorPropsSuccess} >
           <path
@@ -199,10 +194,10 @@ function WebOptimizeUI(props) {
   )
 }
 
-WebOptimizeUI.propTypes = {
+MainScoreUI.propTypes = {
   loadingStatus: PropTypes.bool,
   averageScore: PropTypes.number
 }
 
-export default WebOptimizeUI
+export default MainScoreUI
 

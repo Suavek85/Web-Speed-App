@@ -1,0 +1,30 @@
+$block: signin-btn;
+$blockWarm: signin-btn--warm;
+$blockCold: signin-btn--cold;
+
+.#{$block} {
+    width: 230px;
+    height: 45px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    padding: 6px 15px;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+    &--warm {
+        background: #EE9BA3;
+    }
+    &--cold {
+        background: #B8d1CB;
+    }  
+ }
+
+:export {
+    block: $block;
+    blockWarm: $blockWarm;
+    blockCold: $blockCold;
+}

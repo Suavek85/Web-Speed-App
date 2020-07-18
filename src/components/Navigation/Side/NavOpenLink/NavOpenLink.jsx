@@ -11,7 +11,7 @@ export default function NavOpenLink() {
   const handleExpandMenu = () => dispatch({ type: navigationStates.EXPAND })
 
   return (
-    <div id='buttonwrapper' className={ styles.blockWrapper } onClick={ handleExpandMenu }>
+    <div id='buttonwrapper' className={ styles.block } onClick={ handleExpandMenu }>
       <h2> { SETTINGS } </h2>
     </div>
   )

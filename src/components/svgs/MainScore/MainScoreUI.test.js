@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import WebOptimizeUI from './WebOptimizeUI'
+import MainScoreUI from './MainScoreUI'
 
 it('Should match the snapshot', () => {
-  const wrapper = shallow(<WebOptimizeUI />).debug()
+  const wrapper = shallow(<MainScoreUI />).debug()
   expect(wrapper).toMatchSnapshot()
 })

@@ -26,9 +26,9 @@ export default function LightHouse() {
   //STYLES
   const cx = classNames.bind(styles)
   const getWrapperClass = cx({
-    blockWrapper: true,
-    blockWrapperTablet: useMediaQuery(tabletWidth),
-    blockWrapperSmallMobile: useMediaQuery(smallMobileWidth),
+    block: true,
+    blockTablet: useMediaQuery(tabletWidth),
+    blockSmallMobile: useMediaQuery(smallMobileWidth),
   })
 
   //PROPS

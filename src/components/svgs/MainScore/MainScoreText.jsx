@@ -1,7 +1,7 @@
 import React from "react"
 import { useSpring, animated } from 'react-spring'
 
-export default function WebOptimizeText(props) {
+export default function MainScoreText(props) {
 
   const { xCord, yCord, value } = props
 

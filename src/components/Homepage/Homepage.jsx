@@ -1,10 +1,9 @@
 import React from 'react'
 import classNames from 'classnames/bind'
 import { useMediaQuery } from 'react-responsive'
-
 import { tabletWidth } from'../../scss/mediaqueries'
 import MainNavigation from '../Navigation/Main/MainNavigation'
-import PrimaryCard from '../Primary/PrimaryCard'
+import Primary from '../Primary/Primary'
 import Side from '../Side/Side'
 import Navigation from '../Navigation/Side/Navigation'
 import styles from './Homepage.scss'
@@ -23,7 +22,7 @@ export default function Homepage() {
       <Navigation />
       <MainNavigation />
       <div className={ getButtonClasses }>
-        <PrimaryCard />
+        <Primary />
         <Side />
       </div>
 

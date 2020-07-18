@@ -1,16 +1,19 @@
-@import "../../scss/styles.scss";
+@import "../../scss/styles";
 
-.app__wrapper {
+$block: app-wrapper;
+$blockTablet: app-wrapper--tablet;
+
+.#{$block} {
     display: flex;
     position: relative;
     background-color: $color-main-background;
+    &--tablet {
+        flex-direction: column;
+    }
 }
 
-.app__wrapper-tablet {
-    flex-direction: column;
-}
 
 :export {
-    block: app__wrapper;
-    blockTablet: app__wrapper-tablet;
+    block: $block;
+    blockTablet: $blockTablet;
 }

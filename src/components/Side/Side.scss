@@ -1,6 +1,10 @@
-@import "../../scss/styles.scss";
+@import "../../scss/styles";
 
-.side__wrapper { 
+$block: side;
+$blockTablet: side--tablet;
+$blockMobile: side--mobile;
+
+.#{$block} { 
     display: flex;
     width: 30%;
     height: 80vh;
@@ -41,7 +45,7 @@
 }
 
 :export {
-    block: side__wrapper;
-    blockTablet: side__wrapper--tablet;
-    blockMobile: side__wrapper--mobile;
+    block: $block;
+    blockTablet: $blockTablet;
+    blockMobile: $blockMobile;
 }

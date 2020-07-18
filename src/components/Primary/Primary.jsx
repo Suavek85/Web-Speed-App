@@ -5,9 +5,9 @@ import { useMediaQuery } from 'react-responsive'
 import InputWrapper from './Input/InputWrapper'
 import LighthouseWrapper from './Lighthouse/LighthouseWrapper'
 import { tabletWidth } from'../../scss/mediaqueries'
-import styles from './PrimaryCard.scss'
+import styles from './Primary.scss'
 
-export default function PrimaryCard() {
+export default function Primary() {
 
   //STYLES
   const cx = classNames.bind(styles)
@@ -18,7 +18,7 @@ export default function PrimaryCard() {
 
   return (
     <div className={ getClass } >
-      <div className={ styles.headerInputWrapper } >
+      <div className={ styles.blockInput } >
         <InputWrapper />
       </div>     
       <LighthouseWrapper />

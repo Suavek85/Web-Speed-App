@@ -1,11 +1,21 @@
-@import '../../../scss/styles.scss';
+@import '../../../scss/styles';
 
-.lighthouse__wrapper {
+$block: lighthouse;
+$blockContent: lighthouse__content;
+$blockTablet: lighthouse--tablet;
+$blockSmallMobile: lighthouse--small-mobile;
+
+.#{$block} {
   margin-right: 40px;
   margin-left: 20px;
   margin-top: 10px;
   border: $ws-border-light;
   background-color: $color-ivory;
+  &__content {
+    display: flex; 
+    flex-direction: column;
+    height: auto;
+  }
   &--tablet {
     margin-right: 0;
     margin-left: 0;
@@ -20,15 +30,9 @@
   }
 }
 
-.lighthouse__content {
-  display: flex; 
-  flex-direction: column;
-  height: auto;
-}
-
 :export {
-    blockWrapper: lighthouse__wrapper;
-    blockWrapperTablet: lighthouse__wrapper--tablet;
-    blockWrapperSmallMobile: lighthouse__wrapper--small-mobile;
-    blockContent: lighthouse__content;
+    block: $block;
+    blockTablet: $blockTablet;
+    blockSmallMobile: $blockSmallMobile;
+    blockContent: $blockContent;
 }

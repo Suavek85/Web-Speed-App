@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import FormInput from './FormInput'
+import FormInput from './FormInput/FormInput'
+import FormButton from './FormButton/FormButton'
 import styles from './SignIn.scss'
 import * as content from '../../constants/signinContent'
 
@@ -24,7 +25,6 @@ export default function SignUp() {
       <form onSubmit={ handleSubmit } className={ styles.blockForm } >
         <FormInput 
           label={ content.USERNAME_LABEL }
-          className={ styles.blockInput } 
           name='username' 
           type='text' 
           value={ email } 
@@ -33,7 +33,6 @@ export default function SignUp() {
         />
         <FormInput 
           label={ content.EMAIL_LABEL }
-          className={ styles.blockInput } 
           name='email' 
           type='email' 
           value={ email } 
@@ -42,7 +41,6 @@ export default function SignUp() {
         />
         <FormInput 
           label={ content.PASSWORD_LABEL }
-          className={ styles.blockInput } 
           name='password' 
           type='password' 
           value={password} 
@@ -51,19 +49,13 @@ export default function SignUp() {
         />
         <FormInput 
           label={ content.CONFIRM_PASSWORD_LABEL }
-          className={ styles.blockInput } 
           name='confirm password' 
           type='password' 
           value={ password } 
           handleChange={ handlePasswordChange } 
           required
         />
-        <button 
-          className={ `${styles.blockButton} ${styles.blockButtonWarm}`} 
-          type='submit' 
-          value='Submit form'>
-          { content.SUBMIT }
-        </button>
+        <FormButton colorType='warm' />
       </form>
     </div>
   )

@@ -2,10 +2,20 @@
 
 exports[`Should match the snapshot 1`] = `
 <section
-  className="block"
+  style={
+    Object {
+      "display": "flex",
+      "flexDirection": "column",
+    }
+  }
 >
   <Memo(Navigation) />
-  <PrimaryCard />
-  <Side />
+  <MainNavgation />
+  <div
+    className="block"
+  >
+    <Primary />
+    <Side />
+  </div>
 </section>
 `;

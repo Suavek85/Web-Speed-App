@@ -1,6 +1,21 @@
-@import "../../../scss/styles.scss";
+@import "../../../scss/styles";
 
-.navigation__background {
+$block: nav-wrapper;
+$blockBackground: nav-wrapper-background;
+$blockCloseWrapper: nav-wrapper-close;
+
+.#{$block} {
+    position: absolute;
+    display: block;
+    top:0;
+    left:-300px;
+    width: 0px;
+    height: 100vh;
+    background-color: $color-white;
+    z-index: 100;
+}
+
+.#{$blockBackground} {
     display: none;
     position: fixed;
     top: 0;
@@ -13,24 +28,12 @@
     background-color: $color-black;
 }
 
-.navigation__wrapper {
-    position: absolute;
-    display: block;
-    top:0;
-    left:-300px;
-    width: 0px;
-    height: 100vh;
-    background-color: $color-white;
-    z-index: 100;
-}
-
-.navigationclose__wrapper {
+.#{$blockCloseWrapper} {
    margin-left: 15px;
 }
 
-
 :export {
-    blockBackground: navigation__background;
-    block: navigation__wrapper;
-    blockCloseWrapper: navigationclose__wrapper;
+    block: $block;
+    blockBackground: $blockBackground;
+    blockCloseWrapper: $blockCloseWrapper;
 }

@@ -1,6 +1,8 @@
-@import "../../../../scss/styles.scss";
+@import "../../../../scss/styles";
 
-.navigationclose {
+$block: nav-close;
+
+.#{$block} {
     font-size: 20px;
     font-weight: 700;
     color: $color-grey;
@@ -9,5 +11,5 @@
 }
 
 :export {
-    block: navigationclose;
+    block: $block;
 }

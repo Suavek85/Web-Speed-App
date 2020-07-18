@@ -1,5 +1,4 @@
 import React from 'react'
-
 import { INPUT_HINT } from '../../../../constants/content'
 import './InputUrlUI.scss'
 import styles from './InputUrlUI.scss'

@@ -1,6 +1,9 @@
-@import '../../../../scss/styles.scss';
+@import '../../../../scss/styles';
 
-.lighthouse__tabsitem {
+$block: lighthouse-tabitem;
+$blockActive: lighthouse-tabitem--active;
+
+.#{$block} {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -24,6 +27,6 @@
   }
 
   :export {
-    blockTabsItem: lighthouse__tabsitem;
-    blockTabsItemActive: lighthouse__tabsitem--active;
+    block: $block;
+    blockActive: $blockActive;
 }

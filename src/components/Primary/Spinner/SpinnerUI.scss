@@ -1,22 +1,18 @@
 
-@import "../../../scss/styles.scss";
+@import "../../../scss/styles";
 
-/* CSS SPINNERS */
+$block: spinner;
   
-  @keyframes rotating {
-    to {transform: rotate(360deg)}
-  }
-  
-  .spinner {
-    position: relative;
-    width: 46px;
-    height: 46px;
-    margin-left: 20px;
-    border-radius: 50%;
-    border: 2px solid rgb(168, 193, 230);
-    text-align: center;
-  }
-  .spinner:before {
+.#{$block} {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  margin-left: 20px;
+  border-radius: 50%;
+  border: 2px solid rgb(168, 193, 230);
+  text-align: center;
+
+  &:before {
     content: '';
     position: absolute;
     top: -3%;
@@ -30,6 +26,12 @@
     filter: blur(1px);
   }
 
-  :export {
-    block: spinner;
-  }
+}
+
+@keyframes rotating {
+  to {transform: rotate(360deg)}
+}
+
+:export {
+  block: $block;
+}

@@ -1,6 +1,20 @@
-@import '../../scss/styles.scss';
+@import '../../scss/styles';
 
-.section__wrapper {
+$block: sidecard;
+$blockGeneric: sidecard--generic;
+$blockTop: sidecard--top;
+$blockBottom: sidecard--bottom;
+$blockContent: sidecard__content;
+$blockContentAlert: sidecard__content--alert;
+$blockContentWarning: sidecard__content--warning;
+$blockContentInfo: sidecard__content--info;
+$blockDesc: sidecard__desc;
+$blockGenericDesc: sidecard__desc--generic;
+$blockResultDesc: sidecard__desc--result;
+$blockBulb: sidecard__bulb;
+$blockScore: sidecard__score;
+
+.#{$block} {
     width: 100%;
     height: 100%;
     display: flex;
@@ -17,16 +31,18 @@
     }
 }
 
-.section__content-wrapper {
+.#{$blockContent} {
     display: flex;
     position: relative;
     flex-direction: column;
     padding: 0px 30px;
+
     > div > h2 {
       color: $color-main-font;
       font-size: 19px;
       margin-bottom: 0;
     }
+
     p {
       font-size: 13px;
       margin-top: 10px;
@@ -35,6 +51,7 @@
       flex-direction: row;
       align-items: center;
     }
+
     p span {
       font-weight: 500;
       padding-left: 5px;
@@ -54,7 +71,7 @@
     }
 }
 
-.section__description {
+.#{$blockDesc} {
   display: flex;
   &--generic {
     flex-direction: column;
@@ -66,31 +83,24 @@
 
 }
 
-
-.section__lightbulb {
+.#{$blockBulb} {
   position: absolute;
   right: 5px; 
   top: 5px;
 }
 
-.score__para {
-  display: flex; 
-  align-items: center;
-}
-
 
 :export {
-    blockWrapper: section__wrapper;
-    blockGeneric: section__wrapper--generic;
-    blockTop: section__wrapper--top;
-    blockBottom: section__wrapper--bottom;
-    blockLightbulb: section__lightbulb;
-    contentWrapper: section__content-wrapper;
-    scorePara: score__para;
-    blockAlert: section__content-wrapper--alert;
-    blockWarning: section__content-wrapper--warning;
-    blockInfo: section__content-wrapper--info;
-    blockDesc: section__description;
-    blockGenericDesc: section__description--generic;
-    blockResultDesc: section__description--result;
+  block: $block;
+  blockGeneric: $blockGeneric;
+  blockTop: $blockTop;
+  blockBottom: $blockBottom;
+  blockContent: $blockContent;
+  blockContentAlert: $blockContentAlert;
+  blockContentWarning: $blockContentWarning;
+  blockContentInfo: $blockContentInfo;
+  blockDesc: $blockDesc;
+  blockGenericDesc:  $blockGenericDesc;
+  blockResultDesc: $blockResultDesc;
+  blockBulb: $blockBulb; 
 }

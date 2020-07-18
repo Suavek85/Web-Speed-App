@@ -1,18 +1,33 @@
-@import '../../../scss/styles.scss';
+@import '../../../scss/styles';
 
-.chart__wrapper {
-   width: 70px;
-   height: 70px;
-  }
-  
-  .chart__svg {
+$block: chart;
+$blockSvg: chart__svg;
+$blockBg: chart__background;
+$blockStats: chart__stats;
+$blockStatsAlert: chart__stats--alert;
+$blockStatsWarning: chart__stats--warning;
+$blockStatsInfo: chart__stats--info;
+$blockText: chart__text;
+$blockTextAlert: chart__text--alert;
+$blockTextWarning: chart__text--warning;
+$blockTextInfo: chart__text--info;
+$blockBgAlert: chart__background--alert;
+$blockBgWarning: chart__background--warning;
+$blockBgInfo: chart__background--info;
+
+
+.#{$block} {
+   width: 60px;
+   height: 60px;
+
+   &__svg {
     display: block;
     margin: 10px auto;
     max-width: 80%;
     max-height: 250px;
   }
-  
-  .chart__background {
+
+  &__background {
     fill: #fff0d8;
     stroke: #ffda9d;
     stroke-width: 3.8;
@@ -29,8 +44,8 @@
       stroke: #80ff80;
     }
   }
-  
-  .chart__stats {
+
+  &__stats {
     fill: none;
     stroke-width: 3.6;
     stroke-linecap: round;
@@ -45,10 +60,10 @@
       stroke: $color-green-success;
     }
   }
-  
-  .chart__text {
+
+  &__text {
     font-family: sans-serif;
-    font-size: 10px;
+    font-size: 11px;
     font-weight: 500;
     text-anchor: middle;
     &--alert {
@@ -62,25 +77,27 @@
     }
   }
 
-  @keyframes progress {
-    0% {
-      stroke-dasharray: 0 100;
-    }
+}
+  
+@keyframes progress {
+  0% {
+    stroke-dasharray: 0 100;
   }
+}
 
-  :export {
-    block: chart__wrapper;
-    blockSvg: chart__svg;
-    blockBg: chart__background;
-    blockStats: chart__stats;
-    blockStatsAlert: chart__stats--alert;
-    blockStatsWarning: chart__stats--warning;
-    blockStatsInfo: chart__stats--info;
-    blockText: chart__text;
-    blockTextAlert: chart__text--alert;
-    blockTextWarning: chart__text--warning;
-    blockTextInfo: chart__text--info;
-    blockBgAlert: chart__background--alert;
-    blockBgWarning: chart__background--warning;
-    blockBgInfo: chart__background--info;
-  }
+:export {
+  block: $block;
+  blockSvg: $blockSvg;
+  blockBg: $blockBg;
+  blockStats: $blockStats;
+  blockStatsAlert: $blockStatsAlert;
+  blockStatsWarning: $blockStatsWarning;
+  blockStatsInfo: $blockStatsInfo;
+  blockText: $blockText;
+  blockTextAlert: $blockTextAlert;
+  blockTextWarning: $blockTextWarning;
+  blockTextInfo: $blockTextInfo;
+  blockBgAlert: $blockBgAlert;
+  blockBgWarning: $blockBgWarning;
+  blockBgInfo: $blockBgInfo;
+}
