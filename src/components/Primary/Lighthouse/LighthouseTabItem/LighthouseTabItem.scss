@@ -4,29 +4,30 @@ $block: lighthouse-tabitem;
 $blockActive: lighthouse-tabitem--active;
 
 .#{$block} {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: inherit;
-    background-color: $color-beige;
-    width: 100%;
-    text-align: center;
-    cursor: pointer;
-    padding: 0px 5px;
-    font-size: 12px;
-    &:hover {
-      background-color: $color-grey;
-      opacity: .8;
-      color: $color-white;
-    }
-    &--active {
-      background-color: $color-grey;
-      color: $color-white;
-    }
-  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: inherit;
+  padding: 0 5px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  background-color: $color-beige;
+
+  &:hover {
+    color: $color-white;
+    background-color: $color-grey;
+    opacity: 0.8;
   }
 
-  :export {
-    block: $block;
-    blockActive: $blockActive;
+  &--active {
+    color: $color-white;
+    background-color: $color-grey;
+  }
+}
+
+:export {
+  block: $block;
+  blockActive: $blockActive;
 }

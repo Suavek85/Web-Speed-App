@@ -1,27 +1,33 @@
 $block: lighthouse-results;
 
 .#{$block} {
-    padding-left: 20px;
-    font-size: 13px;
-    > p {
-      padding-bottom: 15px;
-    }
-    > p:first-child {
-      display: flex;
-      padding-top: 15px;
-    }
-    > p:not(:first-child) {
-      display: flex;
-      align-items: center;
-    }
-    > p > span {
-      padding-right: 5px;
-    }
-    > p > span:nth-child(2) {
-      margin-left: 5px;
-    }
+  height: 200px;
+  padding-left: 20px;
+  font-size: 13px;
+
+  > p {
+    padding-bottom: 15px;
   }
 
-  :export {
-    block: $block;
+  > p:first-child {
+    display: flex;
+    padding-top: 15px;
   }
+
+  > p:not(:first-child) {
+    display: flex;
+    align-items: center;
+  }
+
+  > p:first-child > span {
+    padding-right: 5px;
+  }
+
+  > p > span:nth-child(2) {
+    margin-left: 5px;
+  }
+}
+
+:export {
+  block: $block;
+}

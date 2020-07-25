@@ -5,33 +5,32 @@ $blockTablet: primary--tablet;
 $blockInput: primary__input;
 
 .primary {
-    width: 70%;
-    height: max-content;
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: max-content;
+  background-color: $color-main-background;
+
+  &--tablet {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  &__input {
     display: flex;
     flex-direction: column;
-    background-color: $color-main-background;
-    
-    &--tablet {
-      width: 100%;
-      padding-left: 0;
-    }
+    height: max-content;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
 
-    &__input {
-      display: flex;
-      flex-direction: column;
-      padding-left: 20px;
-      margin-bottom: 20px;
-      height: max-content;
-    }
-
-    h1 { 
-      color: $color-main-font;
-    }
+  h1 {
+    color: $color-main-font;
+  }
 }
 
 :export {
-    block: $block;
-    blockTablet: $blockTablet;
-    blockInput: $blockInput;
+  block: $block;
+  blockTablet: $blockTablet;
+  blockInput: $blockInput;
 }
-

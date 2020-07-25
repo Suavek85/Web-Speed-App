@@ -3,28 +3,30 @@ $blockWarm: signin-btn--warm;
 $blockCold: signin-btn--cold;
 
 .#{$block} {
-    width: 230px;
-    height: 45px;
-    margin-top: 10px;
-    margin-bottom: 20px;
-    padding: 6px 15px;
-    font-weight: bold;
-    border-radius: 5px;
-    outline: none;
-    border: none;
-    color: white;
-    font-size: 14px;
-    cursor: pointer;
-    &--warm {
-        background: #EE9BA3;
-    }
-    &--cold {
-        background: #B8d1CB;
-    }  
- }
+  width: 230px;
+  height: 45px;
+  padding: 6px 15px;
+  margin-top: 10px;
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  border: 0;
+  border-radius: 5px;
+  outline: none;
+
+  &--warm {
+    background: #ee9ba3;
+  }
+
+  &--cold {
+    background: #b8d1cb;
+  }
+}
 
 :export {
-    block: $block;
-    blockWarm: $blockWarm;
-    blockCold: $blockCold;
+  block: $block;
+  blockWarm: $blockWarm;
+  blockCold: $blockCold;
 }

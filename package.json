@@ -28,6 +28,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "test": "react-scripts test",
+    "stylelint": "npx stylelint \"**/*.css\"",
     "flow": "flow",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9009 -s public",
@@ -62,7 +63,11 @@
     "enzyme-to-json": "^3.4.3",
     "eslint-plugin-flowtype": "^4.5.3",
     "eslint-plugin-react": "^7.17.0",
-    "gh-pages": "^2.2.0"
+    "gh-pages": "^2.2.0",
+    "stylelint": "^13.6.1",
+    "stylelint-config-sass-guidelines": "^7.0.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-order": "^4.1.0"
   },
   "jest": {
     "snapshotSerializers": [

@@ -1,51 +1,59 @@
-@import "../../scss/styles";
+@import '../../scss/styles';
 
 $block: side;
 $blockTablet: side--tablet;
 $blockMobile: side--mobile;
 
-.#{$block} { 
-    display: flex;
-    width: 30%;
-    height: 80vh;
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+  width: 30%;
+  height: 80vh;
+  margin-right: 20px;
+  border: $ws-border-light;
+
+  > div:first-child {
+    height: 37%;
+  }
+
+  > div:not(:first-child) {
+    height: calc((100% - 37%) / 3);
+  }
+
+  > div:not(:first-child) > div > p:nth-child(n+3) {
+    margin-top: 0;
+  }
+
+  > div:not(:first-child) > div > p:nth-child(n+2) {
+    margin-bottom: 5px;
+  }
+
+  &--tablet {
+    flex-direction: row;
+    width: auto;
+    height: 100%;
+    margin: 20px 0;
+
+    > div {
+      height: 350px !important;
+    }
+
+    > div:not(:last-child) {
+      border-right: solid 1px #e4f0f7;
+    }
+  }
+
+  &--mobile {
     flex-direction: column;
-    margin-top: 30px;
-    margin-right: 20px;
-    border: $ws-border-light;
-    > div:first-child {
-        height: 37%;
+
+    > div {
+      height: 200px;
     }
-    > div:not(:first-child) {
-        height: calc((100% - 37%)/3);
-    }
-    > div:not(:first-child) > div > p:nth-child(n+3) {
-        margin-top: 0;
-    }
-    > div:not(:first-child) > div > p:nth-child(n+2) {
-        margin-bottom: 5px;
-    }
-    &--tablet { 
-        width: auto;
-        height: 100%;
-        flex-direction: row;
-        margin: 20px 0;
-        > div {
-            height: 350px !important;
-        }
-        > div:not(:last-child) {
-            border-right: solid 1px #E4F0F7;
-        }
-    }
-    &--mobile { 
-        flex-direction: column;
-        > div {
-            height: 200px;
-        }
-    }
+  }
 }
 
 :export {
-    block: $block;
-    blockTablet: $blockTablet;
-    blockMobile: $blockMobile;
+  block: $block;
+  blockTablet: $blockTablet;
+  blockMobile: $blockMobile;
 }

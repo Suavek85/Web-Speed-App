@@ -58,7 +58,7 @@ export default function Section(props) {
 
   const genericPara = (el, index) => (
     <p key={index}>{ result[index]  } 
-      <span className={ getColorClass(el)}>
+      <span style={{ marginLeft:'5px' }} className={ getColorClass(el)}>
         { el !== '?' && el }
         { el === '?' && loadingStatus && <SkeletonText />}
       </span>

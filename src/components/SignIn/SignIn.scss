@@ -2,26 +2,27 @@
 $block: signin;
 $blockForm: signin__form;
 
-.#{$block} { 
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: inherit;
+  height: inherit;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 40px;
+
+  span {
+    margin-bottom: 20px;
+  }
+
+  &__form {
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
-    width: inherit;
-    height: inherit;
-    padding-top: 20px;
-    padding-left: 40px;
-    padding-bottom: 20px;
-    span {
-        margin-bottom: 20px;
-    }
-    &__form { 
-        display: flex;
-        flex-direction: column;    
-    }
-
+  }
 }
 
 :export {
-    block: $block;
-    blockForm: $blockForm;
+  block: $block;
+  blockForm: $blockForm;
 }

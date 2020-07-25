@@ -1,27 +1,19 @@
-@import '../../../scss/styles.scss';
+@import '../../../scss/styles';
 
-.input-wrapper {
-    display: flex;
-    margin: 30px 0px;
-    &--small-mobile {
-        flex-direction: column;
-    > div.primarycard__btn-wrapper {
-         margin-top: 20px;
-         margin-right: 20px;
-      }
-    > div.primarycard__btn-wrapper > button {
-        margin-left: 0;
-        width: 100%;
-      }
-    }
+$block: inputwrapper;
+$blockSmallMobile: inputwrapper--small-mobile;
+
+.inputwrapper {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+
+  &--small-mobile {
+    flex-direction: column;
+  }
 }
 
-
-
-.primarycard__btn-wrapper { display: flex; }
-
 :export {
-    block: input-wrapper;
-    blockSmallMobile: input-wrapper--small-mobile;
-    btnWrapper: primarycard__btn-wrapper;
+  block: $block;
+  blockSmallMobile: $blockSmallMobile;
 }

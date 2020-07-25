@@ -1,10 +1,10 @@
 $block: navopen;
 
 .#{$block} {
-    padding-left: 20px;
-    cursor: pointer;
+  padding-left: 20px;
+  cursor: pointer;
 }
 
 :export {
-    block: $block;
+  block: $block;
 }

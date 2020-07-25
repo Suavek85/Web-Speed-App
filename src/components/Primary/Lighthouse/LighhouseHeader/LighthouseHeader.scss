@@ -6,7 +6,7 @@ $blockTitle: lighthouse-header__title;
 $blockSubTitle: lighthouse-header__subtitle;
 
 .#{$block} {
-  display: flex; 
+  display: flex;
   align-items: center;
   height: 120px;
   padding: 30px 40px;
@@ -24,15 +24,14 @@ $blockSubTitle: lighthouse-header__subtitle;
   }
 
   &__subtitle {
-    color: $color-main-font;
     font-size: 20px;
+    color: $color-main-font;
   }
-
 }
 
 :export {
-    block: $block;
-    blockTitleWrapper: $blockTitleWrapper;
-    blockTitle:  $blockTitle;
-    blockSubTitle: $blockSubTitle;
+  block: $block;
+  blockTitleWrapper: $blockTitleWrapper;
+  blockTitle: $blockTitle;
+  blockSubTitle: $blockSubTitle;
 }

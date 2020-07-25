@@ -1,24 +1,23 @@
 @keyframes blink {
-    50% { fill: #A9A9A9 }
-    50.5% { fill: #FFD517}
-    51% { fill: white }
-    51.5% { fill: #FFD517}
-    52% { fill: #A9A9A9 }
-    53% { fill: #FFD517}
-    54% { fill: white}
-    55% { fill: #FFD517}
-    56% { fill: #A9A9A9}
-    57% { fill: #FFD517}
-    58% { fill: white}
-    59% { fill: #FFD517}
-    60.5% { fill: #A9A9A9}
-  }
-  
-  .blink { animation: blink 5s infinite; }
-  
-  .shine { fill: #FFD517}
-  
-  .hide { display: none }
-  
-  .show { display: block }
-  
+  50% { fill: #a9a9a9; }
+  50.5% { fill: #ffd517; }
+  51% { fill: #fff; }
+  51.5% { fill: #ffd517; }
+  52% { fill: #a9a9a9; }
+  53% { fill: #ffd517; }
+  54% { fill: #fff; }
+  55% { fill: #ffd517; }
+  56% { fill: #a9a9a9; }
+  57% { fill: #ffd517; }
+  58% { fill: #fff; }
+  59% { fill: #ffd517; }
+  60.5% { fill: #a9a9a9; }
+}
+
+.blink { animation: blink 5s infinite; }
+
+.shine { fill: #ffd517; }
+
+.hide { display: none; }
+
+.show { display: block; }

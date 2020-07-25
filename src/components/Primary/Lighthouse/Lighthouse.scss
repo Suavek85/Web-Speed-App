@@ -6,33 +6,37 @@ $blockTablet: lighthouse--tablet;
 $blockSmallMobile: lighthouse--small-mobile;
 
 .#{$block} {
+  margin-top: 20px;
   margin-right: 40px;
   margin-left: 20px;
-  margin-top: 10px;
-  border: $ws-border-light;
   background-color: $color-ivory;
+  border: $ws-border-light;
+
   &__content {
-    display: flex; 
+    display: flex;
     flex-direction: column;
     height: auto;
   }
+
   &--tablet {
     margin-right: 0;
     margin-left: 0;
   }
+
   &--small-mobile {
     border: 0;
   }
+
   &--small-mobile > div.lighthouse__header {
-    height: auto;
     flex-direction: column;
     align-items: center;
+    height: auto;
   }
 }
 
 :export {
-    block: $block;
-    blockTablet: $blockTablet;
-    blockSmallMobile: $blockSmallMobile;
-    blockContent: $blockContent;
+  block: $block;
+  blockTablet: $blockTablet;
+  blockSmallMobile: $blockSmallMobile;
+  blockContent: $blockContent;
 }

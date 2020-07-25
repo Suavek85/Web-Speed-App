@@ -15,80 +15,82 @@ $blockBulb: sidecard__bulb;
 $blockScore: sidecard__score;
 
 .#{$block} {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    background-color: $color-ivory;
-    &--generic {
-      border-bottom: solid 1px #E4F0F7;
-    }
-    &--top {
-      border-bottom: solid 1px #E4F0F7;
-    }
-    &--bottom {
-      border-bottom: solid 1px #E4F0F7;
-    }
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  background-color: $color-ivory;
+
+  &--generic {
+    border-bottom: solid 1px #e4f0f7;
+  }
+
+  &--top {
+    border-bottom: solid 1px #e4f0f7;
+  }
+
+  &--bottom {
+    border-bottom: solid 1px #e4f0f7;
+  }
 }
 
 .#{$blockContent} {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 0 30px;
+
+  > div > h2 {
+    margin-bottom: 0;
+    font-size: 19px;
+    color: $color-main-font;
+  }
+
+  p {
     display: flex;
-    position: relative;
-    flex-direction: column;
-    padding: 0px 30px;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 13px;
+    color: #808080;
+  }
 
-    > div > h2 {
-      color: $color-main-font;
-      font-size: 19px;
-      margin-bottom: 0;
-    }
+  p span {
+    font-weight: 500;
+  }
 
-    p {
-      font-size: 13px;
-      margin-top: 10px;
-      color: grey;
-      display: flex;
-      flex-direction: row;
-      align-items: center;
-    }
+  &--alert {
+    color: $color-alert;
+  }
 
-    p span {
-      font-weight: 500;
-      padding-left: 5px;
-    }
+  &--warning {
+    color: $color-warning-loading;
+  }
 
-    &--alert {
-      color: $color-alert;
-    }
-
-    &--warning {
-      color: $color-warning-loading;
-    }
-
-    &--info {
-      color: $color-green-success;
-      
-    }
+  &--info {
+    color: $color-green-success;
+  }
 }
 
 .#{$blockDesc} {
   display: flex;
+  margin-bottom: 5px;
+
   &--generic {
     flex-direction: column;
     align-items: flex-start;
   }
+
   &--result {
     align-items: flex-end;
   }
-
 }
 
 .#{$blockBulb} {
   position: absolute;
-  right: 5px; 
   top: 5px;
+  right: 5px;
 }
-
 
 :export {
   block: $block;
@@ -100,7 +102,7 @@ $blockScore: sidecard__score;
   blockContentWarning: $blockContentWarning;
   blockContentInfo: $blockContentInfo;
   blockDesc: $blockDesc;
-  blockGenericDesc:  $blockGenericDesc;
+  blockGenericDesc: $blockGenericDesc;
   blockResultDesc: $blockResultDesc;
-  blockBulb: $blockBulb; 
+  blockBulb: $blockBulb;
 }

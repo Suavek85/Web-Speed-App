@@ -1,34 +1,38 @@
-@import "../../../scss/styles";
+@import '../../../scss/styles';
 
 $block: mainnav;
 $blockTitle: mainnav__title;
 $blockLinks: mainnav__links;
 
 .#{$block} {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background-color: $color-main-background;
+
+  h1 {
+    color: $color-main-font;
+  }
+
+  &__title {
+    text-decoration: none;
+  }
+
+  &__links {
     display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: $color-main-background;
-    padding-right: 20px;
-    padding-left: 20px;
-    margin-bottom: 20px;
-    h1 {
-        color: $color-main-font;
+
+    h2 {
+      font-size: 18px;
+      color: $color-main-font;
     }
-    &__title {
-        text-decoration: none;
-    }
-    &__links {
-        display: flex;
-        h2 {
-            font-size: 18px;
-            color: $color-main-font;
-        }
-    }
+  }
 }
 
 :export {
-    block: $block;
-    blockTitle: $blockTitle;
-    blockLinks: $blockLinks;
+  block: $block;
+  blockTitle: $blockTitle;
+  blockLinks: $blockLinks;
 }

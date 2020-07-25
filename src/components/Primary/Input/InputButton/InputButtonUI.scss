@@ -1,4 +1,4 @@
-@import "../../../../scss/styles";
+@import '../../../../scss/styles';
 
 $block: inputbutton;
 $blockInactive: inputbutton--inactive;
@@ -6,35 +6,39 @@ $blockLoading: inputbutton--loading;
 $blockError: inputbutton--error;
 $blockSuccess: inputbutton--success;
 
-
 .#{$block} {
-    display: block;
-    height: 44px;
-    line-height: 44px;
-    width: 120px;
-    font-size: 12px;
-    text-align: center;
-    margin-left: 40px;
-    color: white;
-    outline: none;
-    border: none;
-    cursor: pointer;
-    &--inactive {
-      background-color: $color-blue;
-      &:active {
-        transform: translateY(2px);
-      }
+  display: block;
+  width: 120px;
+  height: 44px;
+  margin-left: 50px;
+  font-size: 12px;
+  line-height: 44px;
+  color: #fff;
+  text-align: center;
+  cursor: pointer;
+  border: 0;
+  outline: none;
+
+  &--inactive {
+    background-color: $color-blue;
+
+    &:active {
+      transform: translateY(2px);
     }
-    &--loading {
-        background-color: $color-warning-loading;
-    }
-    &--error {
-      background-color: $color-alert;
-      width: 160px;
-    }
-    &--success {
-      background-color: $color-green-success;
-    }
+  }
+
+  &--loading {
+    background-color: $color-warning-loading;
+  }
+
+  &--error {
+    width: 160px;
+    background-color: $color-alert;
+  }
+
+  &--success {
+    background-color: $color-green-success;
+  }
 }
 
 :export {
