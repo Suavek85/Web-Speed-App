@@ -1,22 +1,22 @@
 {
   "files": {
-    "main.css": "/Web-Speed-App/static/css/main.d4953a05.chunk.css",
-    "main.js": "/Web-Speed-App/static/js/main.e278a4e8.chunk.js",
-    "main.js.map": "/Web-Speed-App/static/js/main.e278a4e8.chunk.js.map",
+    "main.css": "/Web-Speed-App/static/css/main.052c89b7.chunk.css",
+    "main.js": "/Web-Speed-App/static/js/main.e8dccd31.chunk.js",
+    "main.js.map": "/Web-Speed-App/static/js/main.e8dccd31.chunk.js.map",
     "runtime-main.js": "/Web-Speed-App/static/js/runtime-main.a8832365.js",
     "runtime-main.js.map": "/Web-Speed-App/static/js/runtime-main.a8832365.js.map",
     "static/js/2.9fbb6ed5.chunk.js": "/Web-Speed-App/static/js/2.9fbb6ed5.chunk.js",
     "static/js/2.9fbb6ed5.chunk.js.map": "/Web-Speed-App/static/js/2.9fbb6ed5.chunk.js.map",
     "index.html": "/Web-Speed-App/index.html",
-    "precache-manifest.94c390696136bd45e98b3ba53a572d5a.js": "/Web-Speed-App/precache-manifest.94c390696136bd45e98b3ba53a572d5a.js",
+    "precache-manifest.0c46031e2b9aee1cfcfa3eb4dec2ecdb.js": "/Web-Speed-App/precache-manifest.0c46031e2b9aee1cfcfa3eb4dec2ecdb.js",
     "service-worker.js": "/Web-Speed-App/service-worker.js",
-    "static/css/main.d4953a05.chunk.css.map": "/Web-Speed-App/static/css/main.d4953a05.chunk.css.map",
+    "static/css/main.052c89b7.chunk.css.map": "/Web-Speed-App/static/css/main.052c89b7.chunk.css.map",
     "static/js/2.9fbb6ed5.chunk.js.LICENSE": "/Web-Speed-App/static/js/2.9fbb6ed5.chunk.js.LICENSE"
   },
   "entrypoints": [
     "static/js/runtime-main.a8832365.js",
     "static/js/2.9fbb6ed5.chunk.js",
-    "static/css/main.d4953a05.chunk.css",
-    "static/js/main.e278a4e8.chunk.js"
+    "static/css/main.052c89b7.chunk.css",
+    "static/js/main.e8dccd31.chunk.js"
   ]
 }
