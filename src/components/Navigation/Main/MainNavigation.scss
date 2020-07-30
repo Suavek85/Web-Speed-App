@@ -1,8 +1,10 @@
 @import '../../../scss/styles';
 
 $block: mainnav;
-$blockTitle: mainnav__title;
-$blockLinks: mainnav__links;
+$blockTitle: element($block, title);
+$blockLinks: element($block, links);
+$blockMobile: modifier($block, mobile);
+$blockSmallMobile: modifier($block, small-mobile);
 
 .#{$block} {
   display: flex;
@@ -17,17 +19,40 @@ $blockLinks: mainnav__links;
     color: $color-main-font;
   }
 
+  h2 {
+    font-size: em(18);
+    color: $color-main-font;
+  }
+
+  &--mobile {
+    h1 {
+      font-size: em(19);
+    }
+
+    h2 {
+      font-size: em(16);
+    }
+  }
+
+  &--small-mobile {
+    padding-right: 8px;
+    padding-left: 8px;
+
+    h1 {
+      font-size: em(18);
+    }
+
+    h2 {
+      font-size: em(15);
+    }
+  }
+
   &__title {
     text-decoration: none;
   }
 
   &__links {
     display: flex;
-
-    h2 {
-      font-size: 18px;
-      color: $color-main-font;
-    }
   }
 }
 
@@ -35,4 +60,6 @@ $blockLinks: mainnav__links;
   block: $block;
   blockTitle: $blockTitle;
   blockLinks: $blockLinks;
+  blockMobile: $blockMobile;
+  blockSmallMobile: $blockSmallMobile;
 }

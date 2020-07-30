@@ -5,7 +5,7 @@ import classNames from 'classnames/bind'
 
 import styles from './ScoreCircle.scss'
 
-export default function ScoreCircle(props) {
+function ScoreCircle(props) {
 
   const { score } = props
   const scoreCircle = score ? Math.floor(score * 100) : 0
@@ -70,6 +70,8 @@ export default function ScoreCircle(props) {
   
   )
 }
+
+export default React.memo(ScoreCircle)
 
 ScoreCircle.propTypes = {
   score: PropTypes.string,

@@ -1,8 +1,8 @@
 @import '../../../../scss/styles';
 
 $block: url-input;
-$blockLabel: url-input__label;
-$blockBorder: url-input__border;
+$blockLabel: element($block, label);
+$blockBorder: element($block, border);
 
 .#{$block} {
   position: relative;
@@ -14,7 +14,7 @@ $blockBorder: url-input__border;
     position: absolute;
     top: -5px;
     left: 0;
-    font-size: 14px;
+    font-size: em(14);
     font-weight: 500;
     color: $color-alert;
     transition: all 0.2s ease;
@@ -39,7 +39,7 @@ input {
   height: 36px;
   padding: 8px 0;
   font-family: inherit;
-  font-size: 16px;
+  font-size: em(16);
   font-weight: 500;
   color: $color-dark-grey;
   background: none;

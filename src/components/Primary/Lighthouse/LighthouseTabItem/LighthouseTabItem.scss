@@ -1,7 +1,7 @@
 @import '../../../../scss/styles';
 
 $block: lighthouse-tabitem;
-$blockActive: lighthouse-tabitem--active;
+$blockActive: modifier($block, active);
 
 .#{$block} {
   display: flex;
@@ -10,10 +10,14 @@ $blockActive: lighthouse-tabitem--active;
   width: 100%;
   height: inherit;
   padding: 0 5px;
-  font-size: 12px;
+  font-size: em(12);
   text-align: center;
   cursor: pointer;
-  background-color: $color-beige;
+  background-color: #f4f5e1;
+
+  &:not(:last-child) {
+    border-right: 1px solid $color-white;
+  }
 
   &:hover {
     color: $color-white;

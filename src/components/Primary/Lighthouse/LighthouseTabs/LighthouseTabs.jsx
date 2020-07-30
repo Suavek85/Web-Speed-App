@@ -6,7 +6,7 @@ import LighthouseTabItem from '../LighthouseTabItem/LighthouseTabItem'
 
 import styles from './LighthouseTabs.scss'
 import { 
-  mobileWidth, 
+  smallTabletWidth, 
   smallMobileWidth 
 } from'../../../../scss/mediaqueries'
 
@@ -17,7 +17,7 @@ export default function LighthouseTabs(props) {
   const cx = classNames.bind(styles)
   const getTabClass = cx({
     blockTabs: true,
-    blockTabsMobile: useMediaQuery(mobileWidth),
+    blockTabsSmallTablet: useMediaQuery(smallTabletWidth),
     blockTabsSmallMobile: useMediaQuery(smallMobileWidth),
   })
 

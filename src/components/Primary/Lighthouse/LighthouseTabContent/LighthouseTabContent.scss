@@ -1,9 +1,11 @@
+@import '../../../../scss/styles';
+
 $block: lighthouse-results;
 
 .#{$block} {
   height: 200px;
   padding-left: 20px;
-  font-size: 13px;
+  font-size: em(13);
 
   > p {
     padding-bottom: 15px;

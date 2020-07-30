@@ -1,7 +1,7 @@
 @import '../../scss/styles';
 
 $block: app-wrapper;
-$blockTablet: app-wrapper--tablet;
+$blockTablet: modifier($block, tablet);
 
 .#{$block} {
   position: relative;

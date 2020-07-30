@@ -1,19 +1,21 @@
 @import '../../../scss/styles';
 
 $block: inputwrapper;
-$blockSmallMobile: inputwrapper--small-mobile;
+$blockMobile: modifier($block, mobile);
 
 .inputwrapper {
   display: flex;
   align-items: center;
   margin: 30px 0;
 
-  &--small-mobile {
+  //change font-size of all h2 i h1 elements
+
+  &--mobile {
     flex-direction: column;
   }
 }
 
 :export {
   block: $block;
-  blockSmallMobile: $blockSmallMobile;
+  blockMobile: $blockMobile;
 }

@@ -6,7 +6,7 @@ import Main from './Main/Main'
 import Middle from './Middle/Middle'
 import Top from './Top/Top'
 import Bottom from './Bottom/Bottom'
-import { tabletWidth, mobileWidth } from'../../scss/mediaqueries'
+import { tabletWidth, smallTabletWidth } from'../../scss/mediaqueries'
 import styles from './Side.scss'
 
 export default function Side() {
@@ -16,7 +16,7 @@ export default function Side() {
   const getClass = cx({
     block: true,
     blockTablet: useMediaQuery(tabletWidth),
-    blockMobile: useMediaQuery(mobileWidth),
+    blockSmallTablet: useMediaQuery(smallTabletWidth),
   })
 
   return (

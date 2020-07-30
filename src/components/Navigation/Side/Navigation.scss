@@ -1,8 +1,8 @@
 @import '../../../scss/styles';
 
 $block: nav-wrapper;
-$blockBackground: nav-wrapper-background;
-$blockCloseWrapper: nav-wrapper-close;
+$blockBackground: element($block, backgrounds);
+$blockCloseWrapper: element($block, close);
 
 .#{$block} {
   position: absolute;

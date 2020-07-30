@@ -1,6 +1,8 @@
+@import '../../../scss//styles.scss';
+
 $block: signin-btn;
-$blockWarm: signin-btn--warm;
-$blockCold: signin-btn--cold;
+$blockWarm: modifier($block, warm);
+$blockCold: modifier($block, cold);
 
 .#{$block} {
   width: 230px;
@@ -8,7 +10,7 @@ $blockCold: signin-btn--cold;
   padding: 6px 15px;
   margin-top: 10px;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: em(14);
   font-weight: bold;
   color: #fff;
   cursor: pointer;

@@ -1,6 +1,6 @@
 
 $block: signin;
-$blockForm: signin__form;
+$blockForm: element($block, form);
 
 .#{$block} {
   display: flex;

@@ -1,8 +1,8 @@
 @import '../../scss/styles';
 
 $block: primary;
-$blockTablet: primary--tablet;
-$blockInput: primary__input;
+$blockTablet: modifier($block, tablet);
+$blockInput: element($block, input);
 
 .primary {
   display: flex;

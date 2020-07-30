@@ -3,7 +3,7 @@
 $block: nav-close;
 
 .#{$block} {
-  font-size: 20px;
+  font-size: em(20);
   font-weight: 700;
   color: $color-grey;
   cursor: pointer;

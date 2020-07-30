@@ -1,18 +1,18 @@
 @import '../../scss/styles';
 
 $block: sidecard;
-$blockGeneric: sidecard--generic;
-$blockTop: sidecard--top;
-$blockBottom: sidecard--bottom;
-$blockContent: sidecard__content;
-$blockContentAlert: sidecard__content--alert;
-$blockContentWarning: sidecard__content--warning;
-$blockContentInfo: sidecard__content--info;
-$blockDesc: sidecard__desc;
-$blockGenericDesc: sidecard__desc--generic;
-$blockResultDesc: sidecard__desc--result;
-$blockBulb: sidecard__bulb;
-$blockScore: sidecard__score;
+$blockGeneric: modifier($block, generic);
+$blockTop: modifier($block, top);
+$blockBottom: modifier($block, bottom);
+$blockContent: element($block, content);
+$blockContentAlert: modifier($blockContent, alert);
+$blockContentWarning: modifier($blockContent, warning);
+$blockContentInfo: modifier($blockContent, info);
+$blockDesc: element($block, desc);
+$blockGenericDesc: modifier($blockDesc, generic);
+$blockResultDesc: modifier($blockDesc, result);
+$blockBulb: element($block, bulb);
+$blockScore: element($block, score);
 
 .#{$block} {
   display: flex;
@@ -42,7 +42,7 @@ $blockScore: sidecard__score;
 
   > div > h2 {
     margin-bottom: 0;
-    font-size: 19px;
+    font-size: em(19);
     color: $color-main-font;
   }
 
@@ -51,7 +51,7 @@ $blockScore: sidecard__score;
     flex-direction: row;
     align-items: center;
     margin-top: 10px;
-    font-size: 13px;
+    font-size: em(13);
     color: #808080;
   }
 

@@ -1,3 +1,4 @@
+@import '../../../scss/styles.scss';
 
 $block: signin-input;
 
@@ -7,7 +8,7 @@ $block: signin-input;
   padding: 6px 15px;
   margin-top: 10px;
   margin-bottom: 20px;
-  font-size: 14px;
+  font-size: em(14);
   color: #748194;
   background: #f6f7f9;
   border: 0;

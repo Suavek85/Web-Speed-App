@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import SignWithGoogle from './SignWithGoogle'
 import FormInput from './FormInput/FormInput'
 import FormButton from './FormButton/FormButton'
 import styles from './SignIn.scss'

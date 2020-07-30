@@ -1,16 +1,17 @@
 @import '../../../../scss/styles';
 
 $block: lighthouse-header;
-$blockTitleWrapper: lighthouse-header__title-wrapper;
-$blockTitle: lighthouse-header__title;
-$blockSubTitle: lighthouse-header__subtitle;
+$blockTitleWrapper: element($block, title-wrapper);
+$blockTitle: element($block, title);
+$blockSubTitle: element($block, subtitle);
+$blockMobile: modifier($block, mobile);
+$blockSmallMobile: modifier($block, small-mobile);
 
 .#{$block} {
   display: flex;
   align-items: center;
   height: 120px;
   padding: 30px 40px;
-  border-bottom: $ws-border-light;
 
   &__title-wrapper {
     display: flex;
@@ -24,8 +25,33 @@ $blockSubTitle: lighthouse-header__subtitle;
   }
 
   &__subtitle {
-    font-size: 20px;
+    font-size: em(20);
     color: $color-main-font;
+  }
+
+  &--mobile {
+    padding: 30px 0;
+
+    h1 {
+      font-size: em(19);
+    }
+
+    h2 {
+      font-size: em(16);
+    }
+  }
+
+  &--small-mobile {
+    flex-direction: column;
+    height: 240px;
+
+    h1 {
+      font-size: em(18);
+    }
+
+    h2 {
+      font-size: em(15);
+    }
   }
 }
 
@@ -34,4 +60,6 @@ $blockSubTitle: lighthouse-header__subtitle;
   blockTitleWrapper: $blockTitleWrapper;
   blockTitle: $blockTitle;
   blockSubTitle: $blockSubTitle;
+  blockMobile: $blockMobile;
+  blockSmallMobile: $blockSmallMobile;
 }

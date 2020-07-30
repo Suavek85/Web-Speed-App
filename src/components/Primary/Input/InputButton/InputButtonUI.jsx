@@ -1,9 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
-
+import { useMediaQuery } from 'react-responsive'
 import { appStates } from '../../../../constants/states'
 import { btnsContent } from '../../../../constants/content'
+import { mobileWidth } from'../../../../scss/mediaqueries'
 import styles from './InputButtonUI.scss'  
 
 export default function InputButtonUI(props) {
@@ -31,6 +32,7 @@ export default function InputButtonUI(props) {
     blockLoading: isStatus(appStates.LOADING),
     blockError: isStatus(appStates.ERROR),
     blockSuccess: isStatus(appStates.SUCCESS),
+    blockMobile: useMediaQuery(mobileWidth),
   })
 
   return (

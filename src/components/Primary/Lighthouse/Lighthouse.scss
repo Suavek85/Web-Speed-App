@@ -1,9 +1,9 @@
 @import '../../../scss/styles';
 
 $block: lighthouse;
-$blockContent: lighthouse__content;
-$blockTablet: lighthouse--tablet;
-$blockSmallMobile: lighthouse--small-mobile;
+$blockContent: element($block, content);
+$blockTablet: modifier($block, tablet);
+$blockSmallMobile: modifier($block, small-mobile);
 
 .#{$block} {
   margin-top: 20px;

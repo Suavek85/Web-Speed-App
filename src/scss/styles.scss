@@ -2,3 +2,23 @@
 
 //Borders
 $ws-border-light: 1px solid lightgrey;
+
+//Font
+$browser-context: 16; // default value
+
+@function em($pixels, $context: $browser-context) {
+  @return #{$pixels/$context}em;
+}
+
+//BEM
+@function block($block-name) {
+  @return #{$app-classname-prefix}#{$block-name};
+}
+
+@function element($block-name, $element-name) {
+  @return #{$block-name}__#{$element-name};
+}
+
+@function modifier($block-name, $state-name) {
+  @return #{$block-name}--#{$state-name};
+}

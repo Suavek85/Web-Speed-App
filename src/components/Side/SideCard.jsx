@@ -1,9 +1,10 @@
 import React from 'react'
 import ReactTooltip from "react-tooltip"
 import classNames from 'classnames/bind'
+import { useMediaQuery } from 'react-responsive'
 import { useSelector } from "react-redux"
 import { appStates } from '../../constants/states'
-
+import { desktopWidth } from'../../scss/mediaqueries'
 import SkeletonCircle from '../Skeleton/SkeletonCircle'
 import InfoCircle from '../svgs/InfoCircle/InfoCircle'
 import SkeletonText from '../Skeleton/SkeletonText'
@@ -19,6 +20,7 @@ export default function Section(props) {
 
   const getAppState = useSelector(state => state.stateReducer.getAppState)
   const loadingStatus = getAppState === appStates.LOADING
+  const isDesktop = useMediaQuery(desktopWidth)
 
   //STYLES
   const cx = classNames.bind(styles)
@@ -44,16 +46,8 @@ export default function Section(props) {
 
   // GENERIC ELEMENTS
 
-  const lightBulbWrapper = (
-    <span className={ styles.blockBulb } >
-      <LightBulbUI />
-    </span>
-  )
-
   const genericDescription = (
-    <p>
-      { mainContent }
-    </p>
+    <p>{ mainContent }</p>
   )
 
   const genericPara = (el, index) => (
@@ -102,11 +96,11 @@ export default function Section(props) {
 
   return (
     <div className={ getClass } >
+      { isDesktop && position === 'generic' && <LightBulbUI /> }
       <div className={ styles.blockContent }>
         <div className={ getDescrptionWrapperClass }>
           <h2>
             { header }
-            { position === 'generic' && lightBulbWrapper }
           </h2>
           { position === 'generic' && genericDescription }
           { position !== 'generic' && description}

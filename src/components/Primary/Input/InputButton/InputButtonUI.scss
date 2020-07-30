@@ -1,17 +1,18 @@
 @import '../../../../scss/styles';
 
 $block: inputbutton;
-$blockInactive: inputbutton--inactive;
-$blockLoading: inputbutton--loading;
-$blockError: inputbutton--error;
-$blockSuccess: inputbutton--success;
+$blockInactive: modifier($block, inactive);
+$blockLoading: modifier($block, loading);
+$blockError: modifier($block, error);
+$blockSuccess: modifier($block, success);
+$blockMobile: modifier($block, mobile);
 
 .#{$block} {
   display: block;
   width: 120px;
   height: 44px;
   margin-left: 50px;
-  font-size: 12px;
+  font-size: em(12);
   line-height: 44px;
   color: #fff;
   text-align: center;
@@ -39,6 +40,11 @@ $blockSuccess: inputbutton--success;
   &--success {
     background-color: $color-green-success;
   }
+
+  &--mobile {
+    margin-top: 30px;
+    margin-left: 0;
+  }
 }
 
 :export {
@@ -47,4 +53,5 @@ $blockSuccess: inputbutton--success;
   blockLoading: $blockLoading;
   blockError: $blockError;
   blockSuccess: $blockSuccess;
+  blockMobile: $blockMobile;
 }

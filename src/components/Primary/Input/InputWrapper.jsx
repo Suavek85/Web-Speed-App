@@ -1,12 +1,11 @@
 import React from 'react'
 import classNames from 'classnames/bind'
 import { useMediaQuery } from 'react-responsive'
-
 import InputUrlWrapper from './InputUrl/InputUrlWrapper'
 import InputButtonWrapper from './InputButton/InputButtonWrapper'
 import Error from '../Error/Error'
 import styles from './Input.scss'
-import { smallMobileWidth } from'../../../scss/mediaqueries'
+import { mobileWidth } from'../../../scss/mediaqueries'
 
 export default function InputWrapper() {
 
@@ -14,7 +13,7 @@ export default function InputWrapper() {
   const cx = classNames.bind(styles)
   const getClass = cx({
     block: true,
-    blockSmallMobile: useMediaQuery(smallMobileWidth),
+    blockMobile: useMediaQuery(mobileWidth),
   })
 
   return (
