@@ -1,0 +1,33 @@
+@import '../../scss//styles.scss';
+
+$block: close;
+$blockWrapper: close__wrapper;
+
+.#{$block} {
+  font-size: em(20);
+  font-weight: 700;
+  color: $color-grey;
+  cursor: pointer;
+  transform: translateY(-3px);
+
+  &__wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: #fff;
+    border: $ws-border-light;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+:export {
+  block: $block;
+  blockWrapper: $blockWrapper;
+}

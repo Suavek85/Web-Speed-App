@@ -18,7 +18,7 @@ export default function Homepage() {
   })
 
   return (
-    <section style={{display: 'flex', flexDirection: 'column'}}>
+    <section style={{display: 'flex', flexDirection: 'column',}}>
       <Navigation />
       <MainNavigation />
       <div className={ getButtonClasses }>

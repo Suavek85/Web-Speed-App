@@ -2,7 +2,7 @@ import React from 'react'
 import { Switch, Route } from "react-router-dom"
   
 import Homepage from './components/Homepage/Homepage'
-import SignInWrapper from './components/SignIn/SignInWrapper'
+import SigninPage from './components/SignIn/SigninPage'
 
 export default function App() {
 
@@ -10,7 +10,7 @@ export default function App() {
     <>
       <Switch >
         <Route exact path="/" component={ Homepage } />
-        <Route exact path="/signin" component={ SignInWrapper } />
+        <Route exact path="/signin" component={ SigninPage } />
       </Switch>
     </>
   )

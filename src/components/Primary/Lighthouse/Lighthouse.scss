@@ -1,7 +1,7 @@
 @import '../../../scss/styles';
 
 $block: lighthouse;
-$blockContent: element($block, content);
+$blockContent: elem($block, content);
 $blockTablet: modifier($block, tablet);
 $blockSmallMobile: modifier($block, small-mobile);
 

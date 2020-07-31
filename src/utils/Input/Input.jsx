@@ -1,7 +1,7 @@
 import React from 'react'
-import styles from './FormInput.scss'
+import styles from './Input.scss'
 
-export default function FormInput( { handleChange, label, ...props }) {
+export default function Input( { handleChange, label, ...props }) {
 
   return (
     <>

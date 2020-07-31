@@ -15,7 +15,7 @@ $browser-context: 16; // default value
   @return #{$app-classname-prefix}#{$block-name};
 }
 
-@function element($block-name, $element-name) {
+@function elem($block-name, $element-name) {
   @return #{$block-name}__#{$element-name};
 }
 

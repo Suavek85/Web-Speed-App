@@ -1,8 +1,8 @@
 @import '../../../../scss/styles';
 
 $block: url-input;
-$blockLabel: element($block, label);
-$blockBorder: element($block, border);
+$blockLabel: elem($block, label);
+$blockBorder: elem($block, border);
 
 .#{$block} {
   position: relative;

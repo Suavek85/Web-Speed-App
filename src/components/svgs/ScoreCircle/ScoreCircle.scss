@@ -2,19 +2,19 @@
 
 $block: chart;
 //svg
-$blockSvg: element($block, svg);
+$blockSvg: elem($block, svg);
 //stats
-$blockStats: element($block, stats);
+$blockStats: elem($block, stats);
 $blockStatsAlert: modifier($blockStats, alert);
 $blockStatsWarning: modifier($blockStats, warning);
 $blockStatsInfo: modifier($blockStats, info);
 //text
-$blockText: element($block, text);
+$blockText: elem($block, text);
 $blockTextAlert: modifier($blockText, alert);
 $blockTextWarning: modifier($blockText, warning);
 $blockTextInfo: modifier($blockText, info);
 //background
-$blockBg: element($block, background);
+$blockBg: elem($block, background);
 $blockBgAlert: modifier($blockBg, alert);
 $blockBgWarning: modifier($blockBg, warning);
 $blockBgInfo: modifier($blockBg, info);

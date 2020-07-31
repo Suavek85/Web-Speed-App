@@ -1,8 +1,8 @@
 @import '../../../scss/styles';
 
 $block: mainnav;
-$blockTitle: element($block, title);
-$blockLinks: element($block, links);
+$blockTitle: elem($block, title);
+$blockLinks: elem($block, links);
 $blockMobile: modifier($block, mobile);
 $blockSmallMobile: modifier($block, small-mobile);
 

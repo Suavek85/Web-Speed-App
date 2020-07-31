@@ -1,9 +1,9 @@
 @import '../../../../scss/styles';
 
 $block: lighthouse-header;
-$blockTitleWrapper: element($block, title-wrapper);
-$blockTitle: element($block, title);
-$blockSubTitle: element($block, subtitle);
+$blockTitleWrapper: elem($block, title-wrapper);
+$blockTitle: elem($block, title);
+$blockSubTitle: elem($block, subtitle);
 $blockMobile: modifier($block, mobile);
 $blockSmallMobile: modifier($block, small-mobile);
 

@@ -1,8 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useSelector, useDispatch } from "react-redux"
-
-import NavClose from './NavClose/NavClose'
+import Close from '../../../utils/Close/Close'
 import styles from './Navigation.scss'
 import { 
   collapseNavConfig, 
@@ -42,7 +41,7 @@ function Navigation() {
         className={ styles.block } 
       >
         <div className={ styles.blockCloseWrapper } >
-          <NavClose handleOnClick={ handleCollapseMenu } />
+          <Close handleOnClick={ handleCollapseMenu } isSideNav />
         </div>
       </animated.div>
     </>

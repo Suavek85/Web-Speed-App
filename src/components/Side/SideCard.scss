@@ -4,15 +4,15 @@ $block: sidecard;
 $blockGeneric: modifier($block, generic);
 $blockTop: modifier($block, top);
 $blockBottom: modifier($block, bottom);
-$blockContent: element($block, content);
+$blockContent: elem($block, content);
 $blockContentAlert: modifier($blockContent, alert);
 $blockContentWarning: modifier($blockContent, warning);
 $blockContentInfo: modifier($blockContent, info);
-$blockDesc: element($block, desc);
+$blockDesc: elem($block, desc);
 $blockGenericDesc: modifier($blockDesc, generic);
 $blockResultDesc: modifier($blockDesc, result);
-$blockBulb: element($block, bulb);
-$blockScore: element($block, score);
+$blockBulb: elem($block, bulb);
+$blockScore: elem($block, score);
 
 .#{$block} {
   display: flex;

@@ -2,7 +2,7 @@
 
 $block: primary;
 $blockTablet: modifier($block, tablet);
-$blockInput: element($block, input);
+$blockInput: elem($block, input);
 
 .primary {
   display: flex;
