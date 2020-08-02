@@ -1,34 +1,50 @@
-@import '../../scss/styles.scss';
+@import '../../scss/styles';
 
-$block: signin-btn;
-$blockWarm: modifier($block, warm);
-$blockCold: modifier($block, cold);
+$block: btn;
+$blockRegular: modifier($block, regular);
+$blockOval: modifier($block, oval);
 
 .#{$block} {
-  width: 230px;
-  height: 45px;
-  padding: 6px 15px;
-  margin-top: 10px;
-  margin-bottom: 20px;
-  font-size: em(14);
-  font-weight: bold;
-  color: #fff;
   cursor: pointer;
-  border: 0;
-  border-radius: 5px;
-  outline: none;
 
-  &--warm {
+  &--regular {
+    width: 230px;
+    height: 45px;
+    padding: 6px 15px;
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: em(14);
+    font-weight: bold;
+    color: $color-white;
     background: #ee9ba3;
+    border: 0;
+    border-radius: 5px;
+    outline: none;
   }
 
-  &--cold {
-    background: #b8d1cb;
+  &--oval {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    font-size: em(20);
+    font-weight: 700;
+    line-height: 20px;
+    color: $color-grey;
+    background-color: #fff;
+    border: $ws-border-light;
+    border-radius: 100%;
+    transform: translate(-50%, -50%);
   }
 }
 
 :export {
   block: $block;
-  blockWarm: $blockWarm;
-  blockCold: $blockCold;
+  blockRegular: $blockRegular;
+  blockOval: $blockOval;
 }

@@ -39,7 +39,7 @@ export default function SignInForm() {
           handleChange={ handlePasswordChange } 
           required
         />
-        <Button colors='warm' isForm />
+        <Button btnStyle='regular' isFormContent />
       </form>
     </div>
   )

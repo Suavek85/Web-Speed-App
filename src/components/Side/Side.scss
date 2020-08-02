@@ -39,7 +39,7 @@ $blockSmallTablet: modifier($block, small-tablet);
     }
 
     > div:not(:last-child) {
-      border-right: solid 1px #e4f0f7;
+      border-right: $ws-border-light;
     }
   }
 

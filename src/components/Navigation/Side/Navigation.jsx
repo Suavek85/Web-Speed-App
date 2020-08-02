@@ -1,7 +1,7 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useSelector, useDispatch } from "react-redux"
-import Close from '../../../utils/Close/Close'
+import Button from '../../../utils/Button/Button'
 import styles from './Navigation.scss'
 import { 
   collapseNavConfig, 
@@ -40,9 +40,13 @@ function Navigation() {
         style={ getAnimation(getToggleState, expandNav, collapseNav) } 
         className={ styles.block } 
       >
-        <div className={ styles.blockCloseWrapper } >
-          <Close handleOnClick={ handleCollapseMenu } isSideNav />
-        </div>
+      <div style={{transform: 'translate(15px, 15px)',}}>
+        <Button 
+            btnStyle='oval' 
+            handleOnClick={ handleCollapseMenu }
+            isDesktopCloseContent
+          />
+      </div>
       </animated.div>
     </>
   )}

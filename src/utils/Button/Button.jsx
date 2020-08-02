@@ -5,23 +5,25 @@ import * as signincontent from '../../constants/signinContent.js'
 
 export default function Button(props) {
 
- const { colors, content, isForm } = props
+ const { btnStyle, handleOnClick, isMobileCloseContent, isDesktopCloseContent, isFormContent } = props
 
   //STYLES
   const cx = classNames.bind(styles)
   const getClass = cx({
     block: true,
-    blockWarm: colors === 'warm',
-    blockCold: colors === 'cold',
+    blockRegular: btnStyle === 'regular',
+    blockOval: btnStyle === 'oval',
   })
 
   return (
         <button 
           className={ getClass } 
           type='submit' 
+          onClick={ handleOnClick }
           value='Submit form'>
-          { isForm && signincontent.SUBMIT }
-          { content }
+          { isFormContent && signincontent.SUBMIT }
+          { isMobileCloseContent && 'Close' }
+          { isDesktopCloseContent && 'x' }
         </button>
   )
 }

@@ -1,23 +1,27 @@
 // # COLOR VARIABLES
 
 // Background
-$color-main-background: #e4f0f7;
+$color-main-background: #fff; //was #e4f0f7
+$color-inner-background: #f8f8ff;
 
 //Monochrome
-$color-black: black;
-$color-dark-grey: darkslategrey;
-$color-grey: grey;
-$color-beige: beige;
-$color-ivory: ivory;
-$color-white: white;
+$color-black: #000;
+$color-white: #fff;
+
+$color-grey: #808080;
+$color-lightgrey: #cdcdcd;
+
+//Accent
+$color-light-accent: #e4e4ff;
+$color-dark-accent: #d1d1ff;
 
 $color-blue: #376685;
 $color-light-blue: #a8c1e6;
 
-//Accent
 $color-alert: #f76c6c;
 $color-warning-loading: #ffaf10;
 $color-green-success: #02af8e;
 
 //Font colors
-$color-main-font: cadetblue;
+$color-small-font: #222;
+$color-main-font: #558e90; //was #5f9ea0

@@ -1,7 +1,7 @@
-@import './colors.scss';
+@import './colors';
 
 //Borders
-$ws-border-light: 1px solid lightgrey;
+$ws-border-light: 1px solid $color-lightgrey;
 
 //Font
 $browser-context: 16; // default value

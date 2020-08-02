@@ -55,7 +55,7 @@ export default function SignUpForm() {
           handleChange={ handlePasswordChange } 
           required
         />
-        <Button colors='warm' isForm />
+        <Button btnStyle='regular' isFormContent />
       </form>
     </div>
   )

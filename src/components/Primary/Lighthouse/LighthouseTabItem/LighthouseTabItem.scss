@@ -11,23 +11,22 @@ $blockActive: modifier($block, active);
   height: inherit;
   padding: 0 5px;
   font-size: em(12);
+  color: $color-small-font;
   text-align: center;
   cursor: pointer;
-  background-color: #f4f5e1;
+  background-color: $color-light-accent;
 
   &:not(:last-child) {
     border-right: 1px solid $color-white;
   }
 
   &:hover {
-    color: $color-white;
-    background-color: $color-grey;
+    background-color: $color-dark-accent;
     opacity: 0.8;
   }
 
   &--active {
-    color: $color-white;
-    background-color: $color-grey;
+    background-color: $color-dark-accent;
   }
 }
 

@@ -2,7 +2,6 @@
 
 $block: nav-wrapper;
 $blockBackground: elem($block, backgrounds);
-$blockCloseWrapper: elem($block, close);
 
 .#{$block} {
   position: absolute;
@@ -28,12 +27,7 @@ $blockCloseWrapper: elem($block, close);
   opacity: 0;
 }
 
-.#{$blockCloseWrapper} {
-  margin-left: 15px;
-}
-
 :export {
   block: $block;
   blockBackground: $blockBackground;
-  blockCloseWrapper: $blockCloseWrapper;
 }
