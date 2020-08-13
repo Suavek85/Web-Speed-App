@@ -43,7 +43,6 @@ export default function LightHouse() {
   return (
     <div className={ getWrapperClass } >
       <LighthouseHeader />
-  
       <div className={ styles.blockContent }>
         <LighthouseTabs {...tabsProps} />
         <LighthouseTabContent  {...tabContentProps} />

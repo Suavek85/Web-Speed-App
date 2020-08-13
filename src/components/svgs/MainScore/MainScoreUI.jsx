@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState, useEffect } from "react"
 import PropTypes from 'prop-types'
 import { useSpring, animated } from 'react-spring'
 import MainScoreText from './MainScoreText'
@@ -8,7 +8,7 @@ function MainScoreUI(props) {
 
   const { averageScore, loadingStatus } = props
 
-  //Indicator
+  //Indicator animations
   const loadingMotion = { mass: 25, tension: 25, friction: 25 }
   const percentToDegree = percent => percent ? percent * 1.94 : 0
   const defaultDeegree = -164
@@ -30,11 +30,11 @@ function MainScoreUI(props) {
   })
 
   const indicatorPropsSuccess = useSpring({
-    ///from: { transform: `rotate(${successDegree}deg)`, transformOrigin: 'center' },
     to: { transform: `rotate(${successDegree}deg)`, transformOrigin: 'center' },
+    config: { duration: 1000 }
   })
 
-  //Text squares
+  //Text squares animations
   const colorProps = useSpring({
     from:{ fill: "#FFFFFF" },
     to: async next => {

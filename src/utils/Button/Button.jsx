@@ -18,9 +18,9 @@ export default function Button(props) {
   return (
         <button 
           className={ getClass } 
-          type='submit' 
+          type={isFormContent? 'submit' : 'button'} 
           onClick={ handleOnClick }
-          value='Submit form'>
+          value={isFormContent? 'Submit form' : 'value'}>
           { isFormContent && signincontent.SUBMIT }
           { isMobileCloseContent && 'Close' }
           { isDesktopCloseContent && 'x' }

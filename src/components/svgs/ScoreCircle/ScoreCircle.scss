@@ -53,7 +53,6 @@ $blockBgInfo: modifier($blockBg, info);
     fill: none;
     stroke-linecap: round;
     stroke-width: 3.6;
-    animation: progress 2.5s ease-out forwards;
 
     &--alert {
       stroke: #f00;
@@ -85,12 +84,6 @@ $blockBgInfo: modifier($blockBg, info);
     &--info {
       fill: $color-green-success;
     }
-  }
-}
-
-@keyframes progress {
-  0% {
-    stroke-dasharray: 0 100;
   }
 }
 

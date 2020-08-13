@@ -20,7 +20,7 @@ export default function LighthouseTabItem(props) {
     tabsHeader.map((el,i) => ( <div 
       id={i} 
       key={i} 
-      className={ geTabItemClass(i.toString(), activeTab) }>
+      className={ geTabItemClass(i, activeTab) }>
       {el.content}
     </div>) )
   )

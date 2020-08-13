@@ -2,7 +2,6 @@ import React from "react"
 import { useSpring, animated } from 'react-spring'
 import PropTypes from 'prop-types'
 import classNames from 'classnames/bind'
-
 import styles from './ScoreCircle.scss'
 
 function ScoreCircle(props) {
@@ -44,8 +43,13 @@ function ScoreCircle(props) {
   const animation = useSpring({  
     from: { number: 0 }, 
     to: { number: scoreCircle },
-    config: { mass: 25, tension: 25, friction: 25 }
-    //config: {duration: value * 200} 
+    config: { duration: 2000 } 
+  })
+
+  const animateProgress = useSpring({  
+    from: { strokeDasharray: `0, 100` }, 
+    to: { strokeDasharray: strokeValue },
+    config: { duration: 2000 }
   })
 
   return (
@@ -56,8 +60,9 @@ function ScoreCircle(props) {
             a 15.9155 15.9155 0 0 1 0 31.831
             a 15.9155 15.9155 0 0 1 0 -31.831"
         />
-        <path className={ getClass }
-          strokeDasharray={ strokeValue }
+        <animated.path 
+          style={ animateProgress }
+          className={ getClass }
           d="M18 2.0845
             a 15.9155 15.9155 0 0 1 0 31.831
             a 15.9155 15.9155 0 0 1 0 -31.831"

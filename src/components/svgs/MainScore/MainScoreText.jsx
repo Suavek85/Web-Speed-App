@@ -2,14 +2,12 @@ import React from "react"
 import { useSpring, animated } from 'react-spring'
 
 export default function MainScoreText(props) {
-
   const { xCord, yCord, value } = props
 
   const styles = useSpring({  
     from: { number: 0 }, 
     to: { number: value },
-    config: { mass: 25, tension: 25, friction: 25 }
-    //config: {duration: value * 200} 
+    config: { duration: 2000 },
   })
 
   return (
@@ -23,7 +21,6 @@ export default function MainScoreText(props) {
       {value && styles.number.interpolate(number => Math.floor(number))}
     </animated.text>
   )
-
 }
 
 
