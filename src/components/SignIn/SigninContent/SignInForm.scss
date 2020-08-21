@@ -11,7 +11,7 @@ $blockForm: elem($block, form);
   height: inherit;
   padding-top: 20px;
   padding-bottom: 20px;
-  color: $color-small-font;
+  color: var(--color-small-font);
 
   span {
     margin-bottom: 20px;

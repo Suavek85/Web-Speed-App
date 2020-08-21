@@ -1,8 +1,8 @@
 import React from 'react'
 import { Switch, Route } from "react-router-dom"
-  
 import Homepage from './components/Homepage/Homepage'
 import SigninPage from './components/SignIn/SigninPage'
+import './App.scss'
 
 export default function App() {
 

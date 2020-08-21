@@ -12,7 +12,7 @@ $blockMobile: modifier($block, mobile);
   width: 400px;
   height: 660px;
   margin: 50px auto;
-  background-color: $color-inner-background;
+  background-color: var(--color-inner-background);
 
   &--mobile {
     width: 100vw;

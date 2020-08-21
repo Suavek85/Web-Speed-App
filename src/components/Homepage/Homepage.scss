@@ -6,7 +6,7 @@ $blockTablet: modifier($block, tablet);
 .#{$block} {
   position: relative;
   display: flex;
-  background-color: $color-main-background;
+  background-color: var(--color-main-background);
 
   &--tablet {
     flex-direction: column;

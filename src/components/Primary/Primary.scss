@@ -9,7 +9,7 @@ $blockInput: elem($block, input);
   flex-direction: column;
   width: 70%;
   height: max-content;
-  background-color: $color-main-background;
+  background-color: var(--color-main-background);
 
   &--tablet {
     width: 100%;

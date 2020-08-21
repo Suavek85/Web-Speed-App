@@ -40,11 +40,11 @@ const LARGEST_PAINT_TITLE = 'Largest Contentful Paint'
 const LARGEST_PAINT_DESC = 'Largest Contentful Paint marks the time at which the largest text or image is painted.'
 
 //SPEED INDEX - LIGHTHOUSE
-const SPEED_INDEX_TITLE = 'Speed Index.'
+const SPEED_INDEX_TITLE = 'Speed Index'
 const SPEED_INDEX_DESC = 'Speed Index shows how quickly the contents of a page are visibly populated.'
 
 //TIME TO INTERACTIVE - LIGHTHOUSE
-const INTERACTIVE_TITLE = 'Time to Interactive.'
+const INTERACTIVE_TITLE = 'Time to Interactive'
 const INTERACTIVE = 'Time to interactive is the amount of time it takes for the page to become fully interactive.'
 
 //TOTAL BLOCKING TIME - LIGHTHOUSE
@@ -52,7 +52,7 @@ const BLOCKING_TIME_TITLE = 'Total Blocking Time'
 const BLOCKING_TIME_DESC = 'Sum of all time periods between FCP and Time to Interactive, when task length exceeded 50ms.'
 
 //CUMULATIVE LAYOUT SHIFT
-const LAYOUT_SHIFT_TITLE = 'Cumulative Layout Shift.'
+const LAYOUT_SHIFT_TITLE = 'Cumulative Layout Shift'
 const LAYOUT_SHIFT_DESC = 'Cumulative Layout Shift measures the movement of visible elements within the viewport.'
 
 //TABS HEADERS

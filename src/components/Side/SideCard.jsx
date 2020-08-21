@@ -46,10 +46,6 @@ export default function Section(props) {
 
   // GENERIC ELEMENTS
 
-  const genericDescription = (
-    <p>{ mainContent }</p>
-  )
-
   const genericPara = (el, index) => (
     <p key={index}>{ result[index]  } 
       <span style={{ marginLeft:'5px' }} className={ getColorClass(el)}>
@@ -102,8 +98,7 @@ export default function Section(props) {
           <h2>
             { header }
           </h2>
-          { position === 'generic' && genericDescription }
-          { position !== 'generic' && description}
+          { description }
         </div>
         { position === 'generic' && data.map(genericPara) }
         { position !== 'generic' && data.map(scorePara) }

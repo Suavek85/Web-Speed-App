@@ -3,6 +3,7 @@ import classNames from 'classnames/bind'
 import { useMediaQuery } from 'react-responsive'
 import { Link } from 'react-router-dom'
 import NavOpenLink from '../../Navigation/Side/NavOpenLink/NavOpenLink'
+import ToggleSwitch from '../../ToggleSwitch/ToggleSwitch'
 import { APPTITLE, SIGN_IN } from '../../../constants/content'
 import { smallMobileWidth, mobileWidth } from '../../../scss/mediaqueries'
 import styles from './MainNavigation.scss'
@@ -25,6 +26,7 @@ export default function MainNavgation() {
         <h1>{ APPTITLE }</h1>
       </Link>
       <div className={ styles.blockLinks }>
+        <ToggleSwitch />
         <Link to="/signin" className={ styles.blockTitle } >
           <h2>{ SIGN_IN }</h2>
         </Link>

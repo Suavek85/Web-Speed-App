@@ -13,7 +13,7 @@ export default function LighthouseTabItem(props) {
   
   const geTabItemClass = (tabIndex, activeTabIndex) => cx({
     block: true,
-    blockActive: activeTabIndex === tabIndex,
+    blockActive: activeTabIndex == tabIndex,
   })
 
   return (

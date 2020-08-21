@@ -3,10 +3,18 @@
 $block: lighthouse-results;
 
 .#{$block} {
+  //display: flex;
   height: 200px;
   padding-left: 20px;
+  margin-top: 10px;
   font-size: em(13);
-  color: $color-small-font;
+  color: var(--color-grey);
+
+  h2 {
+    padding-right: 7px;
+    font-size: em(17, 13);
+    color: $color-main-font;
+  }
 
   > p {
     padding-bottom: 15px;
