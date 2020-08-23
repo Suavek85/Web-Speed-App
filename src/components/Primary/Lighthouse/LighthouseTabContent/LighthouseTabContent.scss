@@ -8,12 +8,12 @@ $block: lighthouse-results;
   padding-left: 20px;
   margin-top: 10px;
   font-size: em(13);
-  color: var(--color-grey);
+  color: var(--color-very-small-font);
 
   h2 {
     padding-right: 7px;
     font-size: em(17, 13);
-    color: $color-main-font;
+    color: var(--color-header-font);
   }
 
   > p {

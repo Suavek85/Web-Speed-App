@@ -43,7 +43,7 @@ $blockScore: elem($block, score);
   > div > h2 {
     margin-bottom: 0;
     font-size: em(17);
-    color: $color-main-font;
+    color: var(--color-header-font);
   }
 
   p {
@@ -52,7 +52,7 @@ $blockScore: elem($block, score);
     align-items: center;
     margin-top: 10px;
     font-size: em(13);
-    color: var(--color-grey);
+    color: var(--color-very-small-font);
   }
 
   p span {

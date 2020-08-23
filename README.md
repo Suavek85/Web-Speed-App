@@ -1,8 +1,15 @@
 # Web Speed App
 
-React.js app using React Hooks with Redux for state manegement. WIP.
+React.js app with React Hooks and Redux. WIP.
 
-GH Pages live preview: https://suavek85.github.io/Web-Speed-App/
+
+## General info
+
+App allowing to measure a website's performance using Google's Lighthouse API. With dark theme toggle. All animations created with React Spring.
+
+My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[🔨](https://mail.google.com/mail/e/1f528)
+
+[LIVE PREVIEW](https://suavek85.github.io/Web-Speed-App).
 
 
 ## Scripts

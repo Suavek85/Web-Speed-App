@@ -1,0 +1,73 @@
+// COLOR VARIABLES
+
+// Mono
+$color-white: #fff;
+$color-whisper: #e6e6e6;
+$color-grey: #808080;
+$color-gray33: #545454;
+
+$color-bluegray-50: #eceff1;
+$color-bluegray-100: #cfd8dc;
+$color-bluegray-200: #b0bec5;
+$color-bluegray-300: #90a4ae;
+
+$color-black: #000;
+$color-dark-gray: #222;
+$color-dark-00dp: #121212;
+$color-dark-01dp: #1d1d1d; 
+$color-dark-03dp: #242424;
+$color-dark-24dp: #373737;
+
+//Accent
+$color-dark-blue: #558e90;
+$color-blue: #376685;
+$color-light-blue: #a8c1e6;
+$color-light-purple: #bb86fc;
+
+//Alerts
+$color-alert: #f76c6c;
+$color-warning-loading: #ffaf10;
+$color-green-success: #02af8e;
+
+// # MAPPING SCSS VARS ONTO CSS VARS FOR THEMING
+
+//Light mode
+html {
+  //backgrounds
+  --color-main-background: #{$color-bluegray-50};
+  --color-inner-background: #{$color-bluegray-100};
+  --color-innermost-background: #{$color-bluegray-100};
+  --color-basic-background: #{$color-white};
+  --color-inactive-background: #{$color-whisper};
+  --color-small-background: #{$color-bluegray-200};
+  --color-background-focus: #{$color-bluegray-300};
+  --color-button-regular-background: #{$color-blue};
+
+  //font
+  --color-header-font: #{$color-dark-blue};
+  --color-small-font: #{$color-dark-gray};
+  --color-very-small-font: #{$color-grey};
+  --color-button-oval-font: #{$color-grey};
+  --color-button-regular-font: #{$color-white};
+  
+}
+
+//Dark mode
+html.dark {
+  //backgrounds
+  --color-main-background: #{$color-dark-00dp};
+  --color-inner-background: #{$color-dark-01dp};
+  --color-innermost-background: #{$color-dark-03dp};
+  --color-basic-background: #{$color-light-blue};
+  --color-inactive-background: #{$color-dark-01dp};
+  --color-small-background: #{$color-dark-24dp};
+  --color-background-focus: #{$color-gray33};
+  --color-button-regular-background: #{$color-light-purple};
+
+  //font
+  --color-header-font: #{$color-light-blue};
+  --color-small-font: #{$color-white};
+  --color-very-small-font: #{$color-white};
+  --color-button-oval-font: #{$color-dark-gray};
+  --color-button-regular-font: #{$color-dark-gray};
+}

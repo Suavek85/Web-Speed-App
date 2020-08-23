@@ -16,12 +16,12 @@ $blockSmallMobile: modifier($block, small-mobile);
   background-color: var(--color-main-background);
 
   h1 {
-    color: $color-main-font;
+    color: var(--color-header-font);
   }
 
   h2 {
     font-size: em(18);
-    color: $color-main-font;
+    color: var(--color-header-font);
   }
 
   &--mobile {

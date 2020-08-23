@@ -14,19 +14,19 @@ $blockActive: modifier($block, active);
   color: var(--color-small-font);
   text-align: center;
   cursor: pointer;
-  background-color: var(--color-light-accent);
+  background-color: var(--color-small-background);
 
   &:not(:last-child) {
     border-right: $ws-border-light;
   }
 
   &:hover {
-    background-color: var(--color-dark-accent);
+    background-color: var(--color-background-focus);
     opacity: 0.8;
   }
 
   &--active {
-    background-color: var(--color-dark-accent);
+    background-color: var(--color-background-focus);
   }
 }
 
