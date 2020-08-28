@@ -5,7 +5,13 @@ import getUrl from './getUrl'
 
 async function makeGetRequest(dispatch) {
   const urlInput = document.getElementById('urlinput').value
-  const url = getUrl(urlInput)
+  let url = ''
+
+  if (urlInput.includes(' ')) {
+    url = getUrl(urlInput.trim())
+  } else {
+    url = getUrl(urlInput)
+  }
 
   try {
       

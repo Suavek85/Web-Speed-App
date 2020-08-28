@@ -9,7 +9,7 @@ exports[`Should match the snapshot 1`] = `
     }
   }
 >
-  <Memo(Navigation) />
+  <Memo(SideNavigation) />
   <MainNavgation />
   <div
     className="block"

@@ -2,7 +2,7 @@ import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useSelector, useDispatch } from "react-redux"
 import Button from '../../../utils/Button/Button'
-import styles from './Navigation.scss'
+import styles from './SideNavigation.scss'
 import { 
   collapseNavConfig, 
   expandNavConfig, 
@@ -11,7 +11,9 @@ import {
 import { navigationStates } from '../../../constants/navigationStates'
 
 
-function Navigation() {
+function SideNavigation() {
+
+  const getToggleState = useSelector(state => state.toggleReducer.toggleNavigation)
 
   //using useSpring instead of useTransition becouse of react-spring beta version bug
   const collapseNav = useSpring(collapseNavConfig)
@@ -19,7 +21,6 @@ function Navigation() {
   const collapseBackground = useSpring(collapseBackgroundConfig)
   const expandBackground = useSpring(expandBackgroundConfig)
 
-  const getToggleState = useSelector(state => state.toggleReducer.toggleNavigation)
 
   const dispatch = useDispatch()
   const handleCollapseMenu = () => dispatch({ type: navigationStates.COLLAPSE })
@@ -51,4 +52,4 @@ function Navigation() {
     </>
   )}
   
-export default React.memo(Navigation)
+export default React.memo(SideNavigation)

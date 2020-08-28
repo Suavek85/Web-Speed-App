@@ -11,14 +11,14 @@ export default function ToggleSwitch() {
   }, [isDark]);
 
   return (
-    <div class="theme-switch-wrapper">
-        <label class="theme-switch" for="checkbox">
+    <div className="theme-switch-wrapper">
+        <label className="theme-switch" htmlFor="checkbox">
             <input 
               type="checkbox" 
               id="checkbox" 
               onChange={event => setIsDark(event.target.checked)} 
             />
-            <div class="slider round"></div>
+            <div className="slider round"></div>
       </label>
     </div>
   )

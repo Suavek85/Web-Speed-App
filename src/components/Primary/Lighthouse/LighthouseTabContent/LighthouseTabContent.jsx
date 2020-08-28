@@ -20,14 +20,14 @@ export default function LighthouseTabContent(props) {
 
      <div style={{display: 'flex'}}>
       <h2>{ activeTabTitle }</h2>
-      <p>
+      <div style={{display: 'flex', alignItems: 'center'}}>
         <span>
           <InfoCircle mainContent={'lighthouse-tab-title'} />
         </span>
         <ReactTooltip id='lighthouse-tab-title' data-type="warning">
           { activeTabDesc }
         </ReactTooltip> 
-      </p>
+      </div>
      </div>
 
       { !score && loadingStatus && ( 
@@ -49,5 +49,5 @@ export default function LighthouseTabContent(props) {
 LighthouseTabContent.propTypes = {
   activeTabTitle: PropTypes.string,
   activeTabDesc: PropTypes.string,
-  score: PropTypes.string,
+  score: PropTypes.number,
 }

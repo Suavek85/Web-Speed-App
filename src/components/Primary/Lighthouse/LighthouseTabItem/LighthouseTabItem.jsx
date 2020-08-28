@@ -13,6 +13,7 @@ export default function LighthouseTabItem(props) {
   
   const geTabItemClass = (tabIndex, activeTabIndex) => cx({
     block: true,
+    // eslint-disable-next-line
     blockActive: activeTabIndex == tabIndex,
   })
 

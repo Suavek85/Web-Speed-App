@@ -5,7 +5,7 @@ import { tabletWidth } from'../../scss/mediaqueries'
 import MainNavigation from '../Navigation/Main/MainNavigation'
 import Primary from '../Primary/Primary'
 import Side from '../Side/Side'
-import Navigation from '../Navigation/Side/Navigation'
+import SideNavigation from '../Navigation/Side/SideNavigation'
 import styles from './Homepage.scss'
 
 export default function Homepage() {
@@ -19,13 +19,12 @@ export default function Homepage() {
 
   return (
     <section style={{display: 'flex', flexDirection: 'column',}}>
-      <Navigation />
+      <SideNavigation />
       <MainNavigation />
       <div className={ getButtonClasses }>
         <Primary />
         <Side />
       </div>
-
     </section>
   )
 }

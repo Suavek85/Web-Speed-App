@@ -10,14 +10,14 @@ export const stateReducer = (state = { getAppState: initialState }, action) => {
       getAppState: appStates.INACTIVE,
       getData: initialState,
       getLighthouseData: initialStateLighthouse,
-      getErrorStatus: 0
+      getErrorStatus: null
     }
   case appStates.LOADING:
     return {
       getAppState: appStates.LOADING,
       getData: initialState,
       getLighthouseData: initialStateLighthouse,
-      getErrorStatus: 0
+      getErrorStatus: null
     }
   case "ERROR":
     return {
@@ -31,14 +31,14 @@ export const stateReducer = (state = { getAppState: initialState }, action) => {
       getAppState: appStates.SUCCESS,
       getData: action.payload,
       getLighthouseData: action.payloadLighthouse,
-      getErrorStatus: 0
+      getErrorStatus: null
     }
   default:
     return {
       getAppState: appStates.INACTIVE,
       getData: initialState,
       getLighthouseData: initialStateLighthouse,
-      getErrorStatus: 0
+      getErrorStatus: null
     }
   }
 }
