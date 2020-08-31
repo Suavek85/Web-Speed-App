@@ -6,11 +6,9 @@ import { createStore, combineReducers } from 'redux'
 import App from './App.jsx'
 import * as serviceWorker from './serviceWorker'
 import { stateReducer} from "./reducers/stateReducer"
-import { toggleReducer } from "./reducers/toggleReducer"
 
 const rootReducer = combineReducers({
   stateReducer,
-  toggleReducer,
 })
 
 const store = createStore(rootReducer)
