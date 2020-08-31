@@ -1,11 +1,13 @@
 # Web Speed App
 
-React.js app with React Hooks and Redux. WIP.
-
+React.js app with React Hooks and Redux.
+With Rxjs instead of Redux for state management on a separate branch - WIP.
 
 ## General info
 
-App allowing to measure a website's performance using Google's Lighthouse API. With dark theme toggle. All animations created with React Spring.
+App allowing to measure a website's performance using Google's Lighthouse API. With dark theme toggle. 
+
+All animations created with React Spring.
 
 My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[🔨](https://mail.google.com/mail/e/1f528)
 
@@ -22,7 +24,7 @@ runs the app in the development mode on [http://localhost:3000](http://localhost
 
 #### `npm test`
 
-launches the test runner in the interactive watch mode.
+launch unit testing + coverage.
 
 #### `npm run build`
 

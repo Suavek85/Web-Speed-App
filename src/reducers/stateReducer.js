@@ -1,32 +1,32 @@
 import { appStates } from '../constants/states'
 
-const initialState = ['?', '?', '?', '?','?', '?', '?'] 
-const initialStateLighthouse = [{}, {}, {}, {}, {}, {}] 
+const initialData = ['?', '?', '?', '?','?', '?', '?'] 
+const initialDataLighthouse = [{}, {}, {}, {}, {}, {}] 
 
-export const stateReducer = (state = { getAppState: initialState }, action) => {
+export const stateReducer = (state = { getAppState: appStates.INACTIVE }, action) => {
   switch (action.type) {
   case "INACTIVE":
     return {
       getAppState: appStates.INACTIVE,
-      getData: initialState,
-      getLighthouseData: initialStateLighthouse,
+      getData: initialData,
+      getLighthouseData: initialDataLighthouse,
       getErrorStatus: null
     }
   case appStates.LOADING:
     return {
       getAppState: appStates.LOADING,
-      getData: initialState,
-      getLighthouseData: initialStateLighthouse,
+      getData: initialData,
+      getLighthouseData: initialDataLighthouse,
       getErrorStatus: null
     }
-  case "ERROR":
+  case appStates.ERROR:
     return {
       getAppState: appStates.ERROR,
-      getData: initialState,
-      getLighthouseData: initialStateLighthouse,
+      getData: initialData,
+      getLighthouseData: initialDataLighthouse,
       getErrorStatus: action.payload
     }
-  case "SUCCESS":
+  case appStates.SUCCESS:
     return {
       getAppState: appStates.SUCCESS,
       getData: action.payload,
@@ -36,8 +36,8 @@ export const stateReducer = (state = { getAppState: initialState }, action) => {
   default:
     return {
       getAppState: appStates.INACTIVE,
-      getData: initialState,
-      getLighthouseData: initialStateLighthouse,
+      getData: initialData,
+      getLighthouseData: initialDataLighthouse,
       getErrorStatus: null
     }
   }
