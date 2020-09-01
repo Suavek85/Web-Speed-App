@@ -45,15 +45,15 @@ export default function Section(props) {
   
 
   // GENERIC ELEMENTS
-
-  const genericPara = (el, index) => (
-    <p key={index}>{ result[index]  } 
-      <span style={{ marginLeft:'5px' }} className={ getColorClass(el)}>
-        { el !== '?' && el }
-        { el === '?' && loadingStatus && <SkeletonText />}
-      </span>
+  const genericPara = () => result.map((el, i) => (
+    <p key={i}>{el}
+      <span style={{ marginLeft:'5px' }}>
+        { loadingStatus? <SkeletonText /> : data && (
+          <span className={ getColorClass(data[i]) } >{ data[i] }</span>
+        )}
+      </span> 
     </p>
-  )
+  ))
 
   //RESULTS ELEMENTS
 
@@ -68,41 +68,37 @@ export default function Section(props) {
     </>
   )
 
-  const scorePara = (el, index) => { 
-    return el !== '?' && !loadingStatus && (
-      <p key={index}>
-        Score: 
-        <span>
-          <ScoreCircle score={el} />
-        </span>
-      </p>
-    )
-  }
-
-  const scoreParaLoading = (el, index) => { 
-    return el === '?' && loadingStatus && (
-      <p className={scorePara} key={index}>
-        Score: 
-        <span>
-          <SkeletonCircle />
-        </span>
-      </p>
-    )
-  }
+  const scorePara = data => (
+    <p>
+      Score: 
+      <span>
+        <ScoreCircle score={data[0]} />
+      </span>
+    </p>
+  )
+  
+  const scoreParaLoading = (
+    <p className={scorePara}>
+      Score: 
+      <span>
+        <SkeletonCircle />
+      </span>
+    </p>
+  )
+  
+  const isGenericPosition = position === 'generic'
 
   return (
     <div className={ getClass } >
-      { isDesktop && position === 'generic' && <LightBulbUI /> }
+      { isDesktop && isGenericPosition && <LightBulbUI /> }
       <div className={ styles.blockContent }>
         <div className={ getDescrptionWrapperClass }>
-          <h2>
-            { header }
-          </h2>
+          <h2>{ header }</h2>
           { description }
         </div>
-        { position === 'generic' && data.map(genericPara) }
-        { position !== 'generic' && data.map(scorePara) }
-        { position !== 'generic' && data.map(scoreParaLoading) }
+        { isGenericPosition && genericPara() }
+        { !isGenericPosition && !loadingStatus && data && scorePara(data) }
+        { !isGenericPosition && loadingStatus && scoreParaLoading }
       </div>
     </div>
   )

@@ -13,7 +13,7 @@ export default function Bottom() {
     result: [RESULT],
   }
 
-  const data = [getDataState[6]]
+  const data = getDataState? [getDataState[6]] : null
   const position = 'middle'
   const props = { content, data, position }
 

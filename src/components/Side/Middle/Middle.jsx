@@ -13,7 +13,7 @@ export default function Middle() {
     result: [RESULT],
   }
 
-  const data = [getDataState[1]]
+  const data = getDataState? [getDataState[1]] : null
   const position = 'bottom'
   const props = { content, data, position }
 

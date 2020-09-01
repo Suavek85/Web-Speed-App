@@ -13,7 +13,7 @@ export default function Top() {
     result: [RESULT],
   }
 
-  const data = [getDataState[0]]
+  const data = getDataState? [getDataState[0]] : null
   const position = 'top'
   const props = { content, data, position }
 

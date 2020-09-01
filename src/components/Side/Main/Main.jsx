@@ -12,7 +12,7 @@ export default function Main() {
     result: ['Page overall category: ', 'First Contentful Paint: ', 'First Input Delay: ']
   }
 
-  const data = [getDataState[3], getDataState[4], getDataState[5]]
+  const data = getDataState? [getDataState[3], getDataState[4], getDataState[5]] : null
   const position = 'generic'
   const props = { content, data, position }
 

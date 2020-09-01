@@ -3,7 +3,6 @@
 $block: lighthouse-results;
 
 .#{$block} {
-  //display: flex;
   height: 200px;
   padding-left: 20px;
   margin-top: 10px;
@@ -16,27 +15,11 @@ $block: lighthouse-results;
     color: var(--color-header-font);
   }
 
-  > p {
-    padding-bottom: 15px;
-  }
-
-  > p:first-child {
-    display: flex;
-    padding-top: 15px;
-  }
-
-  > p:not(:first-child) {
+  > div {
     display: flex;
     align-items: center;
   }
 
-  > p:first-child > span {
-    padding-right: 5px;
-  }
-
-  > p > span:nth-child(2) {
-    margin-left: 5px;
-  }
 }
 
 :export {

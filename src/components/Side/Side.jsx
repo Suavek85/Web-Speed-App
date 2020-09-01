@@ -20,11 +20,11 @@ export default function Side() {
   })
 
   return (
-    <div className={ getClass } >
+    <aside className={ getClass } >
       <Main />
       <Top />
       <Middle />
       <Bottom />
-    </div>
+    </aside>
   )
 }

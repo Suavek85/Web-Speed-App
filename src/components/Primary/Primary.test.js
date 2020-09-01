@@ -1,8 +1,8 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import PrimaryCard from './PrimaryCard'
+import Primary from './Primary'
 
 it('Should match the snapshot', () => {
-  const wrapper = shallow(<PrimaryCard />)
+  const wrapper = shallow(<Primary />)
   expect(wrapper).toMatchSnapshot()
 })

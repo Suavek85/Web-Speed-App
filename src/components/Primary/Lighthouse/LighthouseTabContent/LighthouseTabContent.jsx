@@ -17,30 +17,29 @@ export default function LighthouseTabContent(props) {
 
   return (
     <div className={ styles.block }>
-
-     <div style={{display: 'flex'}}>
-      <h2>{ activeTabTitle }</h2>
-      <div style={{display: 'flex', alignItems: 'center'}}>
-        <span>
-          <InfoCircle mainContent={'lighthouse-tab-title'} />
-        </span>
-        <ReactTooltip id='lighthouse-tab-title' data-type="warning">
-          { activeTabDesc }
-        </ReactTooltip> 
+      <div style={{display: 'flex'}}>
+        <h2>{ activeTabTitle }</h2>
+        <div style={{display: 'flex', alignItems: 'center'}}>
+          <span>
+            <InfoCircle mainContent={'lighthouse-tab-title'} />
+          </span>
+          <ReactTooltip id='lighthouse-tab-title' data-type="warning">
+            { activeTabDesc }
+          </ReactTooltip> 
+        </div>
       </div>
-     </div>
 
       { !score && loadingStatus && ( 
-        <p>
+        <div>
           <span>Score: </span> 
           <SkeletonCircle />
-        </p>
+        </div>
       )}
       { score && (
-        <p>
+        <div>
           <span>Score: </span> 
           <ScoreCircle score={score} /> 
-        </p> 
+        </div> 
       )}
     </div>
   )

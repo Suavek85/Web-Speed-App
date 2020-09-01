@@ -17,12 +17,12 @@ export default function Primary() {
   })
 
   return (
-    <div className={ getClass } >
-      <div className={ styles.blockInput } >
+    <main className={ getClass } >
+      <section className={ styles.blockInput } >
         <InputWrapper />
-      </div>     
+      </section>     
       <LighthouseWrapper />
-    </div>
+    </main>
     
   )
 }

@@ -25,13 +25,13 @@ export default function MainNavgation() {
       <Link to="/" className={ styles.blockTitle }>
         <h1>{ APPTITLE }</h1>
       </Link>
-      <div className={ styles.blockLinks }>
+      <nav className={ styles.blockLinks }>
         <ToggleSwitch />
         <Link to="/signin" className={ styles.blockTitle } >
           <h2>{ SIGN_IN }</h2>
         </Link>
         <NavOpenLink />
-      </div> 
+      </nav> 
     </div>
   )
 }

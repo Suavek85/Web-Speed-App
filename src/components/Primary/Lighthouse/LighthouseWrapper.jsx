@@ -41,12 +41,12 @@ export default function LightHouse() {
   }
 
   return (
-    <div className={ getWrapperClass } >
+    <section className={ getWrapperClass } >
       <LighthouseHeader />
       <div className={ styles.blockContent }>
         <LighthouseTabs {...tabsProps} />
         <LighthouseTabContent  {...tabContentProps} />
       </div>
-    </div>
+    </section>
   )
 }

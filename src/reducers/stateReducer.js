@@ -1,44 +1,31 @@
 import { appStates } from '../constants/states'
+import getStateforReducer from '../helpers/getStateforReducer'
 
-const initialData = ['?', '?', '?', '?','?', '?', '?'] 
+const initialData = null
 const initialDataLighthouse = [{}, {}, {}, {}, {}, {}] 
+
 
 export const stateReducer = (state = { getAppState: appStates.INACTIVE }, action) => {
   switch (action.type) {
   case "INACTIVE":
     return {
-      getAppState: appStates.INACTIVE,
-      getData: initialData,
-      getLighthouseData: initialDataLighthouse,
-      getErrorStatus: null
+      ...getStateforReducer(appStates.INACTIVE, initialData, initialDataLighthouse, null)
     }
   case appStates.LOADING:
     return {
-      getAppState: appStates.LOADING,
-      getData: initialData,
-      getLighthouseData: initialDataLighthouse,
-      getErrorStatus: null
+      ...getStateforReducer(appStates.LOADING, initialData, initialDataLighthouse, null)
     }
   case appStates.ERROR:
     return {
-      getAppState: appStates.ERROR,
-      getData: initialData,
-      getLighthouseData: initialDataLighthouse,
-      getErrorStatus: action.payload
+      ...getStateforReducer(appStates.ERROR, initialData, initialDataLighthouse, action.payload)
     }
   case appStates.SUCCESS:
     return {
-      getAppState: appStates.SUCCESS,
-      getData: action.payload,
-      getLighthouseData: action.payloadLighthouse,
-      getErrorStatus: null
+      ...getStateforReducer(appStates.SUCCESS, action.payload, action.payloadLighthouse, null)
     }
   default:
     return {
-      getAppState: appStates.INACTIVE,
-      getData: initialData,
-      getLighthouseData: initialDataLighthouse,
-      getErrorStatus: null
+      ...getStateforReducer(appStates.INACTIVE, initialData, initialDataLighthouse, null)
     }
   }
 }
