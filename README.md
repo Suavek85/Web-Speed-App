@@ -22,9 +22,17 @@ In the project directory, you can run:
 
 runs the app in the development mode on [http://localhost:3000](http://localhost:3000)
 
-#### `npm test`
+#### `npm go`
 
-launch unit testing + coverage.
+script to run stylelint and then commit all to selected branch
+
+#### `npm test:coverage`
+
+launch unit testing + coverage report.
+
+#### `npm stylelint:fix`
+
+run stylelint on all scss files and fix what can be fixed
 
 #### `npm run build`
 

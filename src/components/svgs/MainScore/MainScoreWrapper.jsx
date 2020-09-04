@@ -9,7 +9,7 @@ function WebOptimizeWrapper() {
   const loadingStatus = getAppState === appStates.LOADING
 
   const getLighthouseData = useSelector(state => state.stateReducer.getLighthouseData)
-  const getScore = getLighthouseData.map(el => el.score)
+  const getScore = getLighthouseData? getLighthouseData.map(el => el.score) : 0
   const averageScore = calcPerformanceAverage(getScore)
   
   return <MainScoreUI 

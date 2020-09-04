@@ -12,14 +12,15 @@
   line-height: 54px;
   text-align: center;
   cursor: pointer;
+
   span {
+    color: var(--color-small-font);
     pointer-events: none;
-    color: var(--color-small-font)
   }
 
   &--inactive {
     color: var(--color-very-small-font);
-    background-color: var(--color-inactive-background)
+    background-color: var(--color-inactive-background);
   }
 }
 

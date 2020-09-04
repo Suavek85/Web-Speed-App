@@ -19,9 +19,8 @@ export default function MainNavgation() {
     blockSmallMobile: useMediaQuery(smallMobileWidth),
   })
 
-
   return (
-    <div className={ getClass } >
+    <section className={ getClass } >
       <Link to="/" className={ styles.blockTitle }>
         <h1>{ APPTITLE }</h1>
       </Link>
@@ -32,6 +31,6 @@ export default function MainNavgation() {
         </Link>
         <NavOpenLink />
       </nav> 
-    </div>
+    </section>
   )
 }

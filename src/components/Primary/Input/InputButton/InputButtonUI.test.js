@@ -13,7 +13,6 @@ describe('InputButtonUI snapshot', () => {
 })
 
 describe('InputButtonUI rendering', () => {
-
   it('should add classes for different states', () => {
     const props = { getAppState: appStates.LOADING}
     const wrapper = shallow(<InputButtonUI {...props} />)

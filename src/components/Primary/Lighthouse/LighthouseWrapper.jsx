@@ -21,7 +21,7 @@ export default function LightHouse() {
   const activeTabTitle = tabsTitles[activeTabInt]
 
   const getDataState = useSelector(state => state.stateReducer.getLighthouseData)
-  const { score } = getDataState[activeTabInt]
+  const  score = getDataState ? getDataState[activeTabInt].score : null
 
   //STYLES
   const cx = classNames.bind(styles)

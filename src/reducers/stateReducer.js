@@ -2,12 +2,12 @@ import { appStates } from '../constants/states'
 import getStateforReducer from '../helpers/getStateforReducer'
 
 const initialData = null
-const initialDataLighthouse = [{}, {}, {}, {}, {}, {}] 
+const initialDataLighthouse = null
 
 
 export const stateReducer = (state = { getAppState: appStates.INACTIVE }, action) => {
   switch (action.type) {
-  case "INACTIVE":
+  case appStates.INACTIVE:
     return {
       ...getStateforReducer(appStates.INACTIVE, initialData, initialDataLighthouse, null)
     }

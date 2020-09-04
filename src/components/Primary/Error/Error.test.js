@@ -33,4 +33,4 @@ describe('Error rendering', () => {
     expect(wrapper.find('div').exists()).toBeTruthy()
   })
 
-});
+})

@@ -1,6 +1,7 @@
 @import '../../scss/styles';
 
-$block: app-wrapper;
+$block: app;
+$blockWrapper: elem($block, wrapper);
 $blockTablet: modifier($block, tablet);
 
 .#{$block} {
@@ -11,9 +12,15 @@ $blockTablet: modifier($block, tablet);
   &--tablet {
     flex-direction: column;
   }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 :export {
   block: $block;
   blockTablet: $blockTablet;
+  blockWrapper: $blockWrapper;
 }

@@ -12,20 +12,20 @@ export default function Homepage() {
 
   //STYLES
   const cx = classNames.bind(styles)
-  const getButtonClasses = cx({
+  const getClasses = cx({
     block: true,
     blockTablet: useMediaQuery(tabletWidth),
   })
 
   return (
-    <section style={{display: 'flex', flexDirection: 'column',}}>
+    <div className={ styles.blockWrapper }>
       <SideNavigation />
       <MainNavigation />
-      <div className={ getButtonClasses }>
+      <main role='main' className={ getClasses }>
         <Primary />
         <Side />
-      </div>
-    </section>
+      </main>
+    </div>
   )
 }
 

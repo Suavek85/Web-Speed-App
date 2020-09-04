@@ -8,7 +8,7 @@ describe('SideNavigation snapshot', () => {
 
   it('should match the snapshot', () => {
     const spyUseSelector = jest.spyOn(redux, 'useSelector')
-    const mockDispatch = jest.fn();
+    const mockDispatch = jest.fn()
     const spyUseDispatch = jest.spyOn(redux, 'useDispatch')
     spyUseSelector.mockReturnValue(navigationStates.EXPAND)
     spyUseDispatch.mockReturnValue(mockDispatch)

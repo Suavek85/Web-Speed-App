@@ -1,21 +1,15 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should match the snapshot 1`] = `
-<section
-  style={
-    Object {
-      "display": "flex",
-      "flexDirection": "column",
-    }
-  }
->
+<div>
   <Memo(SideNavigation) />
   <MainNavgation />
-  <div
+  <main
     className="block"
+    role="main"
   >
     <Primary />
     <Side />
-  </div>
-</section>
+  </main>
+</div>
 `;
