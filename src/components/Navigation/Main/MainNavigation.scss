@@ -17,11 +17,18 @@ $blockSmallMobile: modifier($block, small-mobile);
 
   h1 {
     color: var(--color-header-font);
+    font-weight: normal;
   }
 
   h2 {
     font-size: em(18);
+    font-weight: normal;
     color: var(--color-header-font);
+    padding: 0 5px;
+  }
+
+  h2:hover {
+    color: var(--color-header-focus-font);
   }
 
   &--mobile {

@@ -12,7 +12,6 @@ exports[`Should match the snapshot 1`] = `
     </h1>
   </Link>
   <nav>
-    <ToggleSwitch />
     <Link
       to="/signin"
     >
@@ -21,6 +20,7 @@ exports[`Should match the snapshot 1`] = `
       </h2>
     </Link>
     <NavOpenLink />
+    <ToggleSwitch />
   </nav>
 </section>
 `;

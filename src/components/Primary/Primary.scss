@@ -26,6 +26,11 @@ $blockInput: elem($block, input);
 
   h1 {
     color: var(--color-header-font);
+    font-weight: normal;
+  }
+
+  h2 {
+    font-weight: normal;
   }
 }
 

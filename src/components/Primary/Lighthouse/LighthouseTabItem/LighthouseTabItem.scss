@@ -21,8 +21,7 @@ $blockActive: modifier($block, active);
   }
 
   &:hover {
-    background-color: var(--color-background-focus);
-    opacity: 0.8;
+    background-color: var(--color-background-hover);
   }
 
   &--active {

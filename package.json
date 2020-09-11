@@ -28,7 +28,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "go": "sh -e gitpush.sh",
-    "test:coverage": "react-scripts test --coverage --watchAll=false",
+    "test:coverage": "react-scripts test --coverage --watchAll=false --forceExit",
     "stylelint:fix": "npx stylelint \"**/*.scss\" --fix",
     "flow": "flow",
     "eject": "react-scripts eject",

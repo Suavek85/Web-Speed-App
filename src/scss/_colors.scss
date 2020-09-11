@@ -5,11 +5,13 @@ $color-white: #fff;
 $color-whisper: #e6e6e6;
 $color-grey: #808080;
 $color-gray33: #545454;
+$color-charcoal: #474747;
 
 $color-bluegray-50: #eceff1;
 $color-bluegray-100: #cfd8dc;
 $color-bluegray-200: #b0bec5;
 $color-bluegray-300: #90a4ae;
+$color-bluegray-400: #78909C;
 
 $color-black: #000;
 $color-dark-gray: #222;
@@ -19,7 +21,8 @@ $color-dark-03dp: #242424;
 $color-dark-24dp: #373737;
 
 //Accent
-$color-dark-blue: #558e90;
+$color-very-dark-blue: #253E40;
+$color-dark-blue: #447173;
 $color-blue: #376685;
 $color-light-blue: #a8c1e6;
 $color-light-purple: #bb86fc;
@@ -41,10 +44,12 @@ html {
   --color-inactive-background: #{$color-whisper};
   --color-small-background: #{$color-bluegray-200};
   --color-background-focus: #{$color-bluegray-300};
+  --color-background-hover: #{$color-bluegray-400};
   --color-button-regular-background: #{$color-blue};
 
   //font
   --color-header-font: #{$color-dark-blue};
+  --color-header-focus-font: #{$color-very-dark-blue};
   --color-small-font: #{$color-dark-gray};
   --color-very-small-font: #{$color-grey};
   --color-button-oval-font: #{$color-grey};
@@ -60,11 +65,13 @@ html.dark {
   --color-basic-background: #{$color-light-blue};
   --color-inactive-background: #{$color-dark-01dp};
   --color-small-background: #{$color-dark-24dp};
-  --color-background-focus: #{$color-gray33};
+  --color-background-focus: #{$color-charcoal};
+  --color-background-hover: #{$color-gray33};
   --color-button-regular-background: #{$color-light-purple};
 
   //font
   --color-header-font: #{$color-light-blue};
+  --color-header-focus-font: #{$color-whisper};
   --color-small-font: #{$color-white};
   --color-very-small-font: #{$color-white};
   --color-button-oval-font: #{$color-dark-gray};

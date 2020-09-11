@@ -14,7 +14,6 @@ btnsContent.ERROR = 'Oops, an error. Try again'
 btnsContent.SUCCESS = 'Get new report'
 
 //LIGHTHOUSE
-
 export const LIGHTHOUSE_TITLE = 'Lighthouse Score'
 export const PERFORMANCE = 'Overall Performance'
 
