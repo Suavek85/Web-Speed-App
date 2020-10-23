@@ -23,7 +23,7 @@ export default function LighthouseTabContent(props) {
           <span>
             <InfoCircle mainContent={'lighthouse-tab-title'} />
           </span>
-          <ReactTooltip id='lighthouse-tab-title' data-type="warning">
+          <ReactTooltip id='lighthouse-tab-title' data-type="info">
             { activeTabDesc }
           </ReactTooltip> 
         </div>
