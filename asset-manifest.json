@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/Web-Speed-App/static/css/main.f88e5001.chunk.css",
+    "main.js": "/Web-Speed-App/static/js/main.413a2c67.chunk.js",
+    "main.js.map": "/Web-Speed-App/static/js/main.413a2c67.chunk.js.map",
+    "runtime-main.js": "/Web-Speed-App/static/js/runtime-main.a8832365.js",
+    "runtime-main.js.map": "/Web-Speed-App/static/js/runtime-main.a8832365.js.map",
+    "static/js/2.1a93b239.chunk.js": "/Web-Speed-App/static/js/2.1a93b239.chunk.js",
+    "static/js/2.1a93b239.chunk.js.map": "/Web-Speed-App/static/js/2.1a93b239.chunk.js.map",
+    "index.html": "/Web-Speed-App/index.html",
+    "precache-manifest.79dba8efa77877a1356f8f5b1757d4bb.js": "/Web-Speed-App/precache-manifest.79dba8efa77877a1356f8f5b1757d4bb.js",
+    "service-worker.js": "/Web-Speed-App/service-worker.js",
+    "static/css/main.f88e5001.chunk.css.map": "/Web-Speed-App/static/css/main.f88e5001.chunk.css.map",
+    "static/js/2.1a93b239.chunk.js.LICENSE": "/Web-Speed-App/static/js/2.1a93b239.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.a8832365.js",
+    "static/js/2.1a93b239.chunk.js",
+    "static/css/main.f88e5001.chunk.css",
+    "static/js/main.413a2c67.chunk.js"
+  ]
+}
