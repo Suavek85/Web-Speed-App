@@ -1,0 +1,34 @@
+@import '../../../scss/styles';
+
+$block: signin;
+$blockForm: elem($block, form);
+
+.#{$block} {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  width: inherit;
+  height: inherit;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: var(--color-small-font);
+
+  span {
+    margin-bottom: 20px;
+  }
+
+  input {
+    background-color: $color-white;
+    border: $ws-border-light;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+:export {
+  block: $block;
+  blockForm: $blockForm;
+}

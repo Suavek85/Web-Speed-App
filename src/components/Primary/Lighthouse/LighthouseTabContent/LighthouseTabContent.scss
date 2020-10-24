@@ -1,0 +1,26 @@
+@import '../../../../scss/styles';
+
+$block: lighthouse-results;
+
+.#{$block} {
+  height: 200px;
+  padding-left: 20px;
+  margin-top: 10px;
+  font-size: em(13);
+  color: var(--color-very-small-font);
+
+  h2 {
+    padding-right: 7px;
+    font-size: em(17, 13);
+    color: var(--color-header-font);
+  }
+
+  > div {
+    display: flex;
+    align-items: center;
+  }
+}
+
+:export {
+  block: $block;
+}

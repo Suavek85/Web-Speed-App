@@ -1,0 +1,41 @@
+@import '../../scss/styles';
+
+$block: primary;
+$blockTablet: modifier($block, tablet);
+$blockInput: elem($block, input);
+
+.primary {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: max-content;
+  background-color: var(--color-main-background);
+
+  &--tablet {
+    width: 100%;
+    padding-left: 0;
+  }
+
+  &__input {
+    display: flex;
+    flex-direction: column;
+    height: max-content;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    color: var(--color-header-font);
+    font-weight: normal;
+  }
+
+  h2 {
+    font-weight: normal;
+  }
+}
+
+:export {
+  block: $block;
+  blockTablet: $blockTablet;
+  blockInput: $blockInput;
+}

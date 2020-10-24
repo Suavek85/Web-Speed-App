@@ -1,0 +1,26 @@
+@import '../../scss/styles';
+
+$block: app;
+$blockWrapper: elem($block, wrapper);
+$blockTablet: modifier($block, tablet);
+
+.#{$block} {
+  position: relative;
+  display: flex;
+  background-color: var(--color-main-background);
+
+  &--tablet {
+    flex-direction: column;
+  }
+
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+:export {
+  block: $block;
+  blockTablet: $blockTablet;
+  blockWrapper: $blockWrapper;
+}

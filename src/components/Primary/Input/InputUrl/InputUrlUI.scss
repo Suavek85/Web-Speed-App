@@ -1,0 +1,75 @@
+@import '../../../../scss/styles';
+
+$block: url-input;
+$blockLabel: elem($block, label);
+$blockBorder: elem($block, border);
+
+.#{$block} {
+  position: relative;
+  display: flex;
+  width: 100%;
+  max-width: 210px;
+
+  &__label {
+    position: absolute;
+    top: -5px;
+    left: 0;
+    font-size: em(14);
+    font-weight: 500;
+    color: $color-alert;
+    transition: all 0.2s ease;
+    transform-origin: 0 0;
+  }
+
+  &__border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: $color-alert;
+    transition: all 0.15s ease;
+    transform: scaleX(0);
+    transform-origin: 0 0;
+  }
+}
+
+input {
+  width: 100%;
+  height: 36px;
+  padding: 8px 0;
+  font-family: inherit;
+  font-size: em(16);
+  font-weight: 500;
+  color: var(--color-small-font);
+  background: none;
+  border: 0;
+  border-bottom: 2px solid $color-light-blue;
+  border-radius: 0;
+  transition: all 0.15s ease;
+  -webkit-appearance: none;
+}
+
+input:not(:placeholder-shown) + span {
+  color: $color-alert;
+  transform: translateY(-26px) scale(0.75);
+}
+
+input:focus {
+  background: none;
+  outline: none;
+}
+
+input:focus + span {
+  transform: translateY(-26px) scale(0.75);
+}
+
+input:focus + span + .border {
+  transform: scaleX(1);
+}
+
+:export {
+  block: $block;
+  blockLabel: $blockLabel;
+  blockBorder: $blockBorder;
+}

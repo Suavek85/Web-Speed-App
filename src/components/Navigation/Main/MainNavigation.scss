@@ -1,0 +1,72 @@
+@import '../../../scss/styles';
+
+$block: mainnav;
+$blockTitle: elem($block, title);
+$blockLinks: elem($block, links);
+$blockMobile: modifier($block, mobile);
+$blockSmallMobile: modifier($block, small-mobile);
+
+.#{$block} {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+  margin-bottom: 20px;
+  background-color: var(--color-main-background);
+
+  h1 {
+    color: var(--color-header-font);
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: em(18);
+    font-weight: normal;
+    color: var(--color-header-font);
+    padding: 0 5px;
+  }
+
+  h2:hover {
+    color: var(--color-header-focus-font);
+  }
+
+  &--mobile {
+    h1 {
+      font-size: em(19);
+    }
+
+    h2 {
+      font-size: em(16);
+    }
+  }
+
+  &--small-mobile {
+    padding-right: 8px;
+    padding-left: 8px;
+
+    h1 {
+      font-size: em(18);
+    }
+
+    h2 {
+      font-size: em(15);
+    }
+  }
+
+  &__title {
+    text-decoration: none;
+  }
+
+  &__links {
+    display: flex;
+  }
+}
+
+:export {
+  block: $block;
+  blockTitle: $blockTitle;
+  blockLinks: $blockLinks;
+  blockMobile: $blockMobile;
+  blockSmallMobile: $blockSmallMobile;
+}

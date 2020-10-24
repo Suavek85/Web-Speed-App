@@ -1,0 +1,35 @@
+@import '../../../../scss/styles';
+
+$block: lighthouse-tabitem;
+$blockActive: modifier($block, active);
+
+.#{$block} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: inherit;
+  padding: 0 5px;
+  font-size: em(12);
+  color: var(--color-small-font);
+  text-align: center;
+  cursor: pointer;
+  background-color: var(--color-small-background);
+
+  &:not(:last-child) {
+    border-right: $ws-border-light;
+  }
+
+  &:hover {
+    background-color: var(--color-background-hover);
+  }
+
+  &--active {
+    background-color: var(--color-background-focus);
+  }
+}
+
+:export {
+  block: $block;
+  blockActive: $blockActive;
+}

@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Should match the snapshot 1`] = `
+<div>
+  <Memo(SideNavigation) />
+  <MainNavgation />
+  <main
+    className="block"
+    role="main"
+  >
+    <Primary />
+    <Side />
+  </main>
+</div>
+`;

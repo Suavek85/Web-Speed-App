@@ -1,0 +1,31 @@
+@import '../../scss/styles';
+
+$block: main-wrapper;
+$blockMobile: modifier($block, mobile);
+
+.main-wrapper {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 400px;
+  height: 660px;
+  margin: 50px auto;
+  background-color: var(--color-innermost-background);
+
+  &--mobile {
+    width: 100vw;
+    height: auto;
+    margin: 0;
+
+    h2 {
+      font-size: em(18, 16);
+    }
+  }
+}
+
+:export {
+  block: $block;
+  blockMobile: $blockMobile;
+}

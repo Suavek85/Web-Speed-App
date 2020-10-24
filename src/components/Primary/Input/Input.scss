@@ -1,0 +1,19 @@
+@import '../../../scss/styles';
+
+$block: inputwrapper;
+$blockMobile: modifier($block, mobile);
+
+.inputwrapper {
+  display: flex;
+  align-items: center;
+  margin: 30px 0;
+
+  &--mobile {
+    flex-direction: column;
+  }
+}
+
+:export {
+  block: $block;
+  blockMobile: $blockMobile;
+}

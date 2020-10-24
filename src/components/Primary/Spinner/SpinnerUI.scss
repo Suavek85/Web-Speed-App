@@ -1,0 +1,36 @@
+
+@import '../../../scss/styles';
+
+$block: spinner;
+
+.#{$block} {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  margin-left: 20px;
+  text-align: center;
+  border: 2px solid rgb(168, 193, 230);
+  border-radius: 50%;
+
+  &::before {
+    position: absolute;
+    top: -3%;
+    left: -3%;
+    width: 46px;
+    height: 46px;
+    content: '';
+    filter: blur(1px);
+    border-top: 3px solid $color-warning-loading;
+    border-right: 4px solid transparent;
+    border-radius: 50%;
+    animation: rotating 2s linear infinite;
+  }
+}
+
+@keyframes rotating {
+  to { transform: rotate(360deg); }
+}
+
+:export {
+  block: $block;
+}
