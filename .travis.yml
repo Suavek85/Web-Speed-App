@@ -7,10 +7,10 @@ before_install:
   - docker build -t 239002210/web-speed-app -f Dockerfile.dev .
 
 before_script:
-  - docker run 239002210/web-speed-app npm run stylelint:fix
-
+    - docker run 239002210/web-speed-app npm run stylelint:fix
+  
 script:
-  - docker run -e CI=true 239002210/web-speed-app npm run test -- -u
-
+    - docker run -e CI=true 239002210/web-speed-app npm run test -- -u
+  
 after_success:
-  - echo "Unit tests success"
+    - echo "Unit tests successful"
