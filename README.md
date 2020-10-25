@@ -46,4 +46,8 @@ runs storybook to browse a component library, view the different states of each 
 
 runs Cypress integration tests.
 
+#### `npm run deploy`
+
+deploys to GH pages
+
 
