@@ -41,13 +41,13 @@ function SideNavigation() {
         style={ getAnimation(getToggleState, expandNav, collapseNav) } 
         className={ styles.block } 
       >
-      <div style={{transform: 'translate(15px, 15px)',}}>
-        <Button 
+        <div style={{transform: 'translate(15px, 15px)',}}>
+          <Button 
             btnStyle='oval' 
             handleOnClick={ handleCollapseMenu }
             isDesktopCloseContent
           />
-      </div>
+        </div>
       </animated.div>
     </>
   )}

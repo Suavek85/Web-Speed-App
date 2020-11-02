@@ -16,7 +16,6 @@ import styles from './SideCard.scss'
 export default function Section(props) {
 
   const { content, data, position } = props
-  const { header, mainContent, result } = content 
 
   const getAppState = useSelector(state => state.stateReducer.getAppState)
   const loadingStatus = getAppState === appStates.LOADING
@@ -45,7 +44,7 @@ export default function Section(props) {
   
 
   // GENERIC ELEMENTS
-  const genericPara = () => result.map((el, i) => (
+  const genericPara = () => content && content.result.map((el, i) => (
     <p key={i}>{el}
       <span style={{ marginLeft:'5px' }}>
         { loadingStatus? <SkeletonText /> : data && (
@@ -60,10 +59,10 @@ export default function Section(props) {
   const description = (
     <>
       <span style={{marginLeft: '7px'}}>
-        <InfoCircle mainContent={mainContent} />
+        <InfoCircle mainContent={content ? content.mainContent : null} />
       </span>
-      <ReactTooltip id={ mainContent } type='info'>
-        <span>{ mainContent }</span>
+      <ReactTooltip id={ content ? content.mainContent : null } type='info'>
+        <span>{ content ? content.mainContent : null }</span>
       </ReactTooltip>
     </>
   )
@@ -93,7 +92,7 @@ export default function Section(props) {
       { isDesktop && isGenericPosition && <LightBulbUI /> }
       <div className={ styles.blockContent }>
         <div className={ getDescrptionWrapperClass }>
-          <h2>{ header }</h2>
+          <h2>{ content? content.header : null }</h2>
           { description }
         </div>
         { isGenericPosition && genericPara() }

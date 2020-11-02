@@ -1,6 +1,6 @@
 import * as React from 'react'
 import * as redux from 'react-redux'
-import { shallow } from 'enzyme'
+import { shallow, mount } from 'enzyme'
 import SideNavigation from './SideNavigation.jsx'
 import { navigationStates } from '../../../constants/navigationStates'
 
@@ -17,3 +17,4 @@ describe('SideNavigation snapshot', () => {
   })
 
 })
+

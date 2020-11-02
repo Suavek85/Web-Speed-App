@@ -13,14 +13,14 @@ export default function SigninContent(props) {
   const isMobile = useMediaQuery(mobileWidth)
 
   return (
-      <div className={ styles.signinWrapper }>
-        { isSignUp? <SignUpForm /> : <SignInForm /> }
-        <Button 
-          btnStyle={isMobile? 'regular' : 'oval' }
-          handleOnClick={ handleOnClick }
-          isMobileCloseContent={ isMobile }
-          isDesktopCloseContent={ !isMobile }
-        />
-      </div>
+    <div className={ styles.signinWrapper }>
+      { isSignUp? <SignUpForm /> : <SignInForm /> }
+      <Button 
+        btnStyle={ isMobile? 'regular' : 'oval' }
+        handleOnClick={ handleOnClick }
+        isMobileCloseContent={ isMobile }
+        isDesktopCloseContent={ !isMobile }
+      />
+    </div>
   )
 }

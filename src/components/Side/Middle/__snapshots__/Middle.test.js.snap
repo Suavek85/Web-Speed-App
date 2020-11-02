@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Middle snapshot should match the snapshot 1`] = `
+<Section
+  content={
+    Object {
+      "header": "Unused Javascript",
+      "mainContent": "Remove unused JavaScript to reduce bytes consumed by network activity.",
+      "result": Array [
+        "Result: ",
+      ],
+    }
+  }
+  data={
+    Array [
+      0.47,
+    ]
+  }
+  position="bottom"
+/>
+`;

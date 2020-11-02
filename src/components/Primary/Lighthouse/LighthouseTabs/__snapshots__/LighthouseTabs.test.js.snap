@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LighthouseTabContent snapshot should match the snapshot 1`] = `
+<div
+  className="blockTabs"
+>
+  <LighthouseTabItem />
+</div>
+`;

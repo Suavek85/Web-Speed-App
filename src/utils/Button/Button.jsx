@@ -5,7 +5,12 @@ import * as signincontent from '../../constants/signinContent.js'
 
 export default function Button(props) {
 
- const { btnStyle, handleOnClick, isMobileCloseContent, isDesktopCloseContent, isFormContent } = props
+  const { 
+    btnStyle, 
+    handleOnClick, 
+    isMobileCloseContent, 
+    isDesktopCloseContent, 
+    isFormContent } = props
 
   //STYLES
   const cx = classNames.bind(styles)
@@ -16,14 +21,14 @@ export default function Button(props) {
   })
 
   return (
-        <button 
-          className={ getClass } 
-          type={isFormContent? 'submit' : 'button'} 
-          onClick={ handleOnClick }
-          value={isFormContent? 'Submit form' : 'value'}>
-          { isFormContent && signincontent.SUBMIT }
-          { isMobileCloseContent && 'Close' }
-          { isDesktopCloseContent && 'x' }
-        </button>
+    <button 
+      className={ getClass } 
+      type={ isFormContent? 'submit' : 'button' } 
+      onClick={ handleOnClick }
+      value={ isFormContent? 'Submit form' : 'value' }>
+      { isFormContent && signincontent.SUBMIT }
+      { isMobileCloseContent && 'Close' }
+      { isDesktopCloseContent && 'x' }
+    </button>
   )
 }

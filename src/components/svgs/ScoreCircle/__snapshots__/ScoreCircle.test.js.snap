@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ScoreCircle snapshot should match the snapshot 1`] = `
+<div>
+  <svg
+    viewBox="0 0 36 36"
+  >
+    <path
+      className="blockBg blockBgAlert"
+      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+    />
+    <ForwardRef
+      className="blockStats blockStatsAlert"
+      d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
+      style={
+        Object {
+          "strokeDasharray": SpringValue {
+            "_children": Set {
+              [Function],
+            },
+            "_defaultProps": Object {},
+            "_lastAsyncId": 0,
+            "_phase": "CREATED",
+            "_priority": 0,
+            "_state": Object {
+              "key": "strokeDasharray",
+            },
+            "_timestamps": Object {},
+            "animation": Object {
+              "value": [Circular],
+            },
+            "id": 2,
+            "key": "strokeDasharray",
+            "node": AnimatedString {
+              "_string": null,
+              "_toString": [Function],
+              "_value": 0,
+              "done": true,
+              "lastPosition": 0,
+            },
+          },
+        }
+      }
+    />
+    <ForwardRef
+      className="blockText blockTextAlert"
+      x="18"
+      y="21.5"
+    >
+      0
+    </ForwardRef>
+  </svg>
+</div>
+`;

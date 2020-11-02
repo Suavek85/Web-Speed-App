@@ -79,11 +79,13 @@
       "**/*.{js,jsx}",
       "!**/node_modules/**",
       "!**/constants/**",
+      "!**/reducers/**",
       "!**/helpers/**",
       "!**/scss/**",
       "!**/firebase/**",
       "!**/*.stories.js",
-      "!**/*index.js"
+      "!**/*index.js",
+      "!**/*serviceWorker.js"
     ]
   }
 }

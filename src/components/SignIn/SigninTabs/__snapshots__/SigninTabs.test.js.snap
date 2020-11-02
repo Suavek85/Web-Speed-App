@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SignInTabs snapshot should match the snapshot 1`] = `
+<div>
+  <div
+    className="headeritemWrapper headeritemWrapperInactive"
+    id="signin"
+  >
+    <span>
+      Sign in
+    </span>
+  </div>
+  <div
+    className="headeritemWrapper headeritemWrapperInactive"
+    id="signup"
+  >
+    <span>
+      New account
+    </span>
+  </div>
+</div>
+`;

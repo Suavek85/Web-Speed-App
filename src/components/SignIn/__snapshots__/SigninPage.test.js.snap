@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SigninPage snapshot should match the snapshot 1`] = `
+<div
+  className="block"
+>
+  <SigninTabs
+    activeTab="signin"
+    handleTabClick={[Function]}
+  />
+  <SigninContent
+    activeTab="signin"
+    handleOnClick={[Function]}
+  />
+</div>
+`;

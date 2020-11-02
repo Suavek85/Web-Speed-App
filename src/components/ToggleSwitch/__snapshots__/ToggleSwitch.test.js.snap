@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ToggleSwitch snapshot should match the snapshot 1`] = `
+<div
+  className="theme-switch-wrapper"
+>
+  <label
+    className="theme-switch"
+    htmlFor="checkbox"
+  >
+    <input
+      defaultChecked={false}
+      id="checkbox"
+      onChange={[Function]}
+      type="checkbox"
+    />
+    <div
+      className="slider round"
+    />
+  </label>
+</div>
+`;

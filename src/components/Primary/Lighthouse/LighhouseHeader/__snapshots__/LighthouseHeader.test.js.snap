@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LighthouseHeader snapshot should match the snapshot 1`] = `
+<div
+  className="block"
+>
+  <WebOptimizeWrapper />
+  <div>
+    <h1>
+      Lighthouse Score
+    </h1>
+    <h2>
+      Overall Performance
+    </h2>
+  </div>
+</div>
+`;

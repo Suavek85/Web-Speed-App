@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LighthouseWrapper snapshot should match the snapshot 1`] = `
+<section
+  className="block"
+>
+  <LighthouseHeader />
+  <div>
+    <LighthouseTabs
+      activeTab="0"
+      handleActiveTab={[Function]}
+    />
+    <LighthouseTabContent
+      activeTabDesc="First Contentful Paint marks the time at which the first text or image is painted."
+      activeTabTitle="First Contentful Paint"
+      score={null}
+    />
+  </div>
+</section>
+`;

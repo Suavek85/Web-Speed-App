@@ -14,9 +14,13 @@ export default function SigninTabs(props) {
   })
   
   return (
-      <div onClick={ handleTabClick } className={ styles.headerWrapper }>
-        <div id='signin' className={ getClass('signin') }> <span>{ content.SIGNIN_TAB }</span></div>
-        <div id='signup' className={ getClass('signup') }> <span>{ content.SIGNUP_TAB  }</span></div>
+    <div onClick={ handleTabClick } className={ styles.headerWrapper }>
+      <div id='signin' className={ getClass('signin') }> 
+        <span>{ content.SIGNIN_TAB }</span>
       </div>
+      <div id='signup' className={ getClass('signup') }> 
+        <span>{ content.SIGNUP_TAB  }</span>
+      </div>
+    </div>
   )
 }

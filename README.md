@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/Suavek85/Web-Speed-App.svg?branch=master)](https://travis-ci.org/Suavek85/Web-Speed-App)
+
 # Web Speed App
 
 React.js app with React Hooks and Redux.

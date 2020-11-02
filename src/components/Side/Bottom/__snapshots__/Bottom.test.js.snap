@@ -1,0 +1,21 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Bottom snapshot should match the snapshot 1`] = `
+<Section
+  content={
+    Object {
+      "header": "Unused CSS",
+      "mainContent": "Remove dead rules from stylesheets and defer the loading of not used CSS.",
+      "result": Array [
+        "Result: ",
+      ],
+    }
+  }
+  data={
+    Array [
+      0.98,
+    ]
+  }
+  position="middle"
+/>
+`;

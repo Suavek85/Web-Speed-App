@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`should match the snapshot 1`] = `
+<ForwardRef
+  fill="darkslategrey"
+  fontFamily="Orbitron, sans-serif"
+  fontSize="65"
+  fontWeight="bold"
+/>
+`;

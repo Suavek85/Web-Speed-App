@@ -30,10 +30,9 @@ export default function SigninPage(props) {
       <SigninContent 
         activeTab={activeTab} 
         handleOnClick={() => {
-            noAnimationOnRender()
-            props.history.push('/')
-          }
-        } 
+          noAnimationOnRender()
+          props.history.push('/')
+        }} 
       />
     </div>
   )

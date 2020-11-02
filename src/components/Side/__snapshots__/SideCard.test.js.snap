@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SideCard snapshot should match the snapshot 1`] = `
+<div
+  className="block"
+>
+  <div>
+    <div
+      className="blockDesc blockResultDesc"
+    >
+      <h2 />
+      <span
+        style={
+          Object {
+            "marginLeft": "7px",
+          }
+        }
+      >
+        <Section
+          mainContent={null}
+        />
+      </span>
+      <ReactTooltip
+        clickable={false}
+        id={null}
+        insecure={true}
+        resizeHide={true}
+        type="info"
+        wrapper="div"
+      >
+        <span />
+      </ReactTooltip>
+    </div>
+  </div>
+</div>
+`;

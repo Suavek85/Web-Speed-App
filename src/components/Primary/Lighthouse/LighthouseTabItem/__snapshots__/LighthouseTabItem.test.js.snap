@@ -1,0 +1,48 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`LighthouseTabItem snapshot should match the snapshot 1`] = `
+Array [
+  <div
+    className="block"
+    id={0}
+    key="0"
+  >
+    First Paint
+  </div>,
+  <div
+    className="block"
+    id={1}
+    key="1"
+  >
+    Largest Paint
+  </div>,
+  <div
+    className="block"
+    id={2}
+    key="2"
+  >
+    Speed Index
+  </div>,
+  <div
+    className="block"
+    id={3}
+    key="3"
+  >
+    Interactive
+  </div>,
+  <div
+    className="block"
+    id={4}
+    key="4"
+  >
+    Blocking Time
+  </div>,
+  <div
+    className="block"
+    id={5}
+    key="5"
+  >
+    Layout Shift
+  </div>,
+]
+`;

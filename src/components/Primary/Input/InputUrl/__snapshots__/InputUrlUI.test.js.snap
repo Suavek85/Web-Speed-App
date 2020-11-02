@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`InputButtonUrlUI snapshot should match the snapshot 1`] = `
+<label
+  htmlFor="urlinput"
+>
+  <input
+    autoComplete="off"
+    autoFocus={true}
+    id="urlinput"
+    placeholder=" "
+    type="url"
+  />
+  <span>
+    Enter your website url in this format https://www.bbc.co.uk/
+  </span>
+  <span />
+</label>
+`;

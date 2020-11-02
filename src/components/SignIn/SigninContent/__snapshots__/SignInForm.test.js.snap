@@ -1,0 +1,36 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SigninForm snapshot should match the snapshot 1`] = `
+<div>
+  <h2>
+    I already have an account
+  </h2>
+  <span>
+    Sign in with your email and password
+  </span>
+  <form
+    onSubmit={[Function]}
+  >
+    <Input
+      handleChange={[Function]}
+      label="Email"
+      name="email"
+      required={true}
+      type="email"
+      value=""
+    />
+    <Input
+      handleChange={[Function]}
+      label="Password"
+      name="password"
+      required={true}
+      type="password"
+      value=""
+    />
+    <Button
+      btnStyle="regular"
+      isFormContent={true}
+    />
+  </form>
+</div>
+`;

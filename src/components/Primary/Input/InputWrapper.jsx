@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames/bind'
 import { useMediaQuery } from 'react-responsive'
-import InputUrlWrapper from './InputUrl/InputUrlWrapper'
+import InputUrlUI from './InputUrl/InputUrlUI'
 import InputButtonWrapper from './InputButton/InputButtonWrapper'
 import Error from '../Error/Error'
 import styles from './Input.scss'
@@ -18,7 +18,7 @@ export default function InputWrapper() {
 
   return (
     <div className={getClass}>
-      <InputUrlWrapper />
+      <InputUrlUI/>
       <div className={styles.btnWrapper}>
         <InputButtonWrapper />
       </div>

@@ -28,7 +28,6 @@ async function makeGetRequest(dispatch) {
       allData.lighthouseResult.audits['unused-css-rules'].score,
     ]
     const lighthouseDataArr = lighthouseData.map(el => allData.lighthouseResult.audits[el] )
-
     dispatch({ 
       type: appStates.SUCCESS,
       payload: loadingExperienceArr,
