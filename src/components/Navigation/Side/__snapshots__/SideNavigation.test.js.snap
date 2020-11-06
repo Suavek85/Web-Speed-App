@@ -2,109 +2,190 @@
 
 exports[`SideNavigation snapshot should match the snapshot 1`] = `
 <Fragment>
-  <ForwardRef
+  <Animated(div)
     style={
       Object {
         "display": SpringValue {
-          "_children": Set {
-            [Function],
-          },
+          "_children": Set {},
           "_defaultProps": Object {},
-          "_lastAsyncId": 0,
+          "_lastCallId": 0,
+          "_lastToId": 0,
           "_phase": "CREATED",
           "_priority": 0,
           "_state": Object {
-            "key": "display",
+            "pauseQueue": Set {},
+            "resumeQueue": Set {},
           },
-          "_timestamps": Object {},
-          "animation": Object {
-            "value": [Circular],
+          "animation": Animation {
+            "changed": false,
+            "config": AnimationConfig {
+              "bounce": undefined,
+              "clamp": false,
+              "damping": 1,
+              "decay": undefined,
+              "duration": undefined,
+              "easing": [Function],
+              "frequency": undefined,
+              "friction": 26,
+              "mass": 1,
+              "precision": undefined,
+              "progress": undefined,
+              "restVelocity": undefined,
+              "round": undefined,
+              "tension": 170,
+              "velocity": 0,
+            },
+            "from": undefined,
+            "fromValues": Array [],
+            "immediate": false,
+            "onChange": undefined,
+            "onRest": Array [],
+            "onStart": undefined,
+            "to": undefined,
+            "toValues": null,
+            "values": Array [],
           },
           "id": 8,
           "key": "display",
-          "node": AnimatedValue {
-            "_value": "none",
-            "done": true,
-          },
+          "queue": undefined,
         },
         "opacity": SpringValue {
-          "_children": Set {
-            [Function],
-          },
+          "_children": Set {},
           "_defaultProps": Object {},
-          "_lastAsyncId": 0,
+          "_lastCallId": 0,
+          "_lastToId": 0,
           "_phase": "CREATED",
           "_priority": 0,
           "_state": Object {
-            "key": "opacity",
+            "pauseQueue": Set {},
+            "resumeQueue": Set {},
           },
-          "_timestamps": Object {},
-          "animation": Object {
-            "value": [Circular],
+          "animation": Animation {
+            "changed": false,
+            "config": AnimationConfig {
+              "bounce": undefined,
+              "clamp": false,
+              "damping": 1,
+              "decay": undefined,
+              "duration": undefined,
+              "easing": [Function],
+              "frequency": undefined,
+              "friction": 26,
+              "mass": 1,
+              "precision": undefined,
+              "progress": undefined,
+              "restVelocity": undefined,
+              "round": undefined,
+              "tension": 170,
+              "velocity": 0,
+            },
+            "from": undefined,
+            "fromValues": Array [],
+            "immediate": false,
+            "onChange": undefined,
+            "onRest": Array [],
+            "onStart": undefined,
+            "to": undefined,
+            "toValues": null,
+            "values": Array [],
           },
           "id": 7,
           "key": "opacity",
-          "node": AnimatedValue {
-            "_value": 0,
-            "done": true,
-            "lastPosition": 0,
-          },
+          "queue": undefined,
         },
       }
     }
   />
-  <ForwardRef
+  <Animated(div)
     style={
       Object {
         "left": SpringValue {
-          "_children": Set {
-            [Function],
-          },
+          "_children": Set {},
           "_defaultProps": Object {},
-          "_lastAsyncId": 0,
+          "_lastCallId": 0,
+          "_lastToId": 0,
           "_phase": "CREATED",
           "_priority": 0,
           "_state": Object {
-            "key": "left",
+            "pauseQueue": Set {},
+            "resumeQueue": Set {},
           },
-          "_timestamps": Object {},
-          "animation": Object {
-            "value": [Circular],
+          "animation": Animation {
+            "changed": false,
+            "config": AnimationConfig {
+              "bounce": undefined,
+              "clamp": false,
+              "damping": 1,
+              "decay": undefined,
+              "duration": undefined,
+              "easing": [Function],
+              "frequency": undefined,
+              "friction": 26,
+              "mass": 1,
+              "precision": undefined,
+              "progress": undefined,
+              "restVelocity": undefined,
+              "round": undefined,
+              "tension": 170,
+              "velocity": 0,
+            },
+            "from": undefined,
+            "fromValues": Array [],
+            "immediate": false,
+            "onChange": undefined,
+            "onRest": Array [],
+            "onStart": undefined,
+            "to": undefined,
+            "toValues": null,
+            "values": Array [],
           },
           "id": 3,
           "key": "left",
-          "node": AnimatedString {
-            "_string": null,
-            "_toString": [Function],
-            "_value": 0,
-            "done": true,
-            "lastPosition": 0,
-          },
+          "queue": undefined,
         },
         "width": SpringValue {
-          "_children": Set {
-            [Function],
-          },
+          "_children": Set {},
           "_defaultProps": Object {},
-          "_lastAsyncId": 0,
+          "_lastCallId": 0,
+          "_lastToId": 0,
           "_phase": "CREATED",
           "_priority": 0,
           "_state": Object {
-            "key": "width",
+            "pauseQueue": Set {},
+            "resumeQueue": Set {},
           },
-          "_timestamps": Object {},
-          "animation": Object {
-            "value": [Circular],
+          "animation": Animation {
+            "changed": false,
+            "config": AnimationConfig {
+              "bounce": undefined,
+              "clamp": false,
+              "damping": 1,
+              "decay": undefined,
+              "duration": undefined,
+              "easing": [Function],
+              "frequency": undefined,
+              "friction": 26,
+              "mass": 1,
+              "precision": undefined,
+              "progress": undefined,
+              "restVelocity": undefined,
+              "round": undefined,
+              "tension": 170,
+              "velocity": 0,
+            },
+            "from": undefined,
+            "fromValues": Array [],
+            "immediate": false,
+            "onChange": undefined,
+            "onRest": Array [],
+            "onStart": undefined,
+            "to": undefined,
+            "toValues": null,
+            "values": Array [],
           },
           "id": 4,
           "key": "width",
-          "node": AnimatedString {
-            "_string": null,
-            "_toString": [Function],
-            "_value": 0,
-            "done": true,
-            "lastPosition": 0,
-          },
+          "queue": undefined,
         },
       }
     }
@@ -121,7 +202,12 @@ exports[`SideNavigation snapshot should match the snapshot 1`] = `
         handleOnClick={[Function]}
         isDesktopCloseContent={true}
       />
+      <MenuLink
+        content="Sign in"
+        linkPath="/signin"
+      />
+      <ToggleSwitch />
     </div>
-  </ForwardRef>
+  </Animated(div)>
 </Fragment>
 `;

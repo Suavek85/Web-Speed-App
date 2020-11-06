@@ -60,3 +60,10 @@ input:checked + .slider::before {
 .slider.round::before {
   border-radius: 50%;
 }
+
+h2 {
+  padding: 0 5px;
+  font-size: em(18);
+  font-weight: normal;
+  color: var(--color-header-font);
+}

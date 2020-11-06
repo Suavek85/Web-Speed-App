@@ -2,6 +2,7 @@
 
 $block: nav-wrapper;
 $blockBackground: elem($block, backgrounds);
+$blockContent: elem($block, content);
 
 .#{$block} {
   position: absolute;
@@ -27,7 +28,14 @@ $blockBackground: elem($block, backgrounds);
   opacity: 0;
 }
 
+.#{$blockContent} {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 :export {
   block: $block;
   blockBackground: $blockBackground;
+  blockContent: $blockContent;
 }

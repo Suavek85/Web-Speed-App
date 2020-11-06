@@ -8,7 +8,6 @@ $blockSmallTablet: modifier($block, small-tablet);
   display: flex;
   flex-direction: column;
   width: 30%;
-  height: 80vh;
   margin-right: 20px;
   border: $ws-border-light;
 
@@ -47,7 +46,11 @@ $blockSmallTablet: modifier($block, small-tablet);
     flex-direction: column;
 
     > div {
-      height: 200px;
+      height: 120px !important;
+    }
+
+    > div:first-child {
+      height: 200px !important;
     }
   }
 }

@@ -16,6 +16,7 @@ export default function ToggleSwitch() {
 
   return (
     <div className="theme-switch-wrapper">
+      <h2>Dark mode:  </h2>
       <label className="theme-switch" htmlFor="checkbox">
         <input 
           type="checkbox" 

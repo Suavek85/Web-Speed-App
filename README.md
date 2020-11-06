@@ -3,52 +3,53 @@
 # Web Speed App
 
 React.js app with React Hooks and Redux.
-With Rxjs instead of Redux for state management on a separate branch - WIP.
 
 ## General info
 
-App allowing to measure a website's performance using Google's Lighthouse API. With dark theme toggle. 
-
-All animations created with React Spring.
+Measure a website's performance using Google's Lighthouse API. With dark theme toggle. Animations created with React Spring.
 
 My own idea![🤓](https://mail.google.com/mail/e/1f913), created from scratch.[🔨](https://mail.google.com/mail/e/1f528)
 
 [LIVE PREVIEW](https://suavek85.github.io/Web-Speed-App).
 
+With Rxjs instead of Redux for state management on a separate branch - WIP.
 
-## Scripts
+## Development scripts
 
 In the project directory, you can run:
 
-#### `npm start`
+#### npm start
 
 runs the app in the development mode on [http://localhost:3000](http://localhost:3000)
 
-#### `npm go`
+#### npm go
 
 script to run stylelint and then commit all to selected branch
 
-#### `npm test:coverage`
+#### npm test:coverage
 
 launch unit testing + coverage report.
 
-#### `npm stylelint:fix`
+#### npm stylelint:fix
 
 run stylelint on all scss files and fix what can be fixed
 
-#### `npm run build`
-
-builds the app for production to the `build` folder.
-
-#### `npm run storybook`
+#### npm run storybook
 
 runs storybook to browse a component library, view the different states of each UI component.
 
-#### `npm run cypress:open`
+#### npm run cypress:open
 
 runs Cypress integration tests.
 
-#### `npm run deploy`
+
+## Build scripts
+
+#### npm run build
+
+builds the app for production to the `build` folder.
+
+#### npm run deploy
 
 deploys to GH pages
 

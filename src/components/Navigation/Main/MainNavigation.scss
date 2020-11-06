@@ -3,6 +3,7 @@
 $block: mainnav;
 $blockTitle: elem($block, title);
 $blockLinks: elem($block, links);
+$blockMenu: elem($block, menu);
 $blockMobile: modifier($block, mobile);
 $blockSmallMobile: modifier($block, small-mobile);
 
@@ -16,15 +17,15 @@ $blockSmallMobile: modifier($block, small-mobile);
   background-color: var(--color-main-background);
 
   h1 {
-    color: var(--color-header-font);
     font-weight: normal;
+    color: var(--color-header-font);
   }
 
   h2 {
+    padding: 0 5px;
     font-size: em(18);
     font-weight: normal;
     color: var(--color-header-font);
-    padding: 0 5px;
   }
 
   h2:hover {
@@ -61,12 +62,20 @@ $blockSmallMobile: modifier($block, small-mobile);
   &__links {
     display: flex;
   }
+
+  &__menu {
+    width: 35px;
+    height: 4px;
+    margin: 6px 0;
+    background-color: var(--color-header-font);
+  }
 }
 
 :export {
   block: $block;
   blockTitle: $blockTitle;
   blockLinks: $blockLinks;
+  blockMenu: $blockMenu;
   blockMobile: $blockMobile;
   blockSmallMobile: $blockSmallMobile;
 }

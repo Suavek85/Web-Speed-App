@@ -1,7 +1,12 @@
 import React from 'react'
 import { useSpring, animated } from 'react-spring'
 import { useSelector, useDispatch } from "react-redux"
+import { useMediaQuery } from 'react-responsive'
+import { desktopWidth } from'../../../scss/mediaqueries'
 import Button from '../../../utils/Button/Button'
+import ToggleSwitch from '../../ToggleSwitch/ToggleSwitch'
+import MenuLink from '../../../utils/MenuLink/MenuLink'
+import { SIGN_IN } from '../../../constants/content'
 import styles from './SideNavigation.scss'
 import { 
   collapseNavConfig, 
@@ -31,6 +36,8 @@ function SideNavigation() {
     return
   }
 
+  const isDesktop = useMediaQuery(desktopWidth)
+
   return (
     <>
       <animated.div 
@@ -41,12 +48,18 @@ function SideNavigation() {
         style={ getAnimation(getToggleState, expandNav, collapseNav) } 
         className={ styles.block } 
       >
-        <div style={{transform: 'translate(15px, 15px)',}}>
+        <div className={ styles.blockContent } style={{transform: 'translate(15px, 15px)',}}>
           <Button 
             btnStyle='oval' 
             handleOnClick={ handleCollapseMenu }
             isDesktopCloseContent
           />
+          {!isDesktop && (
+            <>
+              <MenuLink linkPath="/signin" content={ SIGN_IN } />
+              <ToggleSwitch />
+            </>
+          )}
         </div>
       </animated.div>
     </>

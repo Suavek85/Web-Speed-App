@@ -86,7 +86,7 @@ exports[`Should match the snapshot 1`] = `
       }
     />
     <g>
-      <ForwardRef
+      <Animated(path)
         d="M219 371.705C219 375.167 216.987 378 214.527 378H169.473C167.013 378 165 375.167 165 371.705V308.295C165 304.833 167.013 302 169.473 302H214.527C216.987 302 219 304.833 219 308.295V371.705Z"
         style={
           Object {
@@ -101,7 +101,7 @@ exports[`Should match the snapshot 1`] = `
       />
     </g>
     <g>
-      <ForwardRef
+      <Animated(path)
         d="M278 371.705C278 375.167 275.987 378 273.527 378H228.473C226.013 378 224 375.167 224 371.705V308.295C224 304.833 226.013 302 228.473 302H273.527C275.987 302 278 304.833 278 308.295V371.705Z"
         id="SVGCleanerId_0_1_"
         style={
@@ -117,7 +117,7 @@ exports[`Should match the snapshot 1`] = `
       />
     </g>
     <g>
-      <ForwardRef
+      <Animated(path)
         d="M336 371.705C336 375.167 333.987 378 331.527 378H286.473C284.013 378 282 375.167 282 371.705V308.295C282 304.833 284.013 302 286.473 302H331.527C333.987 302 336 304.833 336 308.295V371.705Z"
         id="SVGCleanerId_1_1_"
         style={
@@ -132,56 +132,97 @@ exports[`Should match the snapshot 1`] = `
         yCord="363"
       />
     </g>
-    <ForwardRef
+    <Animated(g)
       id="red-indicator"
       style={
         Object {
           "transform": SpringValue {
-            "_children": Set {
-              [Function],
-            },
+            "_children": Set {},
             "_defaultProps": Object {},
-            "_lastAsyncId": 0,
+            "_lastCallId": 0,
+            "_lastToId": 0,
             "_phase": "CREATED",
             "_priority": 0,
             "_state": Object {
-              "key": "transform",
+              "pauseQueue": Set {},
+              "resumeQueue": Set {},
             },
-            "_timestamps": Object {},
-            "animation": Object {
-              "value": [Circular],
+            "animation": Animation {
+              "changed": false,
+              "config": AnimationConfig {
+                "bounce": undefined,
+                "clamp": false,
+                "damping": 1,
+                "decay": undefined,
+                "duration": undefined,
+                "easing": [Function],
+                "frequency": undefined,
+                "friction": 26,
+                "mass": 1,
+                "precision": undefined,
+                "progress": undefined,
+                "restVelocity": undefined,
+                "round": undefined,
+                "tension": 170,
+                "velocity": 0,
+              },
+              "from": undefined,
+              "fromValues": Array [],
+              "immediate": false,
+              "onChange": undefined,
+              "onRest": Array [],
+              "onStart": undefined,
+              "to": undefined,
+              "toValues": null,
+              "values": Array [],
             },
             "id": 3,
             "key": "transform",
-            "node": AnimatedString {
-              "_string": null,
-              "_toString": [Function],
-              "_value": 0,
-              "done": true,
-              "lastPosition": 0,
-            },
+            "queue": undefined,
           },
           "transformOrigin": SpringValue {
-            "_children": Set {
-              [Function],
-            },
+            "_children": Set {},
             "_defaultProps": Object {},
-            "_lastAsyncId": 0,
+            "_lastCallId": 0,
+            "_lastToId": 0,
             "_phase": "CREATED",
             "_priority": 0,
             "_state": Object {
-              "key": "transformOrigin",
+              "pauseQueue": Set {},
+              "resumeQueue": Set {},
             },
-            "_timestamps": Object {},
-            "animation": Object {
-              "value": [Circular],
+            "animation": Animation {
+              "changed": false,
+              "config": AnimationConfig {
+                "bounce": undefined,
+                "clamp": false,
+                "damping": 1,
+                "decay": undefined,
+                "duration": undefined,
+                "easing": [Function],
+                "frequency": undefined,
+                "friction": 26,
+                "mass": 1,
+                "precision": undefined,
+                "progress": undefined,
+                "restVelocity": undefined,
+                "round": undefined,
+                "tension": 170,
+                "velocity": 0,
+              },
+              "from": undefined,
+              "fromValues": Array [],
+              "immediate": false,
+              "onChange": undefined,
+              "onRest": Array [],
+              "onStart": undefined,
+              "to": undefined,
+              "toValues": null,
+              "values": Array [],
             },
             "id": 4,
             "key": "transformOrigin",
-            "node": AnimatedValue {
-              "_value": "center",
-              "done": true,
-            },
+            "queue": undefined,
           },
         }
       }
@@ -212,7 +253,7 @@ exports[`Should match the snapshot 1`] = `
           }
         }
       />
-    </ForwardRef>
+    </Animated(g)>
   </svg>
 </div>
 `;

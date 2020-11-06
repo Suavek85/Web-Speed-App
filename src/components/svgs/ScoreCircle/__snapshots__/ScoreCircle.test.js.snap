@@ -9,46 +9,65 @@ exports[`ScoreCircle snapshot should match the snapshot 1`] = `
       className="blockBg blockBgAlert"
       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
     />
-    <ForwardRef
+    <Animated(path)
       className="blockStats blockStatsAlert"
       d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
       style={
         Object {
           "strokeDasharray": SpringValue {
-            "_children": Set {
-              [Function],
-            },
+            "_children": Set {},
             "_defaultProps": Object {},
-            "_lastAsyncId": 0,
+            "_lastCallId": 0,
+            "_lastToId": 0,
             "_phase": "CREATED",
             "_priority": 0,
             "_state": Object {
-              "key": "strokeDasharray",
+              "pauseQueue": Set {},
+              "resumeQueue": Set {},
             },
-            "_timestamps": Object {},
-            "animation": Object {
-              "value": [Circular],
+            "animation": Animation {
+              "changed": false,
+              "config": AnimationConfig {
+                "bounce": undefined,
+                "clamp": false,
+                "damping": 1,
+                "decay": undefined,
+                "duration": undefined,
+                "easing": [Function],
+                "frequency": undefined,
+                "friction": 26,
+                "mass": 1,
+                "precision": undefined,
+                "progress": undefined,
+                "restVelocity": undefined,
+                "round": undefined,
+                "tension": 170,
+                "velocity": 0,
+              },
+              "from": undefined,
+              "fromValues": Array [],
+              "immediate": false,
+              "onChange": undefined,
+              "onRest": Array [],
+              "onStart": undefined,
+              "to": undefined,
+              "toValues": null,
+              "values": Array [],
             },
             "id": 2,
             "key": "strokeDasharray",
-            "node": AnimatedString {
-              "_string": null,
-              "_toString": [Function],
-              "_value": 0,
-              "done": true,
-              "lastPosition": 0,
-            },
+            "queue": undefined,
           },
         }
       }
     />
-    <ForwardRef
+    <Animated(text)
       className="blockText blockTextAlert"
       x="18"
       y="21.5"
     >
       0
-    </ForwardRef>
+    </Animated(text)>
   </svg>
 </div>
 `;

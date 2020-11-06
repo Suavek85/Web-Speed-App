@@ -12,15 +12,15 @@ exports[`Should match the snapshot 1`] = `
     </h1>
   </Link>
   <nav>
-    <Link
-      to="/signin"
-    >
-      <h2>
-        Sign in
-      </h2>
-    </Link>
-    <NavOpenLink />
-    <ToggleSwitch />
+    <NavOpenLink
+      settings={
+        <React.Fragment>
+          <div />
+          <div />
+          <div />
+        </React.Fragment>
+      }
+    />
   </nav>
 </section>
 `;
